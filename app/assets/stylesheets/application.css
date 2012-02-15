@@ -10,5 +10,7 @@
  *
  *= require reset
  *= require_self
- *= require_tree .
+ * require_tree .
+ * require_directory .
+ *= require screen
 */

@@ -37,8 +37,16 @@ head
     for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/
   = javascript_include_tag 'modernizr'
 
-body
-  = yield
+body.bp.two-col
+  #container.showgrid
+    #header
+      | Header
+    #sidebar
+      | Sidebar
+    #content
+      = yield
+    #footer
+      | Footer
 
   / JavaScript at the bottom for fast page loading
   = javascript_include_tag 'application'
