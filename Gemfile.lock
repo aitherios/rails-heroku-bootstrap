@@ -116,6 +116,7 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    shoulda-matchers (1.0.0)
     slim (1.1.0)
       temple (~> 0.3.5)
       tilt (~> 1.3.2)
@@ -152,6 +153,7 @@ DEPENDENCIES
   rails-boilerplate (~> 0.1.6)
   rspec-rails (~> 2.8.1)
   sass-rails (~> 3.2.3)
+  shoulda-matchers (~> 1.0.0)
   slim (~> 1.1.0)
   thin
   uglifier (>= 1.0.3)

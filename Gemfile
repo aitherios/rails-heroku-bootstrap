@@ -1,22 +1,26 @@
 source 'https://rubygems.org'
 
-gem 'rails',             '~> 3.2.1'
-gem 'jquery-rails',      '~> 2.0.0'
-gem 'rails-boilerplate', '~> 0.1.6'
-gem 'pg',                '~> 0.13.1'
-gem 'slim',              '~> 1.1.0'
+gem 'rails',              '~> 3.2.1'
+gem 'jquery-rails',       '~> 2.0.0'
+gem 'rails-boilerplate',  '~> 0.1.6'
+gem 'pg',                 '~> 0.13.1'
+gem 'slim',               '~> 1.1.0'
 gem 'thin'
 
 group :assets do
-  gem 'sass-rails',      '~> 3.2.3'
-  gem 'coffee-rails',    '~> 3.2.1'
+  gem 'sass-rails',       '~> 3.2.3'
+  gem 'coffee-rails',     '~> 3.2.1'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-  gem 'uglifier',        '>= 1.0.3'
+  gem 'uglifier',         '>= 1.0.3'
 end
 
 group :test, :development do
-  gem 'rspec-rails',     '~> 2.8.1'
+  gem 'rspec-rails',      '~> 2.8.1'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 1.0.0'
 end
 
 group :development do
