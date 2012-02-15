@@ -21,6 +21,8 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 1.0.0'
+  gem 'cucumber-rails',   '~> 1.2.1'
+  gem 'database_cleaner', '~> 0.7.1'
 end
 
 group :development do
