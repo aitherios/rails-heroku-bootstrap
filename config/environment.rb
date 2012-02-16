@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-Rails32Template::Application.initialize!
+Rails32Bootstrap::Application.initialize!

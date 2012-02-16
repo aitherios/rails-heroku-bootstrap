@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Rails32Template::Application.load_tasks
+Rails32Bootstrap::Application.load_tasks

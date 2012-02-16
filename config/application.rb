@@ -10,7 +10,7 @@ if defined?(Bundler)
   Bundler.require(*Rails.groups(:assets => %w(development test)))
 end
 
-module Rails32Template
+module Rails32Bootstrap
   class Application < Rails::Application
     config.encoding = 'utf-8'
     config.filter_parameters += [:password]
