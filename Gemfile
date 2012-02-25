@@ -23,6 +23,8 @@ group :test do
   gem 'shoulda-matchers',     '~> 1.0.0'
   gem 'cucumber-rails',       '~> 1.2.1'
   gem 'database_cleaner',     '~> 0.7.1'
+  gem 'timecop',              '~> 0.3.5'
+  gem 'email_spec',           '~> 1.2.1'
 end
 
 group :development do
