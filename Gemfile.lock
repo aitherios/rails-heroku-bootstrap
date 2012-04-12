@@ -196,7 +196,7 @@ DEPENDENCIES
   compass-rails
   cucumber-rails (~> 1.2.1)
   database_cleaner (~> 0.7.1)
-  email_spec
+  email_spec (~> 1.2.1)
   factory_girl_rails (~> 1.6.0)
   foreman
   heroku
@@ -209,5 +209,5 @@ DEPENDENCIES
   shoulda-matchers (~> 1.0.0)
   slim (~> 1.1.0)
   thin
-  timecop
+  timecop (~> 0.3.5)
   uglifier (>= 1.0.3)
