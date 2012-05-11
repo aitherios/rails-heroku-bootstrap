@@ -1,29 +1,32 @@
 development:
   adapter: postgresql
-  database: rails32template_development
+  database: bootstrap_rails32_development
   host: localhost
   user: postgres
   password:
   pool: 5
   timeout: 5000
+  template: template0
 
 test: &test
   adapter: postgresql
-  database: rails32template_test
+  database: bootstrap_rails32_test
   host: localhost
   user: postgres
   password:
   pool: 5
   timeout: 5000
+  template: template0
 
 production:
   adapter: postgresql
-  database: rails32template_production
+  database: bootstrap_rails32_production
   host: localhost
   user: postgres
   password:
   pool: 5
   timeout: 5000
+  template: template0
 
 cucumber:
   <<: *test

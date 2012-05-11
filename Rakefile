@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-OutraCoisa::Application.load_tasks
+BootstrapRails32::Application.load_tasks

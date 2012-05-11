@@ -1,0 +1,57 @@
+pt-BR:
+  errors:
+    messages:
+      expired: 'já expirou, por favor peça um novo'
+      not_found: 'não encontrado'
+      already_confirmed: 'já foi confirmado'
+      not_locked: 'não foi bloqueado'
+      not_saved:
+        one: '1 erro impediu que %{model} fosse gravado:'
+        other: '%{count} erros impediram que %{model} fosse gravado:'
+
+  devise:
+    failure:
+      already_authenticated: 'Você já efetuou login.'
+      unauthenticated: 'Para continuar, faça login ou registre-se.'
+      unconfirmed: 'Antes de continuar, confirme a sua conta.'
+      locked: 'A sua conta está bloqueada.'
+      invalid: 'Email ou senha inválidos.'
+      invalid_token: 'O token de autenticação não é válido.'
+      timeout: 'A sua sessão expirou, por favor, faça login novamente para continuar.'
+      inactive: 'A sua conta ainda não foi ativada.'
+    sessions:
+      signed_in: 'Login efetuado com sucesso.'
+      signed_out: 'Logout efetuado com sucesso.'
+    passwords:
+      send_instructions: 'Dentro de minutos, você receberá um email com as instruções de reinicialização da sua senha.'
+      updated: 'A sua senha foi alterada com sucesso. Você está autenticado.'
+      updated_not_active: 'Sea senha foi alterada com sucesso.'
+      send_paranoid_instructions: 'Se o seu email existe, você receberá um link de recuperação de senha.'
+    confirmations:
+      send_instructions: 'Dentro de minutos, você receberá um email com as instruções de confirmação da sua conta.'
+      send_paranoid_instructions: 'Se o seu email existe, você receberá instruções sobre como confirmar sua conta em alguns minutos.'
+      confirmed: 'A sua conta foi confirmada com sucesso. Você está autenticado.'
+    registrations:
+      signed_up: 'Login efetuado com sucesso. Se não foi autorizado, a confirmação será enviada por email.'
+      inactive_signed_up: 'A sua conta foi criada com sucesso. No entanto, não foi possível fazer login, pois ela está %{reason}.'
+      updated: 'A sua conta foi atualizada com sucesso.'
+      update_needs_confirmation: 'Sua conta foi atualizada com sucesso mas precisamos confirmar o seu novo email. Por favor confira o seu email e clique no link para confirmar o seu novo endereço de email.'
+      destroyed: 'Adeus! A sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve.'
+      reasons:
+        inactive: 'inativo'
+        unconfirmed: 'não confirmado'
+        locked: 'travado'
+    unlocks:
+      send_instructions: 'Dentro de minutos, você receberá um email com instruções de desbloqueio da sua conta.'
+      unlocked: 'A sua conta foi desbloqueada com sucesso. Você está autenticado.'
+      send_paranoid_instructions: 'Se o seu email existe, você receberá instruções sobre como destravar a sou conta em alguns minutos.'
+    omniauth_callbacks:
+      success: 'Autorizado com sucesso de uma conta de %{kind}.'
+      failure: 'Não foi possível autorizar de uma conta de %{kind} porque "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Instruções de confirmação'
+      reset_password_instructions:
+        subject: 'Instruções de reinicialização de senha'
+      unlock_instructions:
+        subject: 'Instruções de desbloqueio'
