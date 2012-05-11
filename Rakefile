@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-StartaeBootstrap::Application.load_tasks
+OutraCoisa::Application.load_tasks
