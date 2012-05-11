@@ -12,10 +12,13 @@ end
 
 module OutraCoisa
   class Application < Rails::Application
+    config.autoload_paths += %W(#{config.root}/lib)
     config.encoding = 'utf-8'
     config.filter_parameters += [:password]
     config.assets.enabled = true
     config.assets.version = '1.0'
     config.generators.stylesheet_engine = :sass
+    config.assets.initialize_on_precompile = false
+    config.time_zone = 'Brasilia'
   end
 end
