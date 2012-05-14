@@ -18,11 +18,12 @@ task :rename, :project_name do |t, args|
   'config/initializers/secret_token.rb',
   'config/initializers/session_store.rb',
   'config/initializers/session_store.rb',
+  'config/initializers/active_admin.rb',
   'config/routes.rb',
   'config.ru',
   'lib/tasks/rename.rake'].each do |filename|
-    replace_in_file(filename, 'PotenciaEmGrupo', args[:project_name].camelize)
+    replace_in_file(filename, 'StartaeBootstrap', args[:project_name].camelize)
   end
   
-  replace_in_file('config/database.yml', 'PotenciaEmGrupo'.underscore, args[:project_name].underscore)
+  replace_in_file('config/database.yml', 'StartaeBootstrap'.underscore, args[:project_name].underscore)
 end
