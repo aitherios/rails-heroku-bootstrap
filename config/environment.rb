@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-BootstrapRails32::Application.initialize!
+PotenciaEmGrupo::Application.initialize!

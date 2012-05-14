@@ -21,8 +21,8 @@ task :rename, :project_name do |t, args|
   'config/routes.rb',
   'config.ru',
   'lib/tasks/rename.rake'].each do |filename|
-    replace_in_file(filename, 'BootstrapRails32', args[:project_name].camelize)
+    replace_in_file(filename, 'PotenciaEmGrupo', args[:project_name].camelize)
   end
   
-  replace_in_file('config/database.yml', 'BootstrapRails32'.underscore, args[:project_name].underscore)
+  replace_in_file('config/database.yml', 'PotenciaEmGrupo'.underscore, args[:project_name].underscore)
 end

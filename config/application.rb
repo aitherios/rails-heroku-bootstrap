@@ -10,7 +10,7 @@ if defined?(Bundler)
   Bundler.require(*Rails.groups(:assets => %w(development test)))
 end
 
-module BootstrapRails32
+module PotenciaEmGrupo
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
     config.encoding = 'utf-8'

@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: bootstrap_rails32_development
+  database: potencia_em_grupo_development
   host: localhost
   user: postgres
   password:
@@ -10,7 +10,7 @@ development:
 
 test: &test
   adapter: postgresql
-  database: bootstrap_rails32_test
+  database: potencia_em_grupo_test
   host: localhost
   user: postgres
   password:
@@ -20,7 +20,7 @@ test: &test
 
 production:
   adapter: postgresql
-  database: bootstrap_rails32_production
+  database: potencia_em_grupo_production
   host: localhost
   user: postgres
   password:

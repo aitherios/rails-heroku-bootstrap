@@ -1,4 +1,4 @@
-BootstrapRails32::Application.routes.draw do
+PotenciaEmGrupo::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
