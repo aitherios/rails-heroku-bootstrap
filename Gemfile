@@ -6,11 +6,11 @@ gem 'rails-boilerplate',      '~> 0.1.6'
 gem 'pg',                     '~> 0.13.1'
 gem 'slim',                   '~> 1.1.0'
 gem 'thin'
-gem "sass",                   '~> 3.2.0.alpha'
+gem 'sass',                   '~> 3.2.0.alpha'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog',                    '~> 1.3.1'
-gem "meta_search",            '>= 1.1.0.pre'
+gem 'meta_search',            '>= 1.1.0.pre'
 gem 'devise'
 
 group :assets do
