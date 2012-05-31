@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'fog',                    '~> 1.3.1'
 gem 'meta_search',            '>= 1.1.0.pre'
 gem 'devise',                 '~> 2.1.0'
+gem 'omniauth-facebook',      '~> 1.3.0'
 
 group :assets do
   gem "compass-rails",        '~> 1.0.1'
