@@ -12,9 +12,17 @@ head
   meta charset="utf-8"
   meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
 
-  title StartaeBootstrap
-  meta name="description" content=""
-  meta name="author" content=""
+  - if @title.present?
+    title #{@title} - StartaeBootstrap
+  - else
+    title StartaeBootstrap
+    
+  - if @description.present?
+    meta name="description" content="#{@description}"
+  - else
+    meta name="description" content=""
+    
+  meta name="author" content="Startaê"
   meta name="viewport" content="width=device-width,initial-scale=1"
   = csrf_meta_tags
 
@@ -23,8 +31,8 @@ head
   = javascript_include_tag 'modernizr'
 
 body
-  .notice = notice
-  .alert = alert
+  / .notice = notice
+  / .alert = alert
   
   #content
     = yield
