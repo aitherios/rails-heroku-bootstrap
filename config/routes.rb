@@ -1,5 +1,5 @@
 StartaeBootstrap::Application.routes.draw do
-  devise_for :users
+  devise_for :users, sign_out_via: :get
 
   ActiveAdmin.routes(self)
 
