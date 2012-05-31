@@ -4,14 +4,15 @@ gem 'rails',                  '~> 3.2.1'
 gem 'jquery-rails',           '~> 2.0.0'
 gem 'rails-boilerplate',      '~> 0.1.6'
 gem 'pg',                     '~> 0.13.1'
-gem 'slim',                   '~> 1.1.0'
+gem 'slim',                   '~> 1.2.1'
 gem 'thin'
-gem "sass",                   '~> 3.2.0.alpha'
+gem 'sass',                   '~> 3.2.0.alpha'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog',                    '~> 1.3.1'
-gem "meta_search",            '>= 1.1.0.pre'
-gem 'devise'
+gem 'meta_search',            '>= 1.1.0.pre'
+gem 'devise',                 '~> 2.1.0'
+gem 'omniauth-facebook',      '~> 1.3.0'
 
 group :assets do
   gem "compass-rails",        '~> 1.0.1'
@@ -25,8 +26,8 @@ group :test, :development do
 end
 
 group :test do
-  gem 'factory_girl_rails',   '~> 1.6.0'
-  gem 'shoulda-matchers',     '~> 1.0.0'
+  gem 'factory_girl_rails',   '~> 3.3.0'
+  gem 'shoulda-matchers',     '~> 1.1.0'
   gem 'timecop',              '~> 0.3.5'
   gem 'email_spec',           '~> 1.2.1'
 end
