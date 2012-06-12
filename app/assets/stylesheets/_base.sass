@@ -1,0 +1,136 @@
+// ---------------------------------------------------------------------------------/
+//  BASE IMPORTS
+// ---------------------------------------------------------------------------------/
+
+// COMPASS MODULES
+// ----------------------------------------/
+@import "compass/reset"
+@import "compass/typography/"
+@import "compass/utilities/"
+@import "compass/css3"
+
+
+// PLUGINS
+// ----------------------------------------/
+@import "susy"
+// @import "fancybox"
+// @import "responsiveslides"
+// @import "tipsy"
+
+
+// OTHER CSS MODULES
+// ----------------------------------------/
+@import "print"
+@import "ie"
+
+
+
+
+// ---------------------------------------------------------------------------------/
+//  CONFIGS
+// ---------------------------------------------------------------------------------/
+
+// CONFIG: Susy Grid
+// ----------------------------------------/
+$total-columns: 12
+$column-width: 60px
+$gutter-width: 20px
+$grid-padding: 10px
+
+
+// CONFIG: Vertical Rhythm
+// ----------------------------------------/
+$base-font-size: 14px
+$base-line-height: 20px
+$round-to-nearest-half-line: true
+$font-unit: 14px
++establish-baseline
+
+
+// CONFIG: Font Rendering
+// ----------------------------------------/
+html
+  -webkit-font-smoothing: antialiased
+
+
+// CONFIG: Fonts
+// ----------------------------------------/
+// Add a custom font-face with Compass
+// +font-face("Geogrotesque-Regular", font-files("style_169901.woff", woff, "style_169901.ttf", truetype, "style_169901.svg", svg), "style_169901.eot")  
+$sans-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+$serif-family: "Georgia", "Times New Roman", Times, Cambria, Georgia, serif
+$monospace-family: "Monaco", "Courier New", monospace, sans-serif
+$lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  
+
+//These provide basic font stacks with fallbacks. You can add your own fonts to the stack
+=sans-serif($prepend:false)
+  $list: $sans-family
+  @if $prepend != false
+    font-family: join($prepend,$list)
+  @else
+    font-family: $list
+
+=serif($prepend:false)
+  $list: $serif-family
+  @if $prepend != false
+    font-family: join($prepend,$list)
+  @else
+    font-family: $list
+
+=monospace($prepend:false)
+  $list: $monospace-family
+  @if $prepend != false
+    font-family: join($prepend,$list)
+  @else
+    font-family: $list
+    
+    
+// CONFIG: Sprites
+// ----------------------------------------/
+$tab-bar-layout: vertical
+$small-elements-spacing: 20px
+@import "small-elements/*.png"
+
+$tab-bar-layout: vertical
+$small-elements-spacing: 20px
+@import "large-elements/*.png"
+
+
+// ---------------------------------------------------------------------------------/
+//  MIXINS
+// ---------------------------------------------------------------------------------/
+
+=debug
+  background-color: rgba(red,0.6)
+  
+  
+//Estilos elementos em comum
+=box-style-wrapper
+  +box-shadow(rgba(#000, .3) 0 0 8px)
+  background-color: #fff
+  +padding-leader(1/2)
+  +padding-trailer(1/2)
+
+  
+=box-style-inner
+  background-color: #f6f3ec
+  margin-right: 10px
+  margin-left: 10px
+
+  
+=letter-spacing-title
+  letter-spacing: -0.06em
+  
+
+// ---------------------------------------------------------------------------------/
+//  OTHER DEFAULT STYLES
+// ---------------------------------------------------------------------------------/
+
+// FORMS
+// ----------------------------------------/
+input, textarea, select
+  outline: none
+  
+b
+  font-weight: bold
