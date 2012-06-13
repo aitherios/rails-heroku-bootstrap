@@ -11,10 +11,11 @@ doctype 5
 head
   meta charset="utf-8"
   meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
-  title Startaê Bootstrap
+  title Startaê Bootstrap — Tagline
   meta name="description" content=""
   meta name="author" content="Startaê — http://startae.com.br"
   meta name="viewport" content="width=device-width"
+  / = render 'layouts/facebook_og'
   = csrf_meta_tags
   = stylesheet_link_tag 'application', media: 'all'
   = javascript_include_tag 'close_for_facebook_login'
@@ -22,7 +23,7 @@ head
   = render 'layouts/hashgrid'
 
 body
-  = render 'layouts/browser-warning'
+  = render 'layouts/browser_warning'
   
   section.page
 
