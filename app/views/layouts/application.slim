@@ -18,7 +18,6 @@ html.no-js lang="#{I18n.locale}"
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'close_for_facebook_login'
     = javascript_include_tag 'modernizr'
-    = render 'layouts/hashgrid'
 
   body class="#{I18n.locale}"
     = render 'layouts/browser_warning'
@@ -35,4 +34,5 @@ html.no-js lang="#{I18n.locale}"
     = render 'layouts/footer'
 
     = javascript_include_tag 'application'
+    = render 'layouts/hashgrid'
     = render 'layouts/google_analytics' if Rails.env.production?
