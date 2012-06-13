@@ -1,0 +1,47 @@
+// Hashgrid Config
+// Dimensions - same width as your grid with gutters
+$total-columns: 12
+$column-width: 60px
+$gutter-width: 20px
+$grid-padding: 10px
+$grid: ($total-columns * $column-width) + ($total-columns * $gutter-width)
+$leading: 20px
+$horiz-grid-color: rgba(red,.1)
+$vert-grid-color: rgba(#00b0b2,.3)
+
+#grid
+  width: $grid
+  // Grid (left-aligned)
+  // position: absolute
+  // top: 0
+  // left: 0
+  
+  // Grid (centered)
+  position: absolute
+  top: 0
+  left: 50%
+  margin-left: -$grid / 2
+  z-index: 10000
+  
+  div
+    &.vert
+      width: $column-width - 1px
+      border: solid $vert-grid-color
+      border-width: 0 1px
+      margin-right: $gutter-width - 1px
+
+      &:last-child
+        margin-right: 0
+
+    &.first-line
+      margin-left: $grid-padding - 1px
+
+    &.horiz
+      height: $leading - 1px
+      border-bottom: 1px solid $horiz-grid-color
+      margin: 0
+      padding: 0
+
+    &.grid-1 div.vert
+      /* Vertical grid line colour for grid 1
+      border-color: $vert-grid-color
