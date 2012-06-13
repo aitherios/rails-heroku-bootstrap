@@ -57,17 +57,38 @@ html
   -webkit-font-smoothing: antialiased
 
 
+// CONFIG: Colors
+// ----------------------------------------/
+$color-base: #000
+$color-alt: #fff
+
+
 // CONFIG: Fonts
 // ----------------------------------------/
-// Add a custom font-face with Compass
-// +font-face("Geogrotesque-Regular", font-files("style_169901.woff", woff, "style_169901.ttf", truetype, "style_169901.svg", svg), "style_169901.eot")  
 $sans-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 $serif-family: "Georgia", "Times New Roman", Times, Cambria, Georgia, serif
 $monospace-family: "Monaco", "Courier New", monospace, sans-serif
 $lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
-  
+// Add a custom font-face with Compass
+// +font-face("Geogrotesque-Regular", font-files("style_169901.woff", woff, "style_169901.ttf", truetype, "style_169901.svg", svg), "style_169901.eot")  
 
-//These provide basic font stacks with fallbacks. You can add your own fonts to the stack
+
+// CONFIG: Sprites
+// ----------------------------------------/
+// $tab-bar-layout: vertical
+// $small-elements-spacing: 20px
+// @import "small-elements/*.png"
+// 
+// $tab-bar-layout: vertical
+// $small-elements-spacing: 20px
+// @import "large-elements/*.png"
+
+
+// ---------------------------------------------------------------------------------/
+//  MIXINS
+// ---------------------------------------------------------------------------------/
+
+// These provide basic font stacks with fallbacks. You can add your own fonts to the stack
 =sans-serif($prepend:false)
   $list: $sans-family
   @if $prepend != false
@@ -90,21 +111,6 @@ $lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-family: $list
     
     
-// CONFIG: Sprites
-// ----------------------------------------/
-// $tab-bar-layout: vertical
-// $small-elements-spacing: 20px
-// @import "small-elements/*.png"
-// 
-// $tab-bar-layout: vertical
-// $small-elements-spacing: 20px
-// @import "large-elements/*.png"
-
-
-// ---------------------------------------------------------------------------------/
-//  MIXINS
-// ---------------------------------------------------------------------------------/
-
 =debug
   background-color: rgba(red,0.6)
   
@@ -119,8 +125,14 @@ $lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 
 // FORMS
 // ----------------------------------------/
-input, textarea, select
+input, textarea, select, button
   outline: none
+
   
 b
   font-weight: bold
+  
+// CLASSES
+// ----------------------------------------/
+.text-strike
+  text-decoration: line-through
