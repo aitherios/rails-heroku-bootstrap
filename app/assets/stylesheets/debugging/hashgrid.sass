@@ -1,0 +1,40 @@
+// Hashgrid Config
+// Variables are inside the partial _variables.sass
+@import "globals/variables"
+
+#grid
+  width: $hg-grid
+  // Grid (left-aligned)
+  // position: absolute
+  // top: 0
+  // left: 0
+  
+  // Grid (centered)
+  position: absolute
+  top: 0
+  left: 50%
+  margin-left: -$hg-grid / 2
+  z-index: 10000
+  
+  div
+    &.vert
+      width: $hg-column-width - 1px
+      border: solid $hg-vert-grid-color
+      border-width: 0 1px
+      margin-right: $hg-gutter-width - 1px
+
+      &:last-child
+        margin-right: 0
+
+    &.first-line
+      margin-left: $hg-grid-padding - 1px
+
+    &.horiz
+      height: $hg-leading - 1px
+      border-bottom: 1px solid $hg-horiz-grid-color
+      margin: 0
+      padding: 0
+
+    &.grid-1 div.vert
+      /* Vertical grid line colour for grid 1
+      border-color: $hg-vert-grid-color

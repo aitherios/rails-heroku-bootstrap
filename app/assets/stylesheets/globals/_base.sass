@@ -2,8 +2,9 @@
 //  BASE IMPORTS
 // ---------------------------------------------------------------------------------/
 
+
 // COMPASS MODULES
-// ----------------------------------------/
+// --------------------------------------------------
 @import "compass/reset"
 @import "compass/typography/"
 @import "compass/utilities/"
@@ -11,123 +12,50 @@
 
 
 // COMPASS PLUGINS
-// ----------------------------------------/
+// --------------------------------------------------
 @import "susy"
 
 
 // OTHER GLOBAL FILES
-// ----------------------------------------/
+// --------------------------------------------------
+@import "variables"
+@import "mixins"
+@import "sprites"
 @import "print"
 @import "ie"
 
 
+// ---------------------------------------------------------------------------------
+//  DEFAULT STYLES
+// ---------------------------------------------------------------------------------
 
 
-// ---------------------------------------------------------------------------------/
-//  CONFIGS
-// ---------------------------------------------------------------------------------/
-
-// CONFIG: Susy Grid
-// ----------------------------------------/
-// $total-columns: 12
-// $column-width: 60px
-// $gutter-width: 20px
-// $grid-padding: 10px
-$total-columns  : 7
-$column-width   : 4em
-$gutter-width   : 1em
-$grid-padding   : $gutter-width
-
-
-// CONFIG: Vertical Rhythm
-// ----------------------------------------/
-$base-font-size: 14px
-$base-line-height: 20px
-$round-to-nearest-half-line: true
-$font-unit: 14px
+// ACTIVATE THE VERTICAL RHYTHM
+// --------------------------------------------------
 +establish-baseline
 
 
-// CONFIG: Font Rendering
-// ----------------------------------------/
+// FONT RENDERING
+// --------------------------------------------------
 html
   -webkit-font-smoothing: antialiased
+  
 
-
-// CONFIG: Colors
-// ----------------------------------------/
-$color-base: #000
-$color-alt: #fff
-
-
-// CONFIG: Fonts
-// ----------------------------------------/
-$sans-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-$serif-family: "Georgia", "Times New Roman", Times, Cambria, Georgia, serif
-$monospace-family: "Monaco", "Courier New", monospace, sans-serif
-$lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+// FONT-FACES
+// --------------------------------------------------
 // Add a custom font-face with Compass
-// +font-face("Geogrotesque-Regular", font-files("style_169901.woff", woff, "style_169901.ttf", truetype, "style_169901.svg", svg), "style_169901.eot")  
+// +font-face("Geogrotesque-Regular", font-files("style_169901.woff", woff, "style_169901.ttf", truetype, "style_169901.svg", svg), "style_169901.eot")
 
 
-// CONFIG: Sprites
-// ----------------------------------------/
-// $tab-bar-layout: vertical
-// $small-elements-spacing: 20px
-// @import "small-elements/*.png"
-// 
-// $tab-bar-layout: vertical
-// $small-elements-spacing: 20px
-// @import "large-elements/*.png"
-
-
-// ---------------------------------------------------------------------------------/
-//  MIXINS
-// ---------------------------------------------------------------------------------/
-
-// These provide basic font stacks with fallbacks. You can add your own fonts to the stack
-=sans-serif($prepend:false)
-  $list: $sans-family
-  @if $prepend != false
-    font-family: join($prepend,$list)
-  @else
-    font-family: $list
-
-=serif($prepend:false)
-  $list: $serif-family
-  @if $prepend != false
-    font-family: join($prepend,$list)
-  @else
-    font-family: $list
-
-=monospace($prepend:false)
-  $list: $monospace-family
-  @if $prepend != false
-    font-family: join($prepend,$list)
-  @else
-    font-family: $list
-    
-    
-=debug
-  background-color: rgba(red,0.6)
-  
-=pressed-link
-  position: relative
-  bottom: -1px
-  
-
-// ---------------------------------------------------------------------------------/
-//  OTHER DEFAULT STYLES
-// ---------------------------------------------------------------------------------/
-
-// * { box-sizing: border-box } FTW - http://paulirish.com/2012/box-sizing-border-box-ftw/
-// ----------------------------------------/
+// BOX-SIZING BORDER-BOX DEFAULT 
+// http://paulirish.com/2012/box-sizing-border-box-ftw/
+// --------------------------------------------------
 *
   +box-sizing(border-box)
 
 
 // FORMS
-// ----------------------------------------/
+// --------------------------------------------------
 input, textarea, select, button
   outline: none
 
@@ -136,6 +64,6 @@ b
   font-weight: bold
   
 // CLASSES
-// ----------------------------------------/
+// --------------------------------------------------
 .text-strike
   text-decoration: line-through
