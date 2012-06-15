@@ -10,15 +10,12 @@
 @import "compass/css3"
 
 
-// PLUGINS
+// COMPASS PLUGINS
 // ----------------------------------------/
 @import "susy"
-// @import "fancybox"
-// @import "responsiveslides"
-// @import "tipsy"
 
 
-// OTHER CSS MODULES
+// OTHER GLOBAL FILES
 // ----------------------------------------/
 @import "print"
 @import "ie"
@@ -122,6 +119,12 @@ $lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 // ---------------------------------------------------------------------------------/
 //  OTHER DEFAULT STYLES
 // ---------------------------------------------------------------------------------/
+
+// * { box-sizing: border-box } FTW - http://paulirish.com/2012/box-sizing-border-box-ftw/
+// ----------------------------------------/
+*
+  +box-sizing(border-box)
+
 
 // FORMS
 // ----------------------------------------/

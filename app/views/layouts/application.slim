@@ -34,5 +34,8 @@ html.no-js lang="#{I18n.locale}"
     = render 'layouts/footer'
 
     = javascript_include_tag 'application'
+    /[if (gte IE 6)&(lte IE 8)]
+      script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"
+      script type="text/javascript" src="selectivizr.js"
     = render 'layouts/hashgrid'
     = render 'layouts/google_analytics' if Rails.env.production?
