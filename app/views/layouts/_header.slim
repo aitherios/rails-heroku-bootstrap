@@ -18,13 +18,20 @@ header.header-page role="banner"
         
     nav.nav-user role="navigation"
       ul
+      - if current_user.present?
         li
           .user-avatar.small
             .user-avatar-inner
               img src="#{image_path 'avatar/avatar-small.png'}"
         li
-          .username Olá <b>Fulano</b>
+          .username Olá <b>#{current_user.name}</b>
         li
           a href="#" Minha Conta
         li
-          a href="#" Sair
+          a href="#{destroy_user_session_path}" Sair
+      - else
+        li
+          a href="#{new_user_session_path}" Entrar
+        li
+          a href="#{user_omniauth_connect_path(:facebook)}" class="popup button facebook-connect" data-width="600" data-height="400"
+            | Entrar com o Facebook
