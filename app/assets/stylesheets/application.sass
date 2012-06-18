@@ -23,7 +23,31 @@
 
 body
   +sans-serif
+  color: $text-color
+  background-color: $white
   
-//SUSY
+
+// LINKS
+// -----
+
+a
+  color: $link-color
+  text-decoration: none
+
+  &:visited
+    color: $link-color-visited
+
+  &:hover
+    color: $link-color-hover
+    text-decoration: underline
+    
+  &:active
+    color: $link-color-active
+    +pressed-link
+
+  
+  
+// SUSY GRID
+// -----
 .container
   +container
