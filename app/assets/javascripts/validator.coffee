@@ -1,4 +1,13 @@
 $ ->
+  $.fn.exists = ->
+    @.length > 0
+
+  $.fn.addRules = ->
+    if ($ @).exists()
+      args = Array.prototype.slice.call(arguments)
+      args = ['add'].concat(args)
+      ($ @).rules.apply(@, args)
+
   $.validator.setDefaults
     errorElement: 'span'
     errorClass: 'invalid'

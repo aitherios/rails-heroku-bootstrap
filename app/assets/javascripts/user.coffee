@@ -1,15 +1,18 @@
 $ ->
-  if ($ '#new_user').length
+  if ($ '#new_user').exists()
     ($ '#new_user').validate()
-    ($ '#user_email').rules 'add',
+
+    ($ '#user_email').addRules
       required: true
       email: true
-    ($ '#user_password').rules 'add',
+
+    ($ '#user_password').addRules
       required: true
       minlength: 6
       messages:
         minlength: 'Senha curta. Mínimo 6 caracteres'
-    ($ '#user_password_confirmation').rules 'add',
+
+    ($ '#user_password_confirmation').addRules
       required: true
       equalTo: '#user_password'
       messages:
