@@ -7,4 +7,5 @@ $ ->
     required: 'Campo obrigatório'
     email: 'Email inválido'
     digits: 'Apenas números'
-    minlength: 'Senha curta. Mínimo 6 caracteres'
+    minlength: 'Campo muito curto'
+    equalTo: 'Campo não confere'
