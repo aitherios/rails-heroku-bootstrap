@@ -31,6 +31,8 @@ header.header-page role="banner"
           a href="#{destroy_user_session_path}" Sair
       - else
         li
+          a href="#{new_user_registration_path}" Cadastro
+        li
           a href="#{new_user_session_path}" Entrar
         li
           a href="#{user_omniauth_connect_path(:facebook)}" class="popup button facebook-connect" data-width="600" data-height="400"
