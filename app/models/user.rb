@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     data = access_token.info
 
     if user = self.find_by_email(data.email)
-      user.update_attributes name: data.name if user.name.blank?
+      user.update_attributes(name: data.name) if user.name.blank?
       user
     else
       self.create!(email: data.email, password: Devise.friendly_token[0,20], name: data.name)
