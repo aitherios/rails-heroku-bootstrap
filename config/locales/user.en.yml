@@ -6,3 +6,8 @@ en:
         current_password_note: 
           we need your current password to confirm your changes
         update: Update
+        sign_in: Sign In
+        sign_up: Sign Up
+        forgot_password: Forgot your password?
+        no_confirmation_instructions: Didn't receive confirmation instructions?
+        no_unlock_instructions: Didn't receive unlock instructions?
