@@ -26,7 +26,7 @@ header#header-page role="banner"
         li
           .username Olá <b>#{current_user.name}</b>
         li
-          a href="#" Minha Conta
+          a href="#{edit_user_registration_path}" Minha Conta
         li
           a href="#{destroy_user_session_path}" Sair
       - else
