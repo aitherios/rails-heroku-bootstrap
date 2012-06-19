@@ -1,0 +1,12 @@
+pt-BR:
+  helpers:
+    label:
+      user:
+        name: Nome
+        password: Senha
+        password_confirmation: Confirmação de Senha
+        current_password: Senha Atual
+        password_note: para não alterar, deixe em branco
+        current_password_note:
+          precisamos da sua senha atual para confirmar as alterações
+        update: Salvar
