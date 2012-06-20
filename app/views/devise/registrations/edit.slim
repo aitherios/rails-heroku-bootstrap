@@ -10,7 +10,7 @@
     = f.email_field :email
   div
     = f.label :password
-    i = " (#{t 'helpers.label.' + resource_name.to_s + '.password_note'})"
+    i = " (" + t("helpers.label.#{resource_name}.password_note") + ")"
     br
     = f.password_field :password, :autocomplete => "off"
   div
@@ -19,7 +19,7 @@
     = f.password_field :password_confirmation, :autocomplete => "off"
   div
     = f.label :current_password
-    i = " (#{t 'helpers.label.' + resource_name.to_s + '.current_password_note'})"
+    i = " (" + t("helpers.label.#{resource_name}.current_password_note") + ")"
     br
     = f.password_field :current_password, :autocomplete => "off"
-  div= f.submit "#{t 'helpers.label.' + resource_name.to_s + '.update'}"
+  div = f.submit t("helpers.label.#{resource_name}.update")

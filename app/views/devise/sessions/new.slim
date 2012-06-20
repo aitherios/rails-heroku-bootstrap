@@ -11,5 +11,5 @@
     div
       = f.check_box :remember_me, checked: true
       = f.label :remember_me
-  div= f.submit "#{t 'helpers.label.' + resource_name.to_s + '.sign_in'}"
+  div = f.submit t("helpers.label.#{resource_name}.sign_in")
 = render :partial => "devise/shared/links"

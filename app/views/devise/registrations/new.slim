@@ -2,19 +2,19 @@
   = devise_error_messages!
   div
     = f.label :name
-    br/
+    br
     = f.text_field :name
   div
     = f.label :email
-    br/
+    br
     = f.email_field :email
   div
     = f.label :password
-    br/
+    br
     = f.password_field :password
   div
     = f.label :password_confirmation
-    br/
+    br
     = f.password_field :password_confirmation
-  div= f.submit t("helpers.label.user.sign_up")
+  div = f.submit t("helpers.label.user.sign_up")
 = render :partial => "devise/shared/links"

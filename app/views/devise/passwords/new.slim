@@ -2,7 +2,7 @@
   = devise_error_messages!
   div
     = f.label :email
-    br/
+    br
     = f.email_field :email
-  div= f.submit "#{t 'helpers.label.' + resource_name.to_s + '.send_reset_password_instructions'}"
+  div = f.submit t("helpers.label.#{resource_name}.send_reset_password_instructions")
 = render :partial => "devise/shared/links"
