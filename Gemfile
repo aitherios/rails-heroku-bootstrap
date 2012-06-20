@@ -15,11 +15,12 @@ gem 'omniauth-facebook',      '~> 1.3.0'
 gem "oily_png",               '~> 1.0.2'
 
 group :assets do
-  gem 'compass',              '~> 0.12.2.rc.1'
+  gem 'compass',              '~> 0.13.alpha.0'
   gem 'compass-rails',        '~> 1.0.2'
-  gem 'sass',                 '~> 3.2.0.alpha.244'
+  gem 'sass',                 '~> 3.2.0.alpha.247'
   gem 'sass-rails',           '~> 3.2.5'
   gem 'susy',                 '~> 1.0.rc.1'
+  gem 'animate',              '~> 0.1.alpha.0'
   gem 'coffee-rails',         '~> 3.2.2'
   gem 'uglifier',             '~> 1.2.4'
 end
