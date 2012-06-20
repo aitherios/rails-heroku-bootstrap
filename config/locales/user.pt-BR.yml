@@ -16,3 +16,4 @@ pt-BR:
         forgot_password: Esqueceu sua senha?
         no_confirmation_instructions: Não recebeu instruções de confirmação?
         no_unlock_instructions: Não recebeu instruções de desbloqueamento?
+        send_reset_password_instructions: Mandar instruções para alterar minha senha

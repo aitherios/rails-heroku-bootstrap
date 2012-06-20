@@ -11,3 +11,4 @@ en:
         forgot_password: Forgot your password?
         no_confirmation_instructions: Didn't receive confirmation instructions?
         no_unlock_instructions: Didn't receive unlock instructions?
+        send_reset_password_instructions: Send me reset password instructions
