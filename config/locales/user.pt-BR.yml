@@ -4,7 +4,7 @@ pt-BR:
       user:
         name: Nome
         password: Senha
-        password_confirmation: Confirmação de Senha
+        password_confirmation: Confirmação da Senha
         new_password: Nova Senha
         new_password_confirmation: Confirmação da Nova Senha
         current_password: Senha Atual
@@ -15,7 +15,7 @@ pt-BR:
         update: Salvar
         remember_me: Mantenha-me conectado
         sign_in: Entrar
-        sign_up: Cadastro
+        sign_up: Cadastrar
         forgot_password: Esqueceu sua senha?
         no_confirmation_instructions: Não recebeu instruções de confirmação?
         no_unlock_instructions: Não recebeu instruções de desbloqueamento?
