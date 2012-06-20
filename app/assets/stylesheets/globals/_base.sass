@@ -19,16 +19,28 @@
 // OTHER GLOBAL FILES
 // --------------------------------------------------
 @import "variables"
+@import "functions"
 @import "mixins"
+
 @import "sprites"
 @import "media-queries"
+
 @import "print"
 @import "ie"
 
+@import "components/buttons"
 
 // ---------------------------------------------------------------------------------
 //  DEFAULT STYLES
 // ---------------------------------------------------------------------------------
+
+html
+  +improve-text-rendering
+  overflow-y: scroll
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  text-size-adjust: 100%
+
 
 
 // ACTIVATE THE VERTICAL RHYTHM
@@ -36,16 +48,20 @@
 +establish-baseline
 
 
-// FONT RENDERING
-// --------------------------------------------------
-html
-  -webkit-font-smoothing: antialiased
-  
 
 // FONT-FACES
 // --------------------------------------------------
 // Add a custom font-face with Compass
 // +font-face("Geogrotesque-Regular", font-files("style_169901.woff", woff, "style_169901.ttf", truetype, "style_169901.svg", svg), "style_169901.eot")
+
+
+
+// Text Selection
+// --------------------------------------------------
+::selection
+  background: $text-selection-background
+  color: $text-selection-color
+
 
 
 // BOX-SIZING BORDER-BOX DEFAULT 
@@ -58,10 +74,16 @@ html
   +box-sizing(content-box)
 
 
+
 // FORMS
 // --------------------------------------------------
 input, textarea, select, button
   outline: none
+  
+// Remove the webkit glow 
+*:focus
+  outline: none
+
 
   
 b
