@@ -5,6 +5,9 @@ en:
         password_note: leave blank if you don't want to change it
         current_password_note: 
           we need your current password to confirm your changes
+        new_password: New Password
+        new_password_confirmation: New Password Confirmation
+        change_password: Change my password
         update: Update
         sign_in: Sign In
         sign_up: Sign Up

@@ -5,7 +5,10 @@ pt-BR:
         name: Nome
         password: Senha
         password_confirmation: Confirmação de Senha
+        new_password: Nova Senha
+        new_password_confirmation: Confirmação da Nova Senha
         current_password: Senha Atual
+        change_password: Mudar minha senha
         password_note: para não alterar, deixe em branco
         current_password_note:
           precisamos da sua senha atual para confirmar as alterações
@@ -17,3 +20,5 @@ pt-BR:
         no_confirmation_instructions: Não recebeu instruções de confirmação?
         no_unlock_instructions: Não recebeu instruções de desbloqueamento?
         send_reset_password_instructions: Mandar instruções para alterar minha senha
+
+        
