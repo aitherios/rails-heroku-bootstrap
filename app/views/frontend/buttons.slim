@@ -1,6 +1,6 @@
 section#main role="main"
-  h1 Buttons
-    
+
+  h1 Buttons    
   section
     a.button href="#button" Post comment (link)
     input.button type="submit" value="Post comment (input)"
@@ -13,11 +13,31 @@ section#main role="main"
     a.button.primary.small href="#" Publish post
     a.button.small href="#" Save as draft
 
+  
+  h2 Buttons with dangerous actions
+  section
+    a href="#" class="button danger" Delete post
+    
+  
   h2 Grouped buttons
-
   section
     .button-group
       a.button.primary href="#" Dashboard
       a.button href="#" Inbox
       a.button href="#" Account
       a.button href="#" Logout
+      
+      
+  h2 Grouped buttons
+  section
+    .actions.button-container
+      a.button.primary href="#" Compose new
+
+      .button-group
+        a.button.primary href="#" Archive
+        a.button href="#" Report spam
+        a.button.danger href="#" Delete
+
+      .button-group.minor-group
+        a.button href="#" Move to
+        a.button href="#" Labels

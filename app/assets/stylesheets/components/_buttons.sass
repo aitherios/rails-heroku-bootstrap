@@ -13,7 +13,7 @@ h1
 h2
   +adjust-font-size-to(16px)
   +adjust-leading-to(2)
-  +trailer(1)
+  +trailer(0)
   font-weight: bold
 
 
@@ -29,7 +29,6 @@ h2
   vertical-align: middle
   +background-clip(padding-box)
   +inline-block
-  // +float-left
     
 .button
   @extend .normalise-button
@@ -40,25 +39,18 @@ h2
   padding-left: 1em
   +padding-leader(.6)
   +padding-trailer(.6)
-  // +leader(0)
-  // +trailer(1)
-
   min-height: +rhythm(2)
-  // line-height: +rhythm(2)
-  
-  +text-shadow(rgba(#fff, .6) 1px 1px 0)
+  +text-shadow(rgba(#fff, .6) 0 1px 0)
   color: $gray-dark
-  +border-radius(3px)
+  +border-radius(4px)
   position: relative
   overflow: visible
   font-weight: bold
-  // border: 1px solid #d4d4d4
   border: 1px solid #a7a8ab
-  +box-shadow(0 1px 2px rgba(#000, .2), inset 0 0 0 1px rgba(#fff, .3))
+  background-color: #dfe0e3
   +background-image(linear-gradient(#fcfcfc, #dfe0e3))
-  // background-color: #ececec
-  // +background-image(linear-gradient(#f4f4f4, #ececec))
-  
+  +box-shadow(0 1px 2px rgba(#000, .2), inset 0 0 0 1px rgba(#fff, .3))
+
 
   &:visited
     color: $gray-dark
@@ -66,16 +58,12 @@ h2
   &:hover, &:focus, &:active, &.active
     border-color: #9fa1a3
     text-decoration: none
-    // +text-shadow(rgba(#000, .4) 0 -1px 0)
-    // color: $white
     background-color: #3c8dde
-    +background-image(linear-gradient(darken(#fcfcfc, 5%), darken(#dfe0e3, 5%)))
+    +background-image(linear-gradient(darken(#fcfcfc, 6%), darken(#dfe0e3, 8%)))
     color: $gray-darker
 
   &:active, &.active
     border-color: #b3b4b6
-    // border-bottom-color: #3884cd
-    // background-color: #3c8dde
     +box-shadow(0 1px 0 0 rgba(#fff, .6), inset 0 0 4px 0 rgba(41,43,46, .3))
     +background-image(linear-gradient(#d2d4d8, #dedfe2))
     color: $gray
@@ -96,7 +84,7 @@ h2
     min-height: +rhythm(1)
     padding-right: .7em
     padding-left: .7em
-
+    
   &.icon:before
     content: ""
     position: relative
@@ -273,53 +261,30 @@ h2
     color: #900
 
     &:hover, &:focus
+
       border-color: #b53f3a
       border-bottom-color: #a0302a
-      color: #fff
+      color: $white
       background-color: #dc5f59
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630))
-      background-image: -moz-linear-gradient(#dc5f59, #b33630)
-      background-image: -ms-linear-gradient(#dc5f59, #b33630)
-      background-image: -o-linear-gradient(#dc5f59, #b33630)
-      background-image: linear-gradient(#dc5f59, #b33630)
+      +background-image(linear-gradient(#dc5f59, #b33630))
+      +box-shadow(0 1px 2px rgba(#000, .2), inset 0 0 0 1px rgba(#fff, .1))
+      +text-shadow(rgba(#000, .4) 0 1px 0)
 
-    &:active
-      border-color: #b53f3a
-      border-bottom-color: #a0302a
-      color: #fff
-      background-color: #dc5f59
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630))
-      background-image: -moz-linear-gradient(#dc5f59, #b33630)
-      background-image: -ms-linear-gradient(#dc5f59, #b33630)
-      background-image: -o-linear-gradient(#dc5f59, #b33630)
-      background-image: linear-gradient(#dc5f59, #b33630)
+    &:active, &.active
       border-color: #a0302a
       border-bottom-color: #bf4843
+      color: $white
       background-color: #b33630
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59))
-      background-image: -moz-linear-gradient(#b33630, #dc5f59)
-      background-image: -ms-linear-gradient(#b33630, #dc5f59)
-      background-image: -o-linear-gradient(#b33630, #dc5f59)
-      background-image: linear-gradient(#b33630, #dc5f59)
-
-    &.active
-      border-color: #a0302a
-      border-bottom-color: #bf4843
-      background-color: #b33630
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59))
-      background-image: -moz-linear-gradient(#b33630, #dc5f59)
-      background-image: -ms-linear-gradient(#b33630, #dc5f59)
-      background-image: -o-linear-gradient(#b33630, #dc5f59)
-      background-image: linear-gradient(#b33630, #dc5f59)
+      +background-image(linear-gradient(#b33630, #dc5f59))
+      +box-shadow(0 1px 0 0 rgba(#fff, .6), inset 0 0 4px 0 rgba(41,43,46, .3))
+      +text-shadow(rgba(#000, .4) 0 1px 0)
 
   &.pill
     border-radius: 50em
+    
   &.disable
     opacity: 0.5
-  &.big
-    font-size: 14px
-    &.icon:before
-      top: 0
+
 
 /* overrides extra padding on button elements in Firefox
 
@@ -362,12 +327,12 @@ h2
 
 .button +
   .button, .button-group
-    margin-left: 15px
+    margin-left: 10px
 
 .button-group
   +
     .button, .button-group
-      margin-left: 15px
+      margin-left: 10px
   li
     float: left
     padding: 0
@@ -394,15 +359,20 @@ h2
   > .button:last-child
     border-top-left-radius: 0
     border-bottom-left-radius: 0
+
   &.minor-group .button
     border: 1px solid #d4d4d4
     text-shadow: none
     background-image: none
-    background-color: #fff
+    background-color: $gray-lighter
+    +background-image(linear-gradient(#fcfcfc, $gray-lighter))
+    color: $gray
     &:hover, &:focus
-      background-color: #599bdc
+      background-color: darken($gray-lighter, 6%)
+      +background-image(linear-gradient(darken(#fcfcfc, 6%), darken($gray-lighter, 6%)))
     &:active, &.active
-      background-color: #3072b3
+      background-color: darken($gray-lighter, 6%)
+      +background-image(linear-gradient(darken(#fcfcfc, 6%), darken($gray-lighter, 6%)))
     &.icon:before
       opacity: 0.8
 
