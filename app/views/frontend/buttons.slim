@@ -1,15 +1,23 @@
 section#main role="main"
   h1 Buttons
     
-  section.test
+  section
     a.button href="#button" Post comment (link)
     input.button type="submit" value="Post comment (input)"
     button.button type="submit" Post comment (button)
 
-  p opa
-
-  br
-  br
-
   section
     a href="#" class="button pill" This is a pill button
+
+  section
+    a.button.primary.small href="#" Publish post
+    a.button.small href="#" Save as draft
+
+  h2 Grouped buttons
+
+  section
+    .button-group
+      a.button.primary href="#" Dashboard
+      a.button href="#" Inbox
+      a.button href="#" Account
+      a.button href="#" Logout

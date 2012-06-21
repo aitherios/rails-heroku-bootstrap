@@ -1,7 +1,21 @@
+section#main
+  section
+    +trailer(1)
+    padding: +rhythm(1)
+    +box-shadow($gray-lighter 0 0 0 1px inset)
+    +clearfix
+    
 h1
   +adjust-font-size-to(20px)
-  +adjust-leading-to(2)  
+  +adjust-leading-to(2)
   font-weight: bold
+
+h2
+  +adjust-font-size-to(16px)
+  +adjust-leading-to(2)
+  +trailer(1)
+  font-weight: bold
+
 
 .normalise-button
   margin: 0
@@ -34,38 +48,52 @@ h1
   
   +text-shadow(rgba(#fff, .6) 1px 1px 0)
   color: $gray-dark
-  +border-radius(2px)
+  +border-radius(3px)
   position: relative
   overflow: visible
   font-weight: bold
-  border: 1px solid #d4d4d4
-
-
-  background-color: #ececec
-  +background-image(linear-gradient(#f4f4f4, #ececec))
+  // border: 1px solid #d4d4d4
+  border: 1px solid #a7a8ab
+  +box-shadow(0 1px 2px rgba(#000, .2), inset 0 0 0 1px rgba(#fff, .3))
+  +background-image(linear-gradient(#fcfcfc, #dfe0e3))
+  // background-color: #ececec
+  // +background-image(linear-gradient(#f4f4f4, #ececec))
   
 
   &:visited
     color: $gray-dark
     
   &:hover, &:focus, &:active, &.active
-    border-color: #3072b3
-    border-bottom-color: #2a65a0
+    border-color: #9fa1a3
     text-decoration: none
-    +text-shadow(rgba(#000, .4) 0 -1px 0)
-    color: $white
+    // +text-shadow(rgba(#000, .4) 0 -1px 0)
+    // color: $white
     background-color: #3c8dde
-    +background-image(linear-gradient(#599bdc, #3072b3))
+    +background-image(linear-gradient(darken(#fcfcfc, 5%), darken(#dfe0e3, 5%)))
+    color: $gray-dark
 
   &:active, &.active
-    border-color: #2a65a0
-    border-bottom-color: #3884cd
-    background-color: #3c8dde
-    +background-image(linear-gradient(#3072b3, #599bdc))
+    border-color: #b3b4b6
+    // border-bottom-color: #3884cd
+    // background-color: #3c8dde
+    +box-shadow(0 1px 0 0 rgba(#fff, .6), inset 0 0 4px 0 rgba(41,43,46, .3))
+    +background-image(linear-gradient(#d2d4d8, #dedfe2))    
 
   &::-moz-focus-inner
     padding: 0
     border: 0
+    
+  &.small
+    +margin-leader(.5)
+    +margin-trailer(.5)
+    +padding-leader(.4)
+    +padding-trailer(.4)
+    +adjust-font-size-to(11px)
+    +adjust-leading-to(0)
+    height: +rhythm(1)
+    min-height: +rhythm(1)
+    padding-right: .7em
+    padding-left: .7em
 
   &.icon:before
     content: ""
@@ -237,6 +265,7 @@ h1
 
   &.primary
     font-weight: bold
+    
 
   &.danger
     color: #900
@@ -323,13 +352,11 @@ h1
  * ==========================================================================
 
 .button-group
-  display: inline-block
+  +inline-block
   list-style: none
   padding: 0
   margin: 0
-  /* IE hacks
-  zoom: 1
-  *display: inline
+  +pie-clearfix
 
 .button +
   .button, .button-group
