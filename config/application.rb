@@ -19,7 +19,7 @@ module StartaeBootstrap
     config.assets.version = '1.0'
     config.i18n.default_locale = 'pt-BR'
     config.generators.stylesheet_engine = :sass
-    config.assets.initialize_on_precompile = true
+    config.assets.initialize_on_precompile = false
     config.time_zone = 'Brasilia'
   end
 end
