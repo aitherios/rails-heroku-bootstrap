@@ -70,24 +70,26 @@ h2
     // color: $white
     background-color: #3c8dde
     +background-image(linear-gradient(darken(#fcfcfc, 5%), darken(#dfe0e3, 5%)))
-    color: $gray-dark
+    color: $gray-darker
 
   &:active, &.active
     border-color: #b3b4b6
     // border-bottom-color: #3884cd
     // background-color: #3c8dde
     +box-shadow(0 1px 0 0 rgba(#fff, .6), inset 0 0 4px 0 rgba(41,43,46, .3))
-    +background-image(linear-gradient(#d2d4d8, #dedfe2))    
+    +background-image(linear-gradient(#d2d4d8, #dedfe2))
+    color: $gray
+    
 
   &::-moz-focus-inner
     padding: 0
     border: 0
     
   &.small
-    +margin-leader(.5)
-    +margin-trailer(.5)
-    +padding-leader(.4)
-    +padding-trailer(.4)
+    +margin-leader(.4)
+    +margin-trailer(.4)
+    +padding-leader(.5)
+    +padding-trailer(.6)
     +adjust-font-size-to(11px)
     +adjust-leading-to(0)
     height: +rhythm(1)
