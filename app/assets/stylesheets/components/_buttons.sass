@@ -1,7 +1,20 @@
+section#main
+  section
+    +trailer(1)
+    padding: +rhythm(1)
+    +box-shadow($gray-lighter 0 0 0 1px inset)
+    
 h1
   +adjust-font-size-to(20px)
-  +adjust-leading-to(2)  
+  +adjust-leading-to(2)
   font-weight: bold
+
+h2
+  +adjust-font-size-to(16px)
+  +adjust-leading-to(2)
+  +trailer(1)
+  font-weight: bold
+
 
 .normalise-button
   margin: 0
@@ -323,13 +336,11 @@ h1
  * ==========================================================================
 
 .button-group
-  display: inline-block
+  +inline-block
   list-style: none
   padding: 0
   margin: 0
-  /* IE hacks
-  zoom: 1
-  *display: inline
+  +pie-clearfix
 
 .button +
   .button, .button-group
