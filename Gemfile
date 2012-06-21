@@ -1,24 +1,28 @@
 source 'https://rubygems.org'
 
 gem 'rails',                  '~> 3.2.1'
-gem 'jquery-rails',           '~> 2.0.0'
-gem 'rails-boilerplate',      '~> 0.1.6'
+gem 'jquery-rails',           '~> 2.0.2'
+gem 'rails-boilerplate',      '~> 0.1.9'
 gem 'pg',                     '~> 0.13.1'
-gem 'slim',                   '~> 1.2.1'
+gem 'slim',                   '~> 1.2.2'
 gem 'thin'
-gem 'sass',                   '~> 3.2.0.alpha'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog',                    '~> 1.3.1'
 gem 'meta_search',            '>= 1.1.0.pre'
 gem 'devise',                 '~> 2.1.0'
 gem 'omniauth-facebook',      '~> 1.3.0'
+gem "oily_png",               '~> 1.0.2'
 
 group :assets do
-  gem "compass-rails",        '~> 1.0.1'
+  gem 'compass',              '~> 0.13.alpha.0'
+  gem 'compass-rails',        '~> 1.0.2'
+  gem 'sass',                 '~> 3.2.0.alpha.247'
   gem 'sass-rails',           '~> 3.2.5'
-  gem 'coffee-rails',         '~> 3.2.1'
-  gem 'uglifier',             '>= 1.0.3'
+  gem 'susy',                 '~> 1.0.rc.1'
+  gem 'animate',              '~> 0.1.alpha.0'
+  gem 'coffee-rails',         '~> 3.2.2'
+  gem 'uglifier',             '~> 1.2.4'
 end
 
 group :test, :development do

@@ -1,0 +1,58 @@
+// ---------------------------------------------------------------------------------/
+//  IMPORTS
+// ---------------------------------------------------------------------------------/
+@import "globals/base"
+
+
+// PLUGINS
+// ----------------------------------------/
+// @import "fancybox"
+// @import "responsiveslides"
+// @import "tipsy"
+
+
+// SHARED
+// ----------------------------------------/
+// @import "shared/loading"
+
+
+// SECTIONS
+// ----------------------------------------/
+// @import "sections/home"
+
+
+body
+  +sans-serif
+  color: $text-color
+  background-color: $white
+  
+
+// LINKS
+// -----
+
+a
+  color: $link-color
+  text-decoration: none
+
+  &:visited
+    color: $link-color-visited
+    
+  &:focus
+    color: $link-color-hover
+    text-decoration: underline
+
+  &:hover
+    color: $link-color-hover
+    text-decoration: underline
+    
+  &:active
+    color: $link-color-active
+    +pressed-link
+
+  
+  
+// SUSY GRID
+// -----
+#header-page-inner, #content, #footer-page-inner
+  +container
+  +box-sizing(content-box)

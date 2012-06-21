@@ -1,4 +1,5 @@
 StartaeBootstrap::Application.configure do
+  Slim::Engine.set_default_options :format => :html5
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -47,7 +48,7 @@ StartaeBootstrap::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
- config.assets.precompile += %w( modernizr.js active_admin.css active_admin.js close_for_facebook_login.coffee )
+ config.assets.precompile += %w( modernizr.js active_admin.css active_admin.js close_for_facebook_login.coffee selectivizr.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

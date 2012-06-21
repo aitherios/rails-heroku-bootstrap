@@ -1,0 +1,147 @@
+// ---------------------------------------------------------------------------------
+// VARIABLES
+// Variables to customize the look and feel of Bootstrap
+// ---------------------------------------------------------------------------------
+
+
+// CONFIG: Susy Grid
+// --------------------------------------------------
+$total-columns: 12
+$column-width: 60px
+$gutter-width: 20px
+$grid-padding: 10px
+// $total-columns: 8
+// $column-width: 3em
+// $gutter-width: 1em
+// $grid-padding: $gutter-width
+
+
+// CONFIG: Vertical Rhythm
+// --------------------------------------------------
+$base-font-size: 14px
+$base-line-height: 20px
+$round-to-nearest-half-line: false
+$font-unit: 14px
+
+
+// CONFIG: HASH GRID - FOR DEBUGGING
+// Getting values from the variables from Susy Grid and Vertical Rhythm
+// --------------------------------------------------
+$hg-total-columns: $total-columns
+$hg-column-width: $column-width
+$hg-gutter-width: $gutter-width
+$hg-grid-padding: $grid-padding
+$hg-grid: ($hg-total-columns * $hg-column-width) + ($hg-total-columns * $hg-gutter-width)
+$hg-leading: $base-line-height
+$hg-horiz-grid-color: rgba(red,.1)
+$hg-vert-grid-color: rgba(#00b0b2,.3)
+
+
+// CONFIG: Compass Cross-Browser Support Configuration
+// --------------------------------------------------
+$legacy-support-for-ie6: false
+$legacy-support-for-ie7: false
+
+
+// CONFIG: Compass Defaults
+// --------------------------------------------------
+$default-text-shadow-blur: 0
+
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+
+// Links
+$link-color: #0088cc !default
+$link-color-hover: darken($link-color, 15) !default
+$link-color-visited: lighten($link-color, 30) !default
+$link-color-active: rgba($link-color, .5)
+
+
+// Grays
+$black: black !default
+$gray-darker: #222222 !default
+$gray-dark: #333333 !default
+$gray: #555555 !default
+$gray-light: #999999 !default
+$gray-lighter: #eeeeee !default
+$white: white !default
+
+
+// Accent colors
+$blue: #049cdb !default
+$blue-dark: #0064cd !default
+$green: #46a546 !default
+$red: #9d261d !default
+$yellow: #ffc40d !default
+$orange: #f89406 !default
+$pink: #c3325f !default
+$purple: #7a43b6 !default
+
+
+// Text Selection
+$text-selection-color: $gray-dark
+$text-selection-background: lighten($yellow, 40)
+
+
+
+// TYPOGRAPHY
+// --------------------------------------------------
+$sans-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+$serif-family: "Georgia", "Times New Roman", Times, Cambria, Georgia, serif
+$monospace-family: "Monaco", "Courier New", monospace, sans-serif
+$lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+$text-color: $gray-dark !default
+
+
+// Buttons
+$primary-button-background: $link-color !default
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindex-dropdown: 1000 !default
+$zindex-popover: 1010 !default
+$zindex-tooltip: 1020 !default
+$zindex-fixedNavbar: 1030 !default
+$zindex-modalBackdrop: 1040 !default
+$zindex-modal: 1050 !default
+
+
+// Input placeholder text color
+$placeholder-text: $gray-light !default
+
+// Hr border color
+$hr-border: $gray-lighter
+
+// Navbar
+$navbar-height: 40px !default
+$navbar-background: $gray-darker !default
+$navbar-backgroundHighlight: $gray-dark !default
+$navbar-link-background-hover: transparent
+
+$navbar-text: $gray-light !default
+$navbar-link-color: $gray-light !default
+$navbar-link-color-hover: $white !default
+
+// Form states and alerts
+$warning-text: #c09853 !default
+$warning-background: #fcf8e3 !default
+$warning-border: darken(adjust-hue($warning-background, -10), 3%) !default
+
+$error-text: #b94a48 !default
+$error-background: #f2dede !default
+$error-border: darken(adjust-hue($error-background, -10), 3%) !default
+
+$success-text: #468847 !default
+$success-background: #dff0d8 !default
+$success-border: darken(adjust-hue($success-background, -10), 5%) !default
+
+$info-text: #3a87ad !default
+$info-background: #d9edf7 !default
+$info-border: darken(adjust-hue($info-background, -10), 7%) !default

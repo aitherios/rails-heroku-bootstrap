@@ -1,0 +1,411 @@
+h1
+  +adjust-font-size-to(20px)
+  +adjust-leading-to(2)  
+  font-weight: bold
+
+.normalise-button
+  margin: 0
+  padding: 0
+  outline: 0
+  border: none
+  text-decoration: none
+  text-align: center
+  white-space: nowrap
+  cursor: pointer
+  vertical-align: middle
+  +background-clip(padding-box)
+  +inline-block
+  // +float-left
+    
+.button
+  @extend .normalise-button
+  +sans-serif
+  +adjust-font-size-to(13px)
+  +adjust-leading-to(1,20px)
+  padding-right: 1em
+  padding-left: 1em
+  +padding-leader(.6)
+  +padding-trailer(.6)
+  // +leader(0)
+  // +trailer(1)
+
+  min-height: +rhythm(2)
+  // line-height: +rhythm(2)
+  
+  +text-shadow(rgba(#fff, .6) 1px 1px 0)
+  color: $gray-dark
+  +border-radius(2px)
+  position: relative
+  overflow: visible
+  font-weight: bold
+  border: 1px solid #d4d4d4
+
+
+  background-color: #ececec
+  +background-image(linear-gradient(#f4f4f4, #ececec))
+  
+
+  &:visited
+    color: $gray-dark
+    
+  &:hover, &:focus, &:active, &.active
+    border-color: #3072b3
+    border-bottom-color: #2a65a0
+    text-decoration: none
+    +text-shadow(rgba(#000, .4) 0 -1px 0)
+    color: $white
+    background-color: #3c8dde
+    +background-image(linear-gradient(#599bdc, #3072b3))
+
+  &:active, &.active
+    border-color: #2a65a0
+    border-bottom-color: #3884cd
+    background-color: #3c8dde
+    +background-image(linear-gradient(#3072b3, #599bdc))
+
+  &::-moz-focus-inner
+    padding: 0
+    border: 0
+
+  &.icon:before
+    content: ""
+    position: relative
+    top: 1px
+    float: left
+    width: 12px
+    height: 12px
+    margin: 0 0.75em 0 -0.25em
+    background: url(gh-icons.png) 0 99px no-repeat
+
+  &.arrowup.icon
+    &:before
+      background-position: 0 0
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px 0
+  &.arrowdown.icon
+    &:before
+      background-position: 0 -12px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -12px
+  &.arrowleft.icon
+    &:before
+      background-position: 0 -24px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -24px
+  &.arrowright.icon
+    &:before
+      float: right
+      margin: 0 -0.25em 0 0.5em
+      background-position: 0 -36px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -36px
+  &.approve.icon
+    &:before
+      background-position: 0 -48px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -48px
+  &.add.icon
+    &:before
+      background-position: 0 -288px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -288px
+  &.remove.icon
+    &:before
+      background-position: 0 -60px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -60px
+  &.log.icon
+    &:before
+      background-position: 0 -72px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -72px
+  &.calendar.icon
+    &:before
+      background-position: 0 -84px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -84px
+  &.chat.icon
+    &:before
+      background-position: 0 -96px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -96px
+  &.clock.icon
+    &:before
+      background-position: 0 -108px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -108px
+  &.settings.icon
+    &:before
+      background-position: 0 -120px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -120px
+  &.comment.icon
+    &:before
+      background-position: 0 -132px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -132px
+  &.fork.icon
+    &:before
+      background-position: 0 -144px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -144px
+  &.like.icon
+    &:before
+      background-position: 0 -156px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -156px
+  &.favorite.icon
+    &:before
+      background-position: 0 -348px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -348px
+  &.home.icon
+    &:before
+      background-position: 0 -168px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -168px
+  &.key.icon
+    &:before
+      background-position: 0 -180px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -180px
+  &.lock.icon
+    &:before
+      background-position: 0 -192px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -192px
+  &.unlock.icon
+    &:before
+      background-position: 0 -204px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -204px
+  &.loop.icon
+    &:before
+      background-position: 0 -216px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -216px
+  &.search.icon
+    &:before
+      background-position: 0 -228px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -228px
+  &.mail.icon
+    &:before
+      background-position: 0 -240px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -240px
+  &.move.icon
+    &:before
+      background-position: 0 -252px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -252px
+  &.edit.icon
+    &:before
+      background-position: 0 -264px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -264px
+  &.pin.icon
+    &:before
+      background-position: 0 -276px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -276px
+  &.reload.icon
+    &:before
+      background-position: 0 -300px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -300px
+  &.rss.icon
+    &:before
+      background-position: 0 -312px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -312px
+  &.tag.icon
+    &:before
+      background-position: 0 -324px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -324px
+  &.trash.icon
+    &:before
+      background-position: 0 -336px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -336px
+  &.user.icon
+    &:before
+      background-position: 0 -360px
+    &:hover:before, &:focus:before, &:active:before
+      background-position: -12px -360px
+
+  &.primary
+    font-weight: bold
+
+  &.danger
+    color: #900
+
+    &:hover, &:focus
+      border-color: #b53f3a
+      border-bottom-color: #a0302a
+      color: #fff
+      background-color: #dc5f59
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630))
+      background-image: -moz-linear-gradient(#dc5f59, #b33630)
+      background-image: -ms-linear-gradient(#dc5f59, #b33630)
+      background-image: -o-linear-gradient(#dc5f59, #b33630)
+      background-image: linear-gradient(#dc5f59, #b33630)
+
+    &:active
+      border-color: #b53f3a
+      border-bottom-color: #a0302a
+      color: #fff
+      background-color: #dc5f59
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630))
+      background-image: -moz-linear-gradient(#dc5f59, #b33630)
+      background-image: -ms-linear-gradient(#dc5f59, #b33630)
+      background-image: -o-linear-gradient(#dc5f59, #b33630)
+      background-image: linear-gradient(#dc5f59, #b33630)
+      border-color: #a0302a
+      border-bottom-color: #bf4843
+      background-color: #b33630
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59))
+      background-image: -moz-linear-gradient(#b33630, #dc5f59)
+      background-image: -ms-linear-gradient(#b33630, #dc5f59)
+      background-image: -o-linear-gradient(#b33630, #dc5f59)
+      background-image: linear-gradient(#b33630, #dc5f59)
+
+    &.active
+      border-color: #a0302a
+      border-bottom-color: #bf4843
+      background-color: #b33630
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59))
+      background-image: -moz-linear-gradient(#b33630, #dc5f59)
+      background-image: -ms-linear-gradient(#b33630, #dc5f59)
+      background-image: -o-linear-gradient(#b33630, #dc5f59)
+      background-image: linear-gradient(#b33630, #dc5f59)
+
+  &.pill
+    border-radius: 50em
+  &.disable
+    opacity: 0.5
+  &.big
+    font-size: 14px
+    &.icon:before
+      top: 0
+
+/* overrides extra padding on button elements in Firefox
+
+/* =============================================================================
+ * Button icons
+ * ==========================================================================
+
+/* =============================================================================
+ * Button extensions
+ * ==========================================================================
+
+/* Primary button
+ * ==========================================================================
+
+/* Danger button
+ * ==========================================================================
+
+/* Pill button
+ * ==========================================================================
+
+/* Disabled button
+ * ==========================================================================
+
+/* Big button
+ * ==========================================================================
+
+/* =============================================================================
+ * Button groups
+ * ==========================================================================
+
+/* Standard group
+ * ==========================================================================
+
+.button-group
+  display: inline-block
+  list-style: none
+  padding: 0
+  margin: 0
+  /* IE hacks
+  zoom: 1
+  *display: inline
+
+.button +
+  .button, .button-group
+    margin-left: 15px
+
+.button-group
+  +
+    .button, .button-group
+      margin-left: 15px
+  li
+    float: left
+    padding: 0
+    margin: 0
+  .button
+    float: left
+    margin-left: -1px
+  > .button:not(:first-child):not(:last-child)
+    border-radius: 0
+  li
+    &:not(:first-child):not(:last-child) .button
+      border-radius: 0
+    &:first-child .button
+      margin-left: 0
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+    &:last-child > .button
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+  > .button:first-child
+    margin-left: 0
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+  > .button:last-child
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+  &.minor-group .button
+    border: 1px solid #d4d4d4
+    text-shadow: none
+    background-image: none
+    background-color: #fff
+    &:hover, &:focus
+      background-color: #599bdc
+    &:active, &.active
+      background-color: #3072b3
+    &.icon:before
+      opacity: 0.8
+
+/* Minor group
+ * ==========================================================================
+
+/* =============================================================================
+ * Button container (mixing buttons and groups, e.g., nav bar)
+ * ==========================================================================
+.button-container
+  .button, .button-group
+    vertical-align: top
+
+
+
+
+
+// button
+//   +sans-serif
+//   font-size: 13px
+//   line-height: 36px
+//   font-weight: bold
+//   color: #fff
+//   padding: 0 15px
+//   border: solid 1px
+//   border-color: #2978B0 #266FA5 #1C557D
+//   border-radius: 3px
+//   background: -webkit-gradient( linear, left top, left bottom, from(#50A9E7), to(#307CB3) )
+//   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 1px rgba(0,0,0,.08)
+//   text-shadow: 0 -1px 0 rgba(0,0,0,.25)
+//   +respond-to(retina)
+//     border: none
+//     padding: 0 16px
+//     -webkit-box-shadow: inset 0 0 1px #000,inset 0 1px 0 #75c2f8, 0 1px 1px -1px rgba(0, 0, 0, .5)
+//   &:hover

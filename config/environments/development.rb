@@ -14,5 +14,6 @@ StartaeBootstrap::Application.configure do
   config.assets.compress = false
   config.assets.debug = true
   Slim::Engine.set_default_options pretty: true
+  Slim::Engine.set_default_options :format => :html5
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

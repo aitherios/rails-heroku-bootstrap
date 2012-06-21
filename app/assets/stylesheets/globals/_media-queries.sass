@@ -1,0 +1,90 @@
+// ---------------------------------------------------------------------------------
+//   Mixin for Media Queries
+// ---------------------------------------------------------------------------------
+// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+// Device Dimensions inpired on: http://css-tricks.com/snippets/css/media-queries-for-standard-devices
+
+
+// Usage
+// --------------------------------------------------
+// .profile-pic
+//   float: left
+//   width: 250px
+//   +respond-to(tablets)
+//     width: 100%
+//   +respond-to(smartphones)
+//     width: 125px
+//   +respond-to(large-screens)
+//     float: none
+
+
+// Screen Options
+// --------------------------------------------------
+// +respond-to(retina)
+// +respond-to(smartphones)
+// +respond-to(smartphones-landscape)
+// +respond-to(smartphones-portrait)
+// +respond-to(tablets)
+// +respond-to(tablets-landscape)
+// +respond-to(tablets-portrait)
+// +respond-to(desktops)
+// +respond-to(large-screens)
+
+
+// Variables
+// --------------------------------------------------
+$mq-smartphone-portrait: 320px !default
+$mq-smartphone-landscape: 480px !default
+$mq-tablet-portrait: 768px !default
+$mq-tablet-landscape: 1024px !default
+$mq-desktop: 1224px !default
+$mq-large-screens: 1824px !default
+
+
+// COMPASS PLUGINS
+// --------------------------------------------------
+=respond-to($media)
+  @if $media == retina
+    // Retina - Retina screens have a 1.5 pixel ratio, not 2
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+      @content
+  
+  @else if $media == smartphones
+    // Smartphones (portrait and landscape)
+    @media only screen and (min-device-width: $mq-smartphone-portrait) and (max-device-width: $mq-smartphone-landscape)
+      @content
+
+  @else if $media == smartphones-landscape
+    // Smartphones (landscape)
+    @media only screen and (min-width: $mq-smartphone-portrait + 1)
+      @content
+
+  @else if $media == smartphones-portrait
+    // Smartphones (portrait)
+    @media only screen and (max-width: $mq-smartphone-portrait)
+      @content    
+  
+  @else if $media == tablets
+    // iPads (portrait and landscape)
+    @media only screen and (min-device-width: $mq-tablet-portrait) and (max-device-width: $mq-tablet-landscape)
+      @content
+  
+  @else if $media == tablets-landscape
+    // iPads (landscape)
+    @media only screen and (min-device-width: $mq-tablet-portrait) and (max-device-width: $mq-tablet-landscape) and (orientation : landscape)
+      @content
+
+  @else if $media == tablets-portrait
+    // iPads (portrait)
+    @media only screen and (min-device-width: $mq-tablet-portrait) and (max-device-width: $mq-tablet-landscape) and (orientation : portrait)
+      @content
+
+  @else if $media == desktops
+    // Desktops and laptops
+    @media only screen and (min-width: $mq-desktop)
+      @content
+
+  @else if $media == large-screens
+    // Large Screens (TVs, etc)
+    @media only screen and (min-width: $mq-large-screens)
+      @content
