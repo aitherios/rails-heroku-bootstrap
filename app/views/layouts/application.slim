@@ -28,12 +28,6 @@ html.no-js lang="#{I18n.locale}"
     = javascript_include_tag 'close_for_facebook_login'
     = javascript_include_tag 'modernizr'
 
-    
-    
-  meta name="author" content="Startaê"
-  meta name="viewport" content="width=device-width,initial-scale=1"
-  = csrf_meta_tags
-
   - if @page_class.present?
     body class="#{@page_class}"
   - else
