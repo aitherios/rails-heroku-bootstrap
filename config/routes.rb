@@ -13,4 +13,6 @@ StartaeBootstrap::Application.routes.draw do
   root  to:                     'home#index'
   match 'frontend/:template' => 'frontend#show'
   match 'frontend'           => 'frontend#index'
+  
+  match ':slug' => 'paginas#show', as: :pagina
 end
