@@ -205,5 +205,10 @@ pt-BR:
 
   activerecord:
     models:
+      pagina: Página
+    attributes:
+      pagina:
+        titulo: Título
+        conteudo: Conteúdo
     errors:
       <<: *errors

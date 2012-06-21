@@ -13,6 +13,7 @@ gem 'meta_search',            '>= 1.1.0.pre'
 gem 'devise',                 '~> 2.1.0'
 gem 'omniauth-facebook',      '~> 1.3.0'
 gem "oily_png",               '~> 1.0.2'
+gem "friendly_id",            "~> 4.0.1"
 
 group :assets do
   gem 'compass',              '~> 0.13.alpha.0'

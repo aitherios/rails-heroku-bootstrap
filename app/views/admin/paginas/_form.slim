@@ -1,0 +1,7 @@
+= semantic_form_for [:admin, @pagina] do |f|
+  = f.inputs do
+
+    = f.input :titulo
+    = f.input :conteudo, input_html: {class: 'editor'}
+
+    = f.buttons
