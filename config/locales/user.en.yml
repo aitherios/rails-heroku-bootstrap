@@ -15,3 +15,11 @@ en:
         no_confirmation_instructions: Didn't receive confirmation instructions?
         no_unlock_instructions: Didn't receive unlock instructions?
         send_reset_password_instructions: Send me reset password instructions
+    mailer:
+      reset_password_instructions:
+        <p>Hello %{name}!</p>
+        <p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+        <p>%{link}</p>
+        <p>If you didn't request this, please ignore this email.</p>
+        <p>Your password won't change until you access the link above and create a new one.</p>
+      change_my_password: Change my password
