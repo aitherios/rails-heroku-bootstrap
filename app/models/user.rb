@@ -25,21 +25,10 @@ class User < ActiveRecord::Base
   
   mount_uploader :avatar, AvatarUploader
   
-  def update_attributtes_for(data)
-    if data.image.present?
-      update_attributes(imagem: data.image)
-    end
-  
-    if data.nome.present?
-      update_attributes(nome: data.name)
-    end
-  end
-  
   def self.find_for_facebook_oauth(access_token, signed_in_resource = nil)
     data = access_token.info
 
     if user = self.find_by_email(data.email)
-      user.update_attributes(name: data.name) if user.name.blank?
       user
     else
       self.create!(email: data.email, 
