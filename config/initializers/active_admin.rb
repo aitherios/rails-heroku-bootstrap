@@ -1,4 +1,8 @@
-ActiveAdmin.setup do |config|
+ActiveAdmin.setup do |config|  
+  # hack p/ forçar active admin a usar pt-BR :/
+  I18n.default_locale = 'pt-BR'
+  I18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml")]
+  I18n.reload!
 
   # == Site Title
   #

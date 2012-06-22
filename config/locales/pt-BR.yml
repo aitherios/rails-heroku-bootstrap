@@ -206,6 +206,7 @@ pt-BR:
   activerecord:
     models:
       pagina: Página
+      user: Usuário
     attributes:
       pagina:
         titulo: Título

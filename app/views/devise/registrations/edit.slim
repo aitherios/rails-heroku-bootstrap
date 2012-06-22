@@ -1,5 +1,6 @@
 = form_for(current_user, url: update_user_path, :html => { :method => :put }) do |f|
   = devise_error_messages!(@user)
+
   div
     = f.label :nome
     br
