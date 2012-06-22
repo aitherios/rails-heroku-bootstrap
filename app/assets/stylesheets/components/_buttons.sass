@@ -65,7 +65,8 @@ h2
   &:active, &.active
     border-color: darken(#9fa1a3, 15%)
     +box-shadow(0 1px 0 0 rgba(#fff, .6), inset 0 1px 3px 0 rgba(41,43,46, .5))
-    +background-image(linear-gradient(#d2d4d8, #dedfe2))
+    // +background-image(linear-gradient(#d2d4d8, #dedfe2))
+    +background-image(linear-gradient(darken(#dfe0e3, 8%), darken(#fcfcfc, 6%)))
     color: $gray
     
 
@@ -264,11 +265,12 @@ h2
     
     &:hover, &:focus
       background-color: darken(#7f8c9b, 10%)
-      +background-image(linear-gradient(darken(#7f8c9b, 15%), darken(#5c6c7c, 25%)))
+      +background-image(linear-gradient(darken(#7f8c9b, 7%), darken(#5c6c7c, 14%)))
     
     &:active, &.active
       +box-shadow(0 1px 0 0 rgba(#fff, .6), inset 0 1px 2px 0 rgba(41,43,46, .5))
-      border-color: darken(#7f8c9b, 50%)
+      border-color: darken(#7f8c9b, 60%)
+      +background-image(linear-gradient(darken(#5c6c7c, 14%), darken(#7f8c9b, 7%)))
 
   &.danger
     color: #900
