@@ -7,7 +7,7 @@ module DeviseHelper
     messages = user_resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
     sentence = I18n.t("errors.messages.not_saved",
                       :count => user_resource.errors.count,
-                      :user_resource => user_resource.class.model_name.human.downcase)
+                      :resource => user_resource.class.model_name.human.downcase)
 
     html = <<-HTML
     <div id="error_explanation">
