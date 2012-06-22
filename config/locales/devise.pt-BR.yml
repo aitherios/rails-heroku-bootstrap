@@ -32,9 +32,9 @@ pt-BR:
       send_paranoid_instructions: 'Se o seu email existe, você receberá instruções sobre como confirmar sua conta em alguns minutos.'
       confirmed: 'A sua conta foi confirmada com sucesso. Você está autenticado.'
     registrations:
-      signed_up: 'Login efetuado com sucesso. Se não foi autorizado, a confirmação será enviada por email.'
+      signed_up: 'Seja bem-vindo!'
       inactive_signed_up: 'A sua conta foi criada com sucesso. No entanto, não foi possível fazer login, pois ela está %{reason}.'
-      updated: 'A sua conta foi atualizada com sucesso.'
+      updated: 'A sua conta foi atualizada.'
       update_needs_confirmation: 'Sua conta foi atualizada com sucesso mas precisamos confirmar o seu novo email. Por favor confira o seu email e clique no link para confirmar o seu novo endereço de email.'
       destroyed: 'Adeus! A sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve.'
       reasons:
