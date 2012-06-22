@@ -22,7 +22,7 @@ header#header-page role="banner"
           li
             .user-avatar.small
               .user-avatar-inner
-                img src="#{image_path 'avatar/avatar-small.png'}"
+                = image_tag(current_user.avatar.thumb.url)
           li
             .username Olá <b>#{current_user.name}</b>
           li
@@ -35,5 +35,5 @@ header#header-page role="banner"
           li
             a href="#{new_user_session_path}" Entrar
           li
-            a href="#{user_omniauth_connect_path(:facebook)}" class="popup facebook-connect" data-width="600" data-height="400"
+            a href="#{user_omniauth_connect_path(:facebook)}" class="popup button facebook-connect" data-width="600" data-height="400"
               | Entrar com o Facebook

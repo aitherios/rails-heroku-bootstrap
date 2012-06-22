@@ -6,6 +6,9 @@ StartaeBootstrap::Application.routes.draw do
                                    as: 'user_omniauth_connect'
   end
 
+  get '/usuarios/minha-conta' => 'settings#edit', as: :edit_user
+  put '/usuarios' => 'settings#update', as: :update_user
+  
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
