@@ -1,0 +1,1 @@
+require Rails.root.join('lib', 'hash_extension.rb')
