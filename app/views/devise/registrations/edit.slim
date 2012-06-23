@@ -1,25 +1,40 @@
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-  = devise_error_messages!
+= form_for(current_user, url: update_user_path, :html => { :method => :put }) do |f|
+  = devise_error_messages!(@user)
+
   div
-    = f.label :name
+    = f.label :nome
     br
     = f.text_field :name
+
   div
-    = f.label :email
+    = f.label :foto
     br
-    = f.email_field :email
-  div
-    = f.label :password
-    i = " (" + t("helpers.label.#{resource_name}.password_note") + ")"
-    br
-    = f.password_field :password, :autocomplete => "off"
-  div
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, :autocomplete => "off"
-  div
-    = f.label :current_password
-    i = " (" + t("helpers.label.#{resource_name}.current_password_note") + ")"
-    br
-    = f.password_field :current_password, :autocomplete => "off"
-  div = f.submit t("helpers.label.#{resource_name}.update")
+    = f.file_field :avatar
+  
+  - unless current_user.logged_with_facebook?
+    div
+      = f.label :email
+      br
+      = f.email_field :email
+      
+  - unless current_user.logged_with_facebook?
+    div
+      = f.label :password
+      i = " (" + t("helpers.label.user.password_note") + ")"
+      br
+      = f.password_field :password, :autocomplete => "off"
+
+  - unless current_user.logged_with_facebook?    
+    div
+      = f.label :password_confirmation
+      br
+      = f.password_field :password_confirmation, :autocomplete => "off"
+
+  / - unless current_user.logged_with_facebook?
+  /   div
+  /     = f.label :current_password
+  /     i = " (" + t("helpers.label.user.current_password_note") + ")"
+  /     br
+  /     = f.password_field :current_password, :autocomplete => "off"
+
+  div = f.submit t("helpers.label.user.update")

@@ -20,5 +20,11 @@ pt-BR:
         no_confirmation_instructions: Não recebeu instruções de confirmação?
         no_unlock_instructions: Não recebeu instruções de desbloqueamento?
         send_reset_password_instructions: Mandar instruções para alterar minha senha
-
-        
+    mailer:
+      reset_password_instructions:
+        <p>Olá %{name}!</p>
+        <p>Recebemos um pedido para alterar a sua senha. Você pode fazer isso no link abaixo.</p>
+        <p>%{link}</p>
+        <p>Se você não fez o pedido, por favor ignore este email.</p>
+        <p>Sua senha não vai ser alterada enquanto você não seguir as instruções do link acima.</p>
+      change_my_password: Mudar a minha senha

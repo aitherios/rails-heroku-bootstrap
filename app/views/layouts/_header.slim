@@ -22,11 +22,11 @@ header#header-page role="banner"
           li
             .user-avatar.small
               .user-avatar-inner
-                img src="#{image_path 'avatar/avatar-small.png'}"
+                = image_tag(current_user.avatar.thumb.url)
           li
             .username Olá <b>#{current_user.name}</b>
           li
-            a href="#{edit_user_registration_path}" Minha Conta
+            a href="#{edit_user_path}" Minha Conta
           li
             a href="#{destroy_user_session_path}" Sair
         - else
