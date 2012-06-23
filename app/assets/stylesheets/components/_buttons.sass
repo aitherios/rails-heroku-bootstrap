@@ -50,6 +50,10 @@ h2
   background-color: #dfe0e3
   +background-image(linear-gradient(#fcfcfc, #dfe0e3))
   +box-shadow(0 1px 2px rgba(#000, .2), inset 0 1px 0 0 rgba(#fff, .15))
+  +respond-to(retina)
+    border: none
+    +box-shadow(inset 0 0 1px rgba(#000, .9), 0 1px 1px rgba(#000, .2))
+
 
 
   &:visited
@@ -281,7 +285,7 @@ h2
       color: $white
       background-color: #dc5f59
       +background-image(linear-gradient(#dc5f59, #b33630))
-      +box-shadow(0 1px 2px rgba(#000, .2), inset 0 0 0 1px rgba(#fff, .1))
+      +box-shadow(0 1px 2px rgba(#000, .2), inset 0 1px 0 rgba(#fff, .2))
       +text-shadow(rgba(#000, .4) 0 1px 0)
 
     &:active, &.active
@@ -312,6 +316,9 @@ h2
     font-weight: bold
     position: relative
     font-size: 14px
+    +respond-to(retina)
+      border: none
+      +box-shadow(inset 0 0 1px rgba(#194a71, .9), 0 1px 1px rgba(#000, .2))
 
     &:before
       content: ""
