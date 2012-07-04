@@ -17,6 +17,7 @@ gem "friendly_id",            "~> 4.0.1"
 gem 'newrelic_rpm'
 gem 'rdiscount'
 gem 'draper'
+gem 'rufus-scheduler'
 
 group :assets do
   gem 'compass',              '~> 0.13.alpha.0'
