@@ -217,6 +217,8 @@ GEM
       rspec (~> 2.10.0)
     ruby-hmac (0.4.0)
     rubyzip (0.9.9)
+    rufus-scheduler (2.0.17)
+      tzinfo (>= 0.3.23)
     sass (3.2.0.alpha.247)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -281,6 +283,7 @@ DEPENDENCIES
   rails-boilerplate (~> 0.1.9)
   rdiscount
   rspec-rails (~> 2.10.1)
+  rufus-scheduler
   sass (~> 3.2.0.alpha.247)
   sass-rails (~> 3.2.5)
   shoulda-matchers (~> 1.1.0)
