@@ -28,25 +28,23 @@ html.no-js lang="#{I18n.locale}"
     = javascript_include_tag 'close_for_facebook_login'
     = javascript_include_tag 'modernizr'
 
-  - if @page_class.present?
-    body class="#{@page_class}"
-  - else
-    body
-      = render 'layouts/browser_warning'
-
-      section.page
-        = render 'layouts/header'
-
-        #content
-          .notice = notice
-          .alert = alert
-          = yield
   
-        = render 'layouts/footer'
+  body class="#{@page_class} #{@item_menu}"
+    = render 'layouts/browser_warning'
 
-      = javascript_include_tag 'application'
-      /[if (gte IE 6)&(lte IE 8)]
-        = javascript_include_tag 'http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js'
-        = javascript_include_tag 'selectivizr'
-      = render 'layouts/development'
-      = render 'layouts/google_analytics' if Rails.env.production?
+    section.page
+      = render 'layouts/header'
+
+      #content
+        .notice = notice
+        .alert = alert
+        = yield
+
+      = render 'layouts/footer'
+
+    = javascript_include_tag 'application'
+    /[if (gte IE 6)&(lte IE 8)]
+      = javascript_include_tag 'http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js'
+      = javascript_include_tag 'selectivizr'
+    = render 'layouts/development'
+    = render 'layouts/google_analytics' if Rails.env.production?
