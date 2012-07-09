@@ -1,0 +1,26 @@
+#feedback-bar
+  position: fixed
+  left: -32px
+  top: 50%
+  +rotate(-90deg)
+  z-index: 99
+  +respond-to(smartphones)
+    display: none
+  
+  a
+    display: block
+    float: left
+    height: 30px
+    background-color: #fdc80c
+    +adjust-font-size-to(13px)
+    line-height: 30px
+    +box-shadow(rgba(#000, .2) 0 0 0 2px inset)
+    +text-shadow(rgba(#fff, .3) 0 1px 0)
+    color: #6d5c2d
+    padding: 0 1em
+    font-weight: bold
+  
+    &:hover
+      background-color: darken(#fdc80c, 10%)
+      color: darken(#6d5c2d, 10%)
+      text-decoration: none

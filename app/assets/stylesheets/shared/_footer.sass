@@ -1,0 +1,85 @@
+#footer-page
+  background-color: #fff
+  +box-shadow(#ddd 0 1px 0 inset)
+  +respond-to(smartphones)
+    display: none
+    
+  #footer-page-inner
+    +margin-leader(2)
+    +padding-leader(1)
+    +padding-trailer(1)
+    
+  .site-links
+    +span-columns(10,16)
+    +pie-clearfix
+
+    a
+      color: #58595b
+
+      &:hover
+        color: $link-color
+
+      &:active
+        +effect-click-down
+        
+    ul
+      +inline-block-list
+      +adjust-leading-to(2)
+
+      +respond-to(tablets)
+        padding-left: 10px
+      
+      li
+        margin-right: 10px
+        
+        &:after
+          content: "/"
+          position: relative
+          color: $gray-lighter
+          color: rgba($gray-dark, .3)
+          padding-left: 10px
+        
+        &:last-child:after
+          content: ""
+
+
+  .social-links
+    +span-columns(6 omega,16)
+    +pie-clearfix
+    ul
+      +float-right
+      +inline-block-list
+      +adjust-leading-to(2)
+
+      +respond-to(tablets)
+        padding-right: 10px
+
+      li
+        margin-right: 20px
+
+        &:last-child
+          margin-right: 0 !important
+
+    a
+      +hide-text
+      width: 34px
+      height: 34px
+      +opacity(.7)
+
+      &:hover
+        +opacity(1)
+
+      &:active
+        +effect-click-down
+
+    .twitter
+      a
+        +float-left
+        display: block
+        // +small-elements-sprite(icon-twitter-small)
+
+    .facebook
+      a
+        +float-left
+        display: block
+        // +small-elements-sprite(icon-facebook-small)
