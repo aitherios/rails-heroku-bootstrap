@@ -21,24 +21,24 @@
 
       &:active
         +effect-click-down
-        
+
     ul
       +inline-block-list
       +adjust-leading-to(2)
 
       +respond-to(tablets)
         padding-left: 10px
-      
+
       li
         margin-right: 10px
-        
+
         &:after
           content: "/"
           position: relative
           color: $gray-lighter
           color: rgba($gray-dark, .3)
           padding-left: 10px
-        
+
         &:last-child:after
           content: ""
 
@@ -58,7 +58,7 @@
         +margin-leader(.2)
         +inline-block
         +float-left
-        
+
 
         &:last-child
           margin-right: 0 !important

@@ -9,12 +9,12 @@ html.no-js lang="#{I18n.locale}"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
-    
+
     - if @title.present?
       title #{@title} — Startaê Bootstrap
     - else
       title Startaê Bootstrap
-    
+
     - if @description.present?
       meta name="description" content="#{@description}"
     - else
@@ -28,7 +28,7 @@ html.no-js lang="#{I18n.locale}"
     = javascript_include_tag 'close_for_facebook_login'
     = javascript_include_tag 'modernizr'
 
-  
+
   body class="#{@page_class} #{@item_menu}"
     = render 'layouts/browser_warning'
 

@@ -342,14 +342,15 @@ h2
       background-color: rgba(#fff, .1)
       +box-shadow(rgba(#fff, .25) 0 -1px 0)
       z-index: 2
-
-    &:active
-      +box-shadow(rgba(#000, .3) 0 3px 12px inset)
-      border: 1px solid darken(#194a71, 5%)
       
     &:hover
-      +box-shadow(rgba(#fff, .2) 0 4px 8px inset)
+      +box-shadow(rgba(#fff, .2) 0 3px 6px inset)
       +background-image(linear-gradient(lighten(#527ac6, 5%), lighten(#254885, 5%)))
+
+    &:active, &:focus
+      +box-shadow(rgba(#000, .4) 0 2px 6px inset)
+      border: 1px solid darken(#194a71, 5%)
+      +effect-click-down
 
 
 
