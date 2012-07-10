@@ -25,11 +25,41 @@
     display: block
     position: absolute
     top: +rhythm(1)
-    +debug
+    background-color: #eee
+
 
   nav.nav-page
     +span-columns(4 ,12)
     +push(2)
+    +padding-leader(1.5)
+    +padding-trailer(.5)
+    padding-left: 20px
+
+    a
+      color: #58595b
+
+      &:hover
+        color: $link-color
+
+      &:active
+        +effect-click-down
+
+    ul
+      +inline-list
+      +adjust-leading-to(2)
+
+      li
+        margin-right: 10px
+
+        &:after
+          content: "/"
+          position: relative
+          color: $gray-lighter
+          color: rgba($gray-dark, .3)
+          padding-left: 10px
+
+        &:last-child:after
+          content: ""
 
 
   nav.nav-user
