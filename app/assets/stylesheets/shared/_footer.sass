@@ -46,40 +46,30 @@
   .social-links
     +span-columns(6 omega,16)
     +pie-clearfix
-    ul
-      +float-right
-      +inline-block-list
-      +adjust-leading-to(2)
 
-      +respond-to(tablets)
-        padding-right: 10px
+    ul
+      +inline-list
+      +float-right
+      +adjust-font-size-to(32px)
+      +adjust-leading-to(2)
 
       li
         margin-right: 20px
+        +margin-leader(.2)
+        +inline-block
+        +float-left
+        
 
         &:last-child
           margin-right: 0 !important
 
     a
-      // +hide-text
-      width: 34px
-      height: 34px
-      +opacity(.7)
+      +text-shadow(0 -1px 0 rgba(#000, .3))
+      color: #c6c7c8
+      +opacity(.8)
 
       &:hover
         +opacity(1)
 
       &:active
         +effect-click-down
-
-    .twitter
-      a
-        +float-left
-        display: block
-        // +small-elements-sprite(icon-twitter-small)
-
-    .facebook
-      a
-        +float-left
-        display: block
-        // +small-elements-sprite(icon-facebook-small)
