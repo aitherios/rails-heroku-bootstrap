@@ -1,0 +1,97 @@
+// START: MESSAGES =!messages
+// ---------------------------------------------------------------------------------------
+.message, .notice
+  position: relative
+  +adjust-font-size-to(16px)
+  +adjust-leading-to(1)
+  // +rhythm-borders(1px,0)
+  // border-color: #91a4af
+  font-weight: bold
+  +padding-leader(1)
+  +padding-trailer(1)
+  padding-left: 1em
+  padding-right: 1em
+  background-color: #d8f0fb
+  border-color: #4c7299
+  color: #1c3651
+
+#error
+  // background: #f4c3b7 url('/images/admin/icon_message_alert.png') no-repeat scroll 10px 8px
+  background-color: #f4c3b7
+  color: #5b0100
+  background-color: #faf0ef
+  border-color: #eed6ca
+
+.message.info, #notice
+  // background: #d8f0fb url('/images/admin/icon_message_info.png') no-repeat scroll 10px 8px
+  background-color: #d8f0fb
+  border-color: #4c7299
+  color: #1c3651
+
+.message
+  &.success
+    // background: #ecf4e6 url('/images/admin/icon_message_success.png') no-repeat scroll 10px 8px
+    background-color: #ecf4e6
+    border-color: #c6dcb0
+    color: #113d00
+  &.error
+    // background: #faf0ef url("/images/admin/icon_message_alert.png") no-repeat scroll 10px 8px
+    background-color: #faf0ef
+    color: #be0f0c
+    border-color: #eed6ca
+  &.warning
+    // background: #f4d9ac url('/images/admin/icon_message_warning.png') no-repeat scroll 10px 8px
+    background-color: #f4d9ac
+    border-color: #e7b765
+    color: #4f1100
+  &.tip
+    // background: #f6f1c0 url('/images/admin/icon_message_tip.png') no-repeat scroll 10px 8px
+    background-color: #f6f1c0
+    border-color: #dfce2f
+    color: #503d03
+  strong
+    display: block
+    padding: 2px 0 0 0
+  h2
+    font-size: 20px !important
+    margin: -3px 0 8px 0 !important
+    padding: 0 !important
+  h3
+    margin: 0 !important
+    padding: 0 !important
+    font-size: 12px !important
+  ul
+    margin: 10px 0 0 0 !important
+    li
+      margin: 0 0 0 15px !important
+  p
+    margin: 0 0 7px 0 !important
+
+
+.button_close_message
+  color: #333 !important
+  text-decoration: none !important
+  font-size: 9px
+  font-weight: bold
+  text-align: right
+  border: none !important
+  position: absolute
+  top: 7px
+  right: 6px
+  line-height: 14px
+  display: block
+  width: 10px
+  height: 14px
+  // background: transparent url('/images/admin/btn_close_message.png') no-repeat scroll 100% 0
+  padding: 0 17px 0 0
+  text-indent: -9999px !important
+  text-align: left !important
+  overflow: hidden !important
+  &:hover
+    background-position: 100% -14px
+    text-decoration: underline !important
+    background-color: transparent !important
+    color: #000 !important
+  &:active
+    top: 8px
+// END: MESSAGES

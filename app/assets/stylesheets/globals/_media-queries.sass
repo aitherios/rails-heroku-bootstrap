@@ -48,10 +48,17 @@ $mq-large-screens: 1824px !default
     // Retina - Retina screens have a 1.5 pixel ratio, not 2
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
       @content
-  
+
+  @else if $media == desktop-not-wide
+    // iPads (portrait and landscape)
+    // @media only screen and (min-device-width: $mq-tablet-portrait) and (max-device-width: $mq-tablet-landscape)
+    @media screen and (max-width: 1250px)
+      @content
+
   @else if $media == smartphones
     // Smartphones (portrait and landscape)
-    @media only screen and (min-device-width: $mq-smartphone-portrait) and (max-device-width: $mq-smartphone-landscape)
+    // @media only screen and (min-device-width: $mq-smartphone-portrait) and (max-device-width: $mq-smartphone-landscape)
+    @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px)
       @content
 
   @else if $media == smartphones-landscape
@@ -62,13 +69,14 @@ $mq-large-screens: 1824px !default
   @else if $media == smartphones-portrait
     // Smartphones (portrait)
     @media only screen and (max-width: $mq-smartphone-portrait)
-      @content    
-  
+      @content
+
   @else if $media == tablets
     // iPads (portrait and landscape)
-    @media only screen and (min-device-width: $mq-tablet-portrait) and (max-device-width: $mq-tablet-landscape)
+    // @media only screen and (min-device-width: $mq-tablet-portrait) and (max-device-width: $mq-tablet-landscape)
+    @media screen and (min-width: $mq-tablet-portrait) and (max-width: $mq-tablet-landscape)
       @content
-  
+
   @else if $media == tablets-landscape
     // iPads (landscape)
     @media only screen and (min-device-width: $mq-tablet-portrait) and (max-device-width: $mq-tablet-landscape) and (orientation : landscape)
