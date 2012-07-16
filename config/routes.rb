@@ -1,4 +1,4 @@
-StartaeBootstrap::Application.routes.draw do
+BuscaFundos::Application.routes.draw do
   devise_for :users, sign_out_via: :get, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   devise_scope :user do

@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:startae/activepress.git
+  remote: https://github.com/startae/activepress.git
   revision: 022d02c8f168eecbe6872e3d1782dd4709ebe47c
   specs:
     activeadmin (0.4.4)

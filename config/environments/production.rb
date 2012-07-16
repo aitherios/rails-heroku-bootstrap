@@ -1,4 +1,4 @@
-StartaeBootstrap::Application.configure do
+BuscaFundos::Application.configure do
   Slim::Engine.set_default_options :format => :html5
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -79,5 +79,5 @@ StartaeBootstrap::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
-  config.action_mailer.default_url_options = { :host => 'startae-bootstrap.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'busca-fundos.herokuapp.com' }
 end
