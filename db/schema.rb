@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120716181325) do
+ActiveRecord::Schema.define(:version => 20120717004149) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -72,14 +72,14 @@ ActiveRecord::Schema.define(:version => 20120716181325) do
   create_table "funds", :force => true do |t|
     t.string   "name"
     t.integer  "fund_manager_id"
-    t.boolean  "levereged"
+    t.string   "leveraged"
     t.integer  "fund_type_id"
-    t.decimal  "minimum_investiment", :precision => 12, :scale => 2, :default => 0.0
-    t.decimal  "management_fee",      :precision => 2,  :scale => 2, :default => 0.0
-    t.decimal  "daily_return",        :precision => 6,  :scale => 2, :default => 0.0
-    t.decimal  "monthly_return",      :precision => 6,  :scale => 2, :default => 0.0
-    t.decimal  "anual_return",        :precision => 6,  :scale => 2, :default => 0.0
-    t.decimal  "net_worth",           :precision => 15, :scale => 2, :default => 0.0
+    t.decimal  "minimum_investiment", :precision => 14, :scale => 2, :default => 0.0
+    t.decimal  "management_fee",      :precision => 4,  :scale => 2, :default => 0.0
+    t.decimal  "daily_return",        :precision => 8,  :scale => 2, :default => 0.0
+    t.decimal  "monthly_return",      :precision => 8,  :scale => 2, :default => 0.0
+    t.decimal  "anual_return",        :precision => 8,  :scale => 2, :default => 0.0
+    t.decimal  "net_worth",           :precision => 17, :scale => 2, :default => 0.0
     t.date     "start_date"
     t.datetime "created_at",                                                          :null => false
     t.datetime "updated_at",                                                          :null => false
