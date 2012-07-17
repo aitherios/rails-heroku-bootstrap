@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'fund_importer'
+require 'open-uri'
 
 ActiveAdmin.register Fund do
   form partial: 'form'

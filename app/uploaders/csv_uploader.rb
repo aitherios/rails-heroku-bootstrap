@@ -6,10 +6,12 @@ class CsvUploader < CarrierWave::Uploader::Base
 
   include Sprockets::Helpers::RailsHelper
   include Sprockets::Helpers::IsolatedHelper
+  
+  storage :file
 
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}"
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -20,6 +22,6 @@ class CsvUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "#{DateTime.now.to_s.parameterize}.csv" if original_filename
+    "fundos.csv" if original_filename
   end
 end
