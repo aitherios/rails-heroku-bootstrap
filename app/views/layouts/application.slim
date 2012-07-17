@@ -9,12 +9,12 @@ html.no-js lang="#{I18n.locale}"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
-    
+
     - if @title.present?
       title #{@title} — Busca Fundos
     - else
       title Busca Fundos
-    
+
     - if @description.present?
       meta name="description" content="#{@description}"
     - else
@@ -28,7 +28,7 @@ html.no-js lang="#{I18n.locale}"
     = javascript_include_tag 'close_for_facebook_login'
     = javascript_include_tag 'modernizr'
 
-  
+
   body class="#{@page_class} #{@item_menu}"
     = render 'layouts/browser_warning'
 
@@ -36,8 +36,11 @@ html.no-js lang="#{I18n.locale}"
       = render 'layouts/header'
 
       #content
-        .notice = notice
-        .alert = alert
+        - if notice.present?
+          .notice = notice.try(:html_safe)
+        - if alert.present?
+          .alert = alert
+
         = yield
 
       = render 'layouts/footer'

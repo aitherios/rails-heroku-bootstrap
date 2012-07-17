@@ -2,8 +2,11 @@ header#header-page role="banner"
 
   #header-page-inner
 
-    .logo-page
-      a href="#{root_path}" Busca Fundos
+    - if request.fullpath == root_path
+      .logo-page Busca Fundos
+    - else
+      .logo-page
+        a href="#{root_path}" Busca Fundos
 
     / nav.nav-page role="navigation"
     /   ul
@@ -11,29 +14,22 @@ header#header-page role="banner"
     /       a href="#" Item 1
     /     li
     /       a href="#" Item 2
-    /     li
-    /       a href="#" Item 3
-    /     li
-    /       a href="#" Item 4
-        
+    / 
     / nav.nav-user role="navigation"
     /   ul
     /     - if current_user.present?
-    /       li
+    /       li.item-avatar
     /         .user-avatar.small
     /           .user-avatar-inner
     /             = image_tag(current_user.avatar.thumb.url)
-    /       li
-    /         .username Olá <b>#{current_user.name}</b>
-    /       li
+    / 
+    /       li.item-username Olá <b>#{current_user.name.split(" ").first}</b>
+    / 
+    /       li.item-account
     /         a href="#{edit_user_path}" Minha Conta
-    /       li
+    / 
+    /       li.item-logout
     /         a href="#{destroy_user_session_path}" Sair
     /     - else
-    /       li
-    /         a href="#{new_user_registration_path}" Cadastro
-    /       li
-    /         a href="#{new_user_session_path}" Entrar
-    /       li
-    /         a href="#{user_omniauth_connect_path(:facebook)}" class="popup button facebook-connect" data-width="600" data-height="400"
-    /           | Entrar com o Facebook
+    /       li.item-login
+    /         a href="#{user_omniauth_connect_path(:facebook)}" class="popup button facebook-connect" data-width="600" data-height="400" Entrar com o Facebook

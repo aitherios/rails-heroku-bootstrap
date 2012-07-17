@@ -1,0 +1,70 @@
+#footer-page
+  background-color: #fff
+  +box-shadow(#ddd 0 1px 0 inset)
+    
+  #footer-page-inner
+    +margin-leader(2)
+    +padding-leader(1)
+    +padding-trailer(1)
+    
+  .site-links
+    +span-columns(10,16)
+    +pie-clearfix
+
+    a
+      color: #58595b
+
+      &:hover
+        color: $link-color
+
+      &:active
+        +effect-click-down
+
+    ul
+      +inline-block-list
+      +adjust-leading-to(2)
+
+      li
+        margin-right: 10px
+
+        &:after
+          content: "/"
+          position: relative
+          color: $gray-lighter
+          color: rgba($gray-dark, .3)
+          padding-left: 10px
+
+        &:last-child:after
+          content: ""
+
+
+  .social-links
+    +span-columns(6 omega,16)
+    +pie-clearfix
+
+    ul
+      +inline-list
+      +float-right
+      +adjust-font-size-to(32px)
+      +adjust-leading-to(2)
+
+      li
+        margin-right: 20px
+        +margin-leader(.2)
+        +inline-block
+        +float-left
+
+
+        &:last-child
+          margin-right: 0 !important
+
+    a
+      +text-shadow(0 -1px 0 rgba(#000, .3))
+      color: #c6c7c8
+      +opacity(.8)
+
+      &:hover
+        +opacity(1)
+
+      &:active
+        +effect-click-down

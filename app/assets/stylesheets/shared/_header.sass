@@ -1,0 +1,219 @@
+#header-page, #header-page-inner
+  +pie-clearfix
+  
+#header-page
+  +min-height(100px)
+  border-color: #97dce3
+  +box-shadow(rgba(#000, .2) 0 0 5px)
+  z-index: 1000
+  position: relative
+  background-color: #fff
+
+.note-facebook
+  display: block
+  +adjust-font-size-to(11px)
+  color: $gray-light
+  font-weight: normal
+  
+#header-page-inner
+  
+  .logo-page
+    width: 160px
+    height: 60px
+    // +small-elements-sprite(logo)
+    +hide-text
+    display: block
+    position: absolute
+    top: +rhythm(1)
+    background-color: #eee
+
+
+  nav.nav-page
+    +span-columns(4 ,12)
+    +push(2)
+    +padding-leader(1.5)
+    +padding-trailer(.5)
+    padding-left: 20px
+
+    a
+      color: #58595b
+
+      &:hover
+        color: $link-color
+
+      &:active
+        +effect-click-down
+
+    ul
+      +inline-list
+      +adjust-leading-to(2)
+
+      li
+        margin-right: 10px
+
+        &:after
+          content: "/"
+          position: relative
+          color: $gray-lighter
+          color: rgba($gray-dark, .3)
+          padding-left: 10px
+
+        &:last-child:after
+          content: ""
+
+
+  nav.nav-user
+    +padding-leader(1.5)
+    +padding-trailer(.5)
+    +span-columns(6 omega,12)
+    
+    .info
+      color: $gray-light
+      
+    ul
+      +adjust-font-size-to(13px)
+      +adjust-leading-to(1)
+      overflow: visible
+      +float-right
+      
+      li    
+        float: left
+        display: inline
+        margin-left: 5px
+        &.item-avatar
+          vertical-align: middle
+          padding-right: 5px
+
+          .user-avatar
+            +inline-block
+            +pie-clearfix
+            img
+              width: 24px
+              height: 24px
+              float: left
+              text-align: center
+
+        &.item-username
+          padding-right: 5px
+          color: $gray-light
+          b
+            color: $gray
+            
+        &.item-preferences
+
+          a
+            color: #afafad
+            background-color: #e4e4e1
+            +inline-block
+            font-weight: bold
+            text-decoration: none
+            position: relative
+            width: 28px
+            height: 28px
+         
+            &:before
+              content: ""
+              position: relative
+              top: 6px
+              left: 6px
+              float: left
+              width: 16px
+              height: 16px
+              margin: 0
+              // +small-elements-sprite(icon-preferences)
+              +opacity(.3)
+
+            &.active
+              background-color: $link-color
+              color: $white            
+              &:before
+                +opacity(.6)
+
+            &:hover
+              background-color: $link-color
+              color: $white            
+              &:before
+                +opacity(1)
+         
+          .preferences-text
+            display: block
+            +hide-text
+            width: 1px
+
+   
+        &.item-activity
+
+          &.new
+            .activity-indicator
+              display: block
+              
+          a
+            color: #8b8b8b
+            background-color: #e4e4e1
+            +inline-block
+            font-weight: bold
+            text-decoration: none
+            position: relative
+            width: 28px
+            height: 28px
+            
+            .activity-indicator
+              +border-radius(50em)
+              width: 8px
+              height: 8px
+              background-color: #00abc1
+              position: absolute
+              top: -4px
+              left: -4px
+              display: none
+              +box-shadow(0 0 0 1px rgba(#fff, .9))
+
+            .activity-text
+              display: block
+              +hide-text
+              width: 1px
+
+            
+            &:before
+              content: ""
+              position: relative
+              top: 6px
+              left: 6px
+              float: left
+              width: 16px
+              height: 16px
+              margin: 0
+              // +small-elements-sprite(icon-alert)
+              +opacity(.3)
+
+            &:active
+              +effect-click-down
+
+            &.active
+              background-color: $link-color
+              color: $white            
+              &:before
+                +opacity(.6)
+
+            &:hover
+              background-color: $link-color
+              color: $white            
+              &:before
+                +opacity(1)
+
+        &.item-logout
+          a
+            color: #8b8b8b
+            background-color: #e4e4e1
+            +inline-block
+            padding-left: 1em
+            padding-right: 1em
+            font-weight: bold
+            +padding-leader(.2)
+            +padding-trailer(.2)
+            text-decoration: none
+            &:active
+              +effect-click-down
+            &:hover
+              background-color: $link-color
+              color: #333
