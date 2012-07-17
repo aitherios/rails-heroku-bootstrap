@@ -131,5 +131,21 @@ describe FundImporter do
         Fund.first.leveraged.should == 'Não consta'
       end
     end
+    
+    describe "cleaning up" do
+      before do
+        FundManager.create(name: 'This will be destroyed')
+        FundType.create(name: 'This will be destroyed')
+        FundImporter.import_from_csv('spec/fixtures/2-new-funds.csv')
+      end
+      
+      it "destroys all empty Fund Managers" do
+        FundManager.find_by_name('This will be destroyed').should be_nil
+      end
+
+      it "destroys all empty Fund Types" do
+        FundType.find_by_name('This will be destroyed').should be_nil
+      end
+    end
   end
 end
