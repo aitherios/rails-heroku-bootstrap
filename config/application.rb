@@ -10,9 +10,10 @@ if defined?(Bundler)
   Bundler.require(*Rails.groups(:assets => %w(development test)))
 end
 
-module StartaeBootstrap
+module BuscaFundos
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
     config.encoding = 'utf-8'
     config.filter_parameters += [:password]
     config.assets.enabled = true

@@ -1,7 +1,7 @@
 # thin
 $stdout.sync = true
 
-StartaeBootstrap::Application.configure do
+BuscaFundos::Application.configure do
   config.cache_classes = false
   config.whiny_nils = true
   config.consider_all_requests_local       = true

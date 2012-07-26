@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120622193850) do
+ActiveRecord::Schema.define(:version => 20120717164441) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,12 @@ ActiveRecord::Schema.define(:version => 20120622193850) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "csv_files", :force => true do |t|
+    t.string   "file"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
     t.integer  "sluggable_id",                 :null => false
@@ -56,6 +62,37 @@ ActiveRecord::Schema.define(:version => 20120622193850) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], :name => "index_friendly_id_slugs_on_slug_and_sluggable_type", :unique => true
   add_index "friendly_id_slugs", ["sluggable_id"], :name => "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], :name => "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "fund_managers", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "fund_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "funds", :force => true do |t|
+    t.string   "name"
+    t.integer  "fund_manager_id"
+    t.string   "leveraged"
+    t.integer  "fund_type_id"
+    t.decimal  "minimum_investiment", :precision => 14, :scale => 2, :default => 0.0
+    t.decimal  "management_fee",      :precision => 4,  :scale => 2, :default => 0.0
+    t.decimal  "daily_return",        :precision => 8,  :scale => 2, :default => 0.0
+    t.decimal  "monthly_return",      :precision => 8,  :scale => 2, :default => 0.0
+    t.decimal  "anual_return",        :precision => 8,  :scale => 2, :default => 0.0
+    t.decimal  "net_worth",           :precision => 17, :scale => 2, :default => 0.0
+    t.date     "start_date"
+    t.datetime "created_at",                                                          :null => false
+    t.datetime "updated_at",                                                          :null => false
+  end
+
+  add_index "funds", ["fund_manager_id"], :name => "index_funds_on_fund_manager_id"
+  add_index "funds", ["fund_type_id"], :name => "index_funds_on_fund_type_id"
 
   create_table "paginas", :force => true do |t|
     t.string   "titulo"
