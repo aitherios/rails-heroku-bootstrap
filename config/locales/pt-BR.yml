@@ -204,5 +204,12 @@ pt-BR:
       <<: *errors
 
   activerecord:
+    models:
+      pagina: Página
+      user: Usuário
+    attributes:
+      pagina:
+        titulo: Título
+        conteudo: Conteúdo
     errors:
       <<: *errors

@@ -46,5 +46,5 @@ group :development do
   gem 'foreman'
 end
 
-gem 'activeadmin',           git: 'https://github.com/startae/activepress.git'
+gem 'activeadmin',           git: 'git@github.com:startae/activepress.git'
 # gem 'activeadmin',         path: '../active_admin'

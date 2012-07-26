@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-BuscaFundos::Application.load_tasks
+StartaeBootstrap::Application.load_tasks
