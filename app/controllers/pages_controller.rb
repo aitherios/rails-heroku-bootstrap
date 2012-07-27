@@ -6,4 +6,9 @@ class PagesController < ApplicationController
       redirect_to page_path(@page), status: :moved_permanently
     end
   end
+  
+  def bkg
+    Resque.enqueue(WorkingLogger)
+    render layout: false, json: 'ok' 
+  end
 end
