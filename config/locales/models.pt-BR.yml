@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      page: Página
+      user: Usuário
+    attributes:
+      pagina:
+        title: Título
+        content: Conteúdo
