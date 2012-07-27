@@ -300,6 +300,7 @@ DEPENDENCIES
   rails (~> 3.2.1)
   rails-boilerplate (~> 0.1.9)
   rdiscount
+  redis
   resque
   rspec-rails (~> 2.10.1)
   rufus-scheduler
