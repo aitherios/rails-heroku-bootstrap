@@ -1,0 +1,5 @@
+- @title = @page.title
+
+h1 = @page.title
+
+= @page.content.try(:html_safe)

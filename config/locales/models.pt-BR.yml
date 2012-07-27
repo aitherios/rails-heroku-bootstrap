@@ -4,6 +4,6 @@ pt-BR:
       page: Página
       user: Usuário
     attributes:
-      pagina:
+      page:
         title: Título
         content: Conteúdo

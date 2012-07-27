@@ -24,5 +24,5 @@ StartaeBootstrap::Application.routes.draw do
   match 'frontend/:template' => 'frontend#show'
   match 'frontend'           => 'frontend#index'
   
-  match ':slug' => 'paginas#show', as: :pagina
+  match ':slug' => 'pages#show', as: :page
 end

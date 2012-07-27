@@ -1,0 +1,5 @@
+h3 = page.title
+
+p: b = page_url(page)
+
+= page.content.try(:html_safe)

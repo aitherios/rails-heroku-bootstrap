@@ -1,12 +1,12 @@
-ActiveAdmin.register Pagina do
+ActiveAdmin.register Page do
   form partial: 'form'
   
-  filter :titulo
-  filter :conteudo
+  filter :title
+  filter :content
   
   index do
     column :id
-    column :titulo
+    column :title
     default_actions
   end
   
