@@ -18,6 +18,8 @@ gem 'newrelic_rpm'
 gem 'rdiscount'
 gem 'draper'
 gem 'rufus-scheduler'
+gem 'resque'
+gem 'hirefireapp'
 
 group :assets do
   gem 'compass',              '~> 0.13.alpha.0'

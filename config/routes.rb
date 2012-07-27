@@ -1,3 +1,5 @@
+require 'resque/server'
+
 StartaeBootstrap::Application.routes.draw do
   devise_for :users, sign_out_via: :get, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
@@ -12,6 +14,11 @@ StartaeBootstrap::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
+  
+  authenticate :admin_user do
+    mount Resque::Server, :at => "/workers"
+  end
+  
 
   root  to:                     'home#index'
   match 'frontend/:template' => 'frontend#show'
