@@ -1,21 +1,79 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
+ __                  
+(_ _|_ _  ___|_ _  _ 
+__) |_(_| |  |_(_|(/_
+
+The humans.txt file explains the team, technology, and creative assets behind this site.
+http://humanstxt.org
 
 
-/* TEAM */
-  Designer: Renato Carvalho
-  Designer: Rafael Torales
-  Designer: Flávio Ludgero
-  Developer: Renan Carvalho
-  Developer: Julio Protzek
-  Site: http://startae.com.br
-  Twitter: @querostartae
-  Location: Brasília, DF, Brasil
+_______________________________________________________________________________
+PEOPLE
 
-/* THANKS */
-  Names (& URL):
+This site was hand-crafted by Startaê.
+Site:      http://www.startae.com
+Twitter:   @querostartae
+Location:  Brasília, DF, Brasil
 
-/* SITE */
-  Standards: HTML5, CSS3
-  Components: Modernizr, jQuery, Sass, Compass
-  Software: 
+Renato Carvalho
+Visual design, markup, CSS and copywriting
+http://www.startae.com
+
+Rafael Torales
+Visual design, markup, CSS and copywriting
+http://www.startae.com
+
+Julio Protzek
+Development, markup, CSS and copywriting
+http://www.startae.com
+
+Flávio Ludgero
+Content strategy, copywriting
+http://www.startae.com
+
+_______________________________________________________________________________
+TECHNOLOGY
+
+Ruby on Rails
+http://rubyonrails.org
+
+SLIM
+http://slim-lang.com
+
+SASS
+http://sass-lang.com
+
+COMPASS
+http://compass-style.org
+
+HTML5 Boilerplate
+http://html5boilerplate.com
+
+SUSY
+http://susy.oddbird.net
+
+Modernizr
+http://modernizr.com
+
+jQuery
+http://jquery.com
+
+CoffeeScript
+http://coffeescript.org
+
+
+_______________________________________________________________________________
+ICONS
+
+
+_______________________________________________________________________________
+FONTS
+
+Symbolset
+http://symbolset.com
+
+
+_______________________________________________________________________________
+OTHER
+
+Cool Text to ASCII Art Generator
+http://patorjk.com/software/taag/
