@@ -71,11 +71,15 @@ html
 // BOX-SIZING BORDER-BOX DEFAULT 
 // http://paulirish.com/2012/box-sizing-border-box-ftw/
 // --------------------------------------------------
+
+//Using box sizing border box with susy grid: https://github.com/ericam/susy/issues/29#issuecomment-6911654
 *
   +box-sizing(border-box)
 
-.grid
+.container
   +box-sizing(content-box)
+
+
 
 // input, textarea, select, button
 //   +box-sizing(border-box)

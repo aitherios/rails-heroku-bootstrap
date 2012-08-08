@@ -3,8 +3,14 @@
 // DEPENDS ON: globals/variables
 @import "globals/variables"
 
+.holmes-ignore *
+  content: '' !important
+  outline: 0 !important
+  border: none !important
+  
 #grid
   width: $hg-grid
+  @extend .holmes-ignore
 
   *
     -moz-box-sizing: border-box
@@ -26,8 +32,8 @@
   div
     &.vert
       width: $hg-column-width
-      border: solid $hg-vert-grid-color
-      border-width: 0 1px
+      border: solid $hg-vert-grid-color !important
+      border-width: 0 1px !important
       margin-right: $hg-gutter-width
 
       &:last-child
@@ -38,10 +44,10 @@
 
     &.horiz
       height: $hg-leading
-      border-bottom: 1px solid $hg-horiz-grid-color
-      margin: 0
-      padding: 0
+      border-bottom: 1px solid $hg-horiz-grid-color !important
+      margin: 0 !important
+      padding: 0 !important
 
     &.grid-1 div.vert
       /* Vertical grid line colour for grid 1
-      border-color: $hg-vert-grid-color
+      border-color: $hg-vert-grid-color !important
