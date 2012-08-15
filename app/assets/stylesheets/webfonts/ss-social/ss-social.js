@@ -8,8 +8,18 @@
 * <script src="webfonts/ss-social.js"></script>
 */
 
-if (/(MSIE [7-9]\.|Opera.*Version\/(11|12)\.|Chrome\/([5-9]|10)\.|Version\/(4)[\.0-9]+ Safari\/|Version\/(4|5\.0)[\.0-9]+? Mobile\/.*Safari\/)/.test(navigator.userAgent)) {
+if (/(MSIE [7-9]\.|Opera.*Version\/(10\.[5-9]|(11|12)\.)|Chrome\/([1-9]|10)\.|Version\/[2-4][\.0-9]+ Safari\/|Version\/(4\.0\.[4-9]|4\.[1-9]|5\.0)[\.0-9]+? Mobile\/.*Safari\/|Android [1-2]\.)/.test(navigator.userAgent)) {
 
+  var ss_set={'github octocat':'\uF671','googleplus':'\uF613','foursquare':'\uF690','thumbs up':'\uD83D\uDC4D','wordpress':'\uF621','posterous':'\uF623','pinterest':'\uF650','instagram':'\uF641','linkedin':'\uF612','thumbsup':'\uD83D\uDC4D','dribbble':'\uF660','facebook':'\uF610','envelope':'\u2709','rss feed':'\uDB8C\uDC20','behance':'\uF661','twitter':'\uF611','octocat':'\uF671','youtube':'\uF630','google+':'\uF613','spotify':'\uF6B1','approve':'\uD83D\uDC4D','last fm':'\uF6B2','blogger':'\uF622','paypal':'\uF680','flickr':'\uF640','github':'\uF670','tumblr':'\uF620','lastfm':'\uF6B2','email':'\u2709','vimeo':'\uF631','skype':'\uF6A0','mail':'\u2709','like':'\uD83D\uDC4D','rdio':'\uF6B0','rss':'\uE310'};
+
+  if (typeof ss_icons !== 'object' || typeof ss_icons !== 'object') {
+    var ss_icons = ss_set; 
+    var ss_keywords = [];
+    for (var i in ss_set) { ss_keywords.push(i); };
+  } else {
+    for (var i in ss_set) { ss_icons[i] = ss_set[i]; ss_keywords.push(i); }
+  };
+  
   if (typeof ss_legacy !== 'function') {
 
     /* domready.js */
@@ -46,7 +56,7 @@ if (/(MSIE [7-9]\.|Opera.*Version\/(11|12)\.|Chrome\/([5-9]|10)\.|Version\/(4)[\
     };
     
     var ss_liga = function(that) {
-      var re = new RegExp(ss_keywords.join('|'),"gi");
+      var re = new RegExp(ss_keywords.join('|').replace(/[-[\]{}()*+?.,\\^$#\s]/g, "\\$&"),"gi");
       return that.replace(re, function(v) { 
         return ss_icons[v.toLowerCase()];
       });
@@ -61,15 +71,5 @@ if (/(MSIE [7-9]\.|Opera.*Version\/(11|12)\.|Chrome\/([5-9]|10)\.|Version\/(4)[\
     });
   
   }
-  
-  var ss_set={'foursquare':'\uF690','googleplus':'\uF613','wordpress':'\uF621','pinterest':'\uF650','posterous':'\uF623','instagram':'\uF641','dribbble':'\uF660','linkedin':'\uF612','envelope':'\u2709','facebook':'\uF610','twitter':'\uF611','blogger':'\uF622','google+':'\uF613','behance':'\uF661','youtube':'\uF630','tumblr':'\uF620','github':'\uF670','paypal':'\uF680','flickr':'\uF640','skype':'\uF6A0','email':'\u2709','vimeo':'\uF631','mail':'\u2709'};
-
-  if (typeof ss_icons !== 'object' || typeof ss_icons !== 'object') {
-    var ss_icons = ss_set; 
-    var ss_keywords = [];
-    for (var i in ss_set) { ss_keywords.push(i); };
-  } else {
-    for (var i in ss_set) { ss_icons[i] = ss_set[i]; ss_keywords.push(i); }
-  };
   
 };
