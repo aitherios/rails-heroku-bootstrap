@@ -1,20 +1,29 @@
-// @font-face
-//   font-family: "SSSocial"
-//   src: url('ss-social-circle.eot')
-//   src: url('ss-social-circle.eot?#iefix') format("embedded-opentype"), url('ss-social-circle.woff') format("woff"), url('ss-social-circle.ttf') format("truetype"), url('ss-social-circle.svg#SSSocialCircle') format("svg")
-//   font-weight: bold
-//   font-style: normal
-// 
-// 
-// @font-face
-//   font-family: "SSSocial"
-//   src: url('ss-social-regular.eot')
-//   src: url('ss-social-regular.eot?#iefix') format("embedded-opentype"), url('ss-social-regular.woff') format("woff"), url('ss-social-regular.ttf') format("truetype"), url('ss-social-regular.svg#SSSocialRegular') format("svg")
-//   font-weight: normal
-//   font-style: normal
+@charset "UTF-8"
 
-+font-face("SSSocial", font-files("webfonts/ss-social/ss-social-circle.woff", woff, "webfonts/ss-social/ss-social-circle.ttf", truetype, "webfonts/ss-social/ss-social-circle.svg#SSSocialCircle", svg), "webfonts/ss-social/ss-social-circle.eot?#iefix", bold, normal)
-+font-face("SSSocial", font-files("webfonts/ss-social/ss-social-regular.woff", woff, "webfonts/ss-social/ss-social-regular.ttf", truetype, "webfonts/ss-social/ss-social-regular.svg#SSSocialRegular", svg), "webfonts/ss-social/ss-social-regular.eot?#iefix", normal, normal)
+/*
+ ** Symbolset
+ ** www.symbolset.com
+ ** Copyright © 2012 Oak Studios LLC
+ ** 
+ ** Upload this file to your web server
+ ** and place this within your <head> tags.
+ ** <link href="webfonts/ss-social.css" rel="stylesheet" />
+
+@font-face
+  font-family: "SSSocial"
+  src: url('ss-social-circle.eot')
+  src: url('ss-social-circle.eot?#iefix') format("embedded-opentype"), url('ss-social-circle.woff') format("woff"), url('ss-social-circle.ttf') format("truetype"), url('ss-social-circle.svg#SSSocialCircle') format("svg")
+  font-weight: bold
+  font-style: normal
+
+
+@font-face
+  font-family: "SSSocial"
+  src: url('ss-social-regular.eot')
+  src: url('ss-social-regular.eot?#iefix') format("embedded-opentype"), url('ss-social-regular.woff') format("woff"), url('ss-social-regular.ttf') format("truetype"), url('ss-social-regular.svg#SSSocialRegular') format("svg")
+  font-weight: normal
+  font-style: normal
+
 
 .ss-icon
   font-family: "SSSocial"
@@ -166,7 +175,7 @@
 
 .ss-like
   &:before, &.right:after
-    content: ''
+    content: '👍'
 
 .ss-rss
   &:before, &.right:after
