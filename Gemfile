@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails",                  "~> 3.2.1"
-gem "jquery-rails",           "~> 2.0.2"
+gem "jquery-rails",           "~> 2.1.1"
 gem "rails-boilerplate",      "~> 0.1.9"
 gem "pg",                     "~> 0.13.1"
 gem "slim",                   "~> 1.2.2"
