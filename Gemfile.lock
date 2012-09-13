@@ -156,7 +156,6 @@ GEM
       net-ssh (>= 1.99.1)
     net-ssh (2.5.2)
     netrc (0.7.7)
-    newrelic_rpm (3.4.2)
     nokogiri (1.5.5)
     oauth2 (0.8.0)
       faraday (~> 0.8)
@@ -300,7 +299,6 @@ DEPENDENCIES
   jquery-rails (~> 2.1.1)
   meta_search (>= 1.1.0.pre)
   mini_magick
-  newrelic_rpm
   oily_png (~> 1.0.2)
   omniauth-facebook (~> 1.4.1)
   pg (~> 0.13.1)
