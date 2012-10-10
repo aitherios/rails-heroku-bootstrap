@@ -1,3 +1,30 @@
+//NORMAL
+$button-border:                      #a7a8ab !default
+$button-background-solid:            #fcfcfc !default
+$button-background-gradient:         linear-gradient(#fcfcfc, #dfe0e3) !default
+$button-text:                        $gray-dark !default
+$button-text-shadow:                 rgba($white, .6) 0 1px 0 !default
+$button-box-shadow:                  0 1px 2px rgba($black, .2), inset 0 1px 0 0 rgba($white, .15) !default
+$button-box-shadow-retina:           inset 0 0 1px rgba($black, .9), 0 1px 1px rgba($black, .2) !default
+//HOVER
+$button-border-hover:                darken($button-border, 8%) !default
+$button-background-solid-hover:      darken($button-background-solid, 6%) !default
+$button-background-gradient-hover:   linear-gradient(darken(#fcfcfc, 6%), darken(#dfe0e3, 8%)) !default
+$button-text-hover:                  darken($button-text, 100%) !default
+$button-text-shadow-hover:           rgba($white, .6) 0 1px 0 !default
+$button-box-shadow-hover:            0 1px 2px rgba($black, .2), inset 0 1px 0 0 rgba($white, .15) !default
+$button-box-shadow-retina-hover:     inset 0 0 1px rgba($black, .9), 0 1px 1px rgba($black, .2) !default
+//Active
+$button-border-active:                darken($button-border, 15%) !default
+$button-background-solid-active:      darken($button-background-solid, 8%) !default
+$button-background-gradient-active:   linear-gradient(darken(#dfe0e3, 8%), darken(#fcfcfc, 6%)) !default
+$button-text-active:                  darken($button-text, 100%) !default
+$button-text-shadow-active:           rgba($white, .6) 0 1px 0 !default
+$button-box-shadow-active:            0 1px 0 0 rgba($white, .6), inset 0 1px 3px 0 rgba($gray-darker, .7) !default
+$button-box-shadow-retina-active:     inset 0 0 1px rgba($black, .9), 0 1px 1px rgba($black, .2) !default
+
+
+
 // NORMALISE BUTTONS CLASS
 .normalise-button
   margin: 0
@@ -31,33 +58,41 @@
   overflow: visible
   //STYLING
   +border-radius(3px)
-  border: 1px solid #a7a8ab
-  +background-with-css2-fallback(linear-gradient(#fcfcfc, #dfe0e3), #fcfcfc)
-  color: $gray-dark
-  +text-shadow(rgba($white, .6) 0 1px 0)
-  +box-shadow(0 1px 2px rgba($black, .2), inset 0 1px 0 0 rgba($white, .15))
+  border: 1px solid $button-border
+  +background-with-css2-fallback($button-background-gradient, $button-background-solid)
+  color: $button-text
+  +text-shadow($button-text-shadow)
+  +box-shadow($button-box-shadow)
   //RETINA DISPLAY STYLE: Using box shadow to simulate borders
   +respond-to(retina)
     border: none
-    +box-shadow(inset 0 0 1px rgba($black, .9), 0 1px 1px rgba($black, .2))
+    +box-shadow($button-box-shadow-retina)
 
   //STATE: VISITED
   &:visited
-    color: $gray-dark
+    color: $button-text
   
   //STATE: HOVER, FOCUS, ACTIVE
   &:hover, &:focus, &:active, &.active
-    color: $gray-darker
-    border-color: darken(#9fa1a3, 8%)
     text-decoration: none
-    +background-with-css2-fallback(linear-gradient(darken(#fcfcfc, 6%), darken(#dfe0e3, 8%)), darken(#fcfcfc, 6%))
+    color: $button-text-hover
+    border-color: $button-border-hover
+    +box-shadow($button-box-shadow-hover)
+    +background-with-css2-fallback($button-background-gradient-hover, $button-background-solid-hover)
+    +text-shadow($button-text-shadow-hover)
+
+    +respond-to(retina)
+      +box-shadow($button-box-shadow-retina-hover)
 
   //STATE: ACTIVE
   &:active, &.active
-    color: $gray
-    border-color: darken(#9fa1a3, 15%)
-    +background-with-css2-fallback(linear-gradient(darken(#dfe0e3, 8%), darken(#fcfcfc, 6%)), darken(#dfe0e3, 8%))
-    +box-shadow(0 1px 0 0 rgba($white, .6), inset 0 1px 4px 0 rgba($gray-darker, .6))    
+    color: $button-text-active
+    border-color: $button-border-active
+    +background-with-css2-fallback($button-background-gradient-active, $button-background-solid-active)
+    +box-shadow($button-box-shadow-active)
+
+    +respond-to(retina)
+      +box-shadow($button-box-shadow-retina-active)
 
   &::-moz-focus-inner
     padding: 0
@@ -71,7 +106,7 @@
     +margin-leader(.4)
     +margin-trailer(.4)
     +padding-leader(.5)
-    +padding-trailer(.6)
+    +padding-trailer(.5)
     +adjust-font-size-to(11px)
     +adjust-leading-to(0)
     height: +rhythm(1)
