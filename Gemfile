@@ -32,6 +32,7 @@ group :assets do
   gem "animate",              "~> 0.1.0"
   gem "coffee-rails",         "~> 3.2.2"
   gem "uglifier",             "~> 1.3.0"
+  gem "font_assets",          "~> 0.1.2"
 end
 
 group :test, :development do
