@@ -34,13 +34,9 @@
 // ---------------------------------------------------------------------------------
 //  DEFAULT STYLES
 // ---------------------------------------------------------------------------------
-
 html
   +improve-text-rendering
   overflow-y: scroll
-  -webkit-text-size-adjust: 100%
-  -ms-text-size-adjust: 100%
-  text-size-adjust: 100%
 
 
 
@@ -57,31 +53,13 @@ html
 
 
 
-// Text Selection
-// --------------------------------------------------
-::selection
-  background: $text-selection-background
-  color: $text-selection-color
-
-
-
 // BOX-SIZING BORDER-BOX DEFAULT 
 // http://paulirish.com/2012/box-sizing-border-box-ftw/
 // --------------------------------------------------
 
 //Using box sizing border box with susy grid: https://github.com/ericam/susy/issues/29#issuecomment-6911654
 // Susy box sizing correction
-// +border-box-sizing
-*
-  +box-sizing(border-box)
-
-.container
-  +box-sizing(content-box)
-
-
-
-// input, textarea, select, button
-//   +box-sizing(border-box)
++border-box-sizing
 
 
 
