@@ -4,5 +4,5 @@
 #= require facebook_popup
 #= require validator
 #= require user
-#= require webfonts/ss-standard/ss-standard
-#= require webfonts/ss-social/ss-social
+#= require symbolset/ss-standard/ss-standard
+#= require symbolset/ss-social/ss-social

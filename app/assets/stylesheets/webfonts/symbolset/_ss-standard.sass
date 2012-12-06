@@ -1,0 +1,51 @@
+@charset "UTF-8"
+
++font-face("SSStandard", font-files("ss-standard/ss-standard.woff", woff, "ss-standard/ss-standard.ttf", truetype, "ss-standard/ss-standard.svg#SSStandard", svg), "ss-standard/ss-standard.eot?#iefix", normal, normal)
+
+.ss-icon
+  font-family: "SSStandard"
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+  text-rendering: optimizeLegibility
+  white-space: nowrap
+  -webkit-font-feature-settings: "liga"
+  -moz-font-feature-settings: "liga=1"
+  -moz-font-feature-settings: "liga"
+  -ms-font-feature-settings: "liga" 1
+  -o-font-feature-settings: "liga"
+  font-feature-settings: "liga"
+  -webkit-font-smoothing: antialiased
+  &.ss-standard
+    font-family: "SSStandard"
+    font-style: normal
+    font-weight: normal
+    text-decoration: none
+    text-rendering: optimizeLegibility
+    white-space: nowrap
+    -webkit-font-feature-settings: "liga"
+    -moz-font-feature-settings: "liga=1"
+    -moz-font-feature-settings: "liga"
+    -ms-font-feature-settings: "liga" 1
+    -o-font-feature-settings: "liga"
+    font-feature-settings: "liga"
+    -webkit-font-smoothing: antialiased
+
+[class^="ss-"]:before, [class*=" ss-"]:before, [class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before, [class^="ss-"].right:after, [class*=" ss-"].right:after, [class^="ss-"].ss-standard.right:after, [class*=" ss-"].ss-standard.right:after
+  font-family: "SSStandard"
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+  text-rendering: optimizeLegibility
+  white-space: nowrap
+  -webkit-font-feature-settings: "liga"
+  -moz-font-feature-settings: "liga=1"
+  -moz-font-feature-settings: "liga"
+  -ms-font-feature-settings: "liga" 1
+  -o-font-feature-settings: "liga"
+  font-feature-settings: "liga"
+  -webkit-font-smoothing: antialiased
+
+[class^="ss-"].right:before, [class*=" ss-"].ss-standard.right:before
+  display: none
+  content: ''

@@ -46,12 +46,6 @@ ActiveRecord::Schema.define(:version => 20120727142928) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "avatars", :force => true do |t|
-    t.string   "file"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
     t.integer  "sluggable_id",                 :null => false
@@ -88,8 +82,8 @@ ActiveRecord::Schema.define(:version => 20120727142928) do
     t.string   "name",                   :default => ""
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
+    t.string   "avatar"
     t.boolean  "logged_with_facebook",   :default => false
-    t.integer  "avatar_id"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
