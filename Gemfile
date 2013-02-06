@@ -47,7 +47,7 @@ group :test do
 end
 
 group :development do
-  gem "heroku"
+  # gem "heroku"
   gem "foreman"
 end
 
