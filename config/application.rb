@@ -18,6 +18,7 @@ module StartaeBootstrap
     config.assets.enabled = true
     config.assets.version = '1.0'
     config.i18n.default_locale = 'pt-BR'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**/*.{rb,yml}').to_s]
     config.generators.stylesheet_engine = :sass
     config.assets.initialize_on_precompile = false
     config.time_zone = 'Brasilia'
