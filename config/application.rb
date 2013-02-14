@@ -14,7 +14,7 @@ module StartaeBootstrap
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
     config.encoding = 'utf-8'
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :password_confirmation]
     config.assets.enabled = true
     config.assets.version = '1.0'
     config.i18n.default_locale = 'pt-BR'
