@@ -206,3 +206,11 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+
+  formtastic:
+    yes: 'Sim'
+    no: 'Não'
+    create: 'Criar %{model}'
+    update: 'Atualizar %{model}'
+    submit: 'Salvar %{model}'
+    required: 'obrigatório'

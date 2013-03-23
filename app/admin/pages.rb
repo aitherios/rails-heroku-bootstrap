@@ -1,4 +1,5 @@
 ActiveAdmin.register Page do
+  config.per_page = 10
   form partial: 'form'
   
   filter :title

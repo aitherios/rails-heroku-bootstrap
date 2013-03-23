@@ -4,17 +4,29 @@ pt-BR:
       page: Página
       user: Usuário
       admin_user: Administrador
+      content_block: Bloco de Conteúdo
     attributes:
+      content_block:
+        name: Nome
+        body: Conteúdo
+        created_at: Criado em
+        updated_at: Atualizado em
       page:
         title: Título
         content: Conteúdo
+        created_at: Criado em
+        updated_at: Atualizado em
       admin_user:
         email: Email
         password: Senha
         password_confirmation: Confirmação da Senha
+        created_at: Criado em
+        updated_at: Atualizado em
       user:
+        name: Nome
         email: Email
         password: Senha
         password_confirmation: Confirmação da Senha
         remember_me: Lembrar-me
-        name: Nome
+        created_at: Criado em
+        updated_at: Atualizado em

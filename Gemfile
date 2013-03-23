@@ -10,6 +10,7 @@ gem "mini_magick"
 gem "carrierwave"
 gem "fog", "~> 1.3.1"
 gem "meta_search", ">= 1.1.0.pre"
+gem 'activeadmin'
 gem "devise", "~> 2.1.0"
 gem "omniauth-facebook", "~> 1.4.1"
 gem "fb-channel-file", "~> 0.0.1"
@@ -48,8 +49,9 @@ end
 
 group :development do
   # gem "heroku"
-  gem "foreman"
+  gem 'foreman'
+  gem 'thin'
 end
 
-gem 'activeadmin', git: 'https://github.com/startae/activepress.git', branch: '022d02c8f168eecbe6872e3d1782dd4709ebe47c'
+# gem 'activeadmin', git: 'https://github.com/startae/activepress.git', branch: '022d02c8f168eecbe6872e3d1782dd4709ebe47c'
 # gem "activeadmin", path: "../active_admin"

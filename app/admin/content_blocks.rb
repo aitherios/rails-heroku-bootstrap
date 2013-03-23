@@ -1,14 +1,15 @@
-ActiveAdmin.register AdminUser do
+ActiveAdmin.register ContentBlock do
   config.per_page = 10
-  filter :email
+
+  filter :name
 
   index do
     column :id
-    column :email
+    column :name
     default_actions
   end
 
-  show title: :email do
+  show title: :name do
     render partial: 'show'
   end
 
