@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-StartaeBootstrap::Application.load_tasks
+AitheriosStartaeBootstrap::Application.load_tasks
