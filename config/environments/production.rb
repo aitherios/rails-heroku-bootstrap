@@ -52,7 +52,8 @@ AitheriosStartaeBootstrap::Application.configure do
      modernizr.js
      nwmatcher-1.2.5.js
      html5shiv-printshiv.js
-     active_admin.css 
+     active_admin.css
+     active_admin/print.css
      active_admin.js 
      close_for_facebook_login.js 
      selectivizr.js 
