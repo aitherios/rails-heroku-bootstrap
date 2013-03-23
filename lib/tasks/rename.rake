@@ -1,6 +1,6 @@
 desc "Rename project"
-
 task :rename, :project_name do |t, args|
+
   def replace_in_file(filename, s, r)
     filename = Rails.root.join(filename)
     content = File.open(filename).read.gsub(s, r)
