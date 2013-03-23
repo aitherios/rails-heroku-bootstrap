@@ -12,6 +12,7 @@ task :rename_hostname, :project_hostname do |t, args|
   'config/initializers/heroku_wakeup.rb',
   'app/views/layouts/_facebook_metatags.slim',
   'config/initializers/mail.rb',
+  'app/mailers/contact_mailer.rb',
   'lib/tasks/rename_hostname.rake'].each do |filename|
     replace_in_file(filename, 'aitherios-startae-bootstrap.herokuapp.com', args[:project_hostname])
   end

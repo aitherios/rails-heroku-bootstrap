@@ -1,0 +1,12 @@
+en:
+  app:
+    contacts:
+      leave_a_message: Leave us a message
+      email: Email
+      name: Name
+      message: Message
+      form_ready: Send
+      form_sending: Sending
+      form_sent: Sent
+      form_error: Error
+      form_warn: Fill In

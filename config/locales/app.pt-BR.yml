@@ -1,0 +1,12 @@
+pt-BR:
+  app:
+    contacts:
+      leave_a_message: Deixe uma mensagem
+      email: Email
+      name: Nome
+      message: Mensagem
+      form_ready: Enviar
+      form_sending: Enviando
+      form_sent: Enviado
+      form_error: Erro
+      form_warn: Preencha
