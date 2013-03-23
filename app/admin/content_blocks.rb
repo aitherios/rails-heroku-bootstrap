@@ -1,4 +1,5 @@
 ActiveAdmin.register ContentBlock do
+  actions :all, except: [:destroy, :new]
   config.per_page = 10
 
   filter :name
