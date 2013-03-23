@@ -50,6 +50,7 @@ AitheriosStartaeBootstrap::Application.configure do
   # config.assets.precompile += %w( search.js )
   config.assets.precompile += %w( 
      modernizr.js
+     nwmatcher-1.2.5.js
      html5shiv-printshiv.js
      active_admin.css 
      active_admin.js 

@@ -10,6 +10,7 @@ task :rename, :project_name do |t, args|
   
   ['Rakefile',
   'app/views/layouts/application.slim',
+  'app/views/layouts/_facebook_metatags.slim',
   'config/application.rb',
   'config/environment.rb',
   'config/environments/development.rb',
