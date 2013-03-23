@@ -20,8 +20,8 @@ AitheriosStartaeBootstrap::Application.routes.draw do
   end
   
   root  to:                     'home#index'
-  get    'contato'           => 'contacts#index', as: :contacts
-  match  'contato/enviar'    => 'contacts#new',   as: :new_contact
+  get   'contato'           => 'contacts#index', as: :contacts
+  match 'contato/enviar'    => 'contacts#new',   as: :new_contact
   match 'frontend/:template' => 'frontend#show'
   match 'frontend'           => 'frontend#index'
   match ':slug'              => 'pages#show',     as: :page
