@@ -19,10 +19,9 @@ AitheriosStartaeBootstrap::Application.routes.draw do
     mount Resque::Server, :at => "/workers"
   end
   
-
   root  to:                     'home#index'
+  match 'contato'            => 'contacts#index'
   match 'frontend/:template' => 'frontend#show'
   match 'frontend'           => 'frontend#index'
-  match 'bkg' => 'pages#bkg'
-  match ':slug' => 'pages#show', as: :page
+  match ':slug'              => 'pages#show', as: :page
 end

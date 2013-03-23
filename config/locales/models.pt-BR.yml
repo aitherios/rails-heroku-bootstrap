@@ -1,11 +1,18 @@
 pt-BR:
   activerecord:
     models:
-      page: Página
-      user: Usuário
-      admin_user: Administrador
-      content_block: Bloco de Conteúdo
+      page: Página(s)
+      user: Usuário(s)
+      admin_user: Administrador(es)
+      content_block: Bloco(s) de Conteúdo
+      contact: Contato(s)
     attributes:
+      contact:
+        name: Nome
+        email: Email
+        message: Mensagem
+        created_at: Criado em
+        updated_at: Atualizado em
       content_block:
         name: Nome
         body: Conteúdo
