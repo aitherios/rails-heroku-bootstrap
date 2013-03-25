@@ -7,7 +7,7 @@ if ENV['DATABASE_URL']
   scheduler.every '10m' do
     require "net/http"
     require "uri"
-    url = 'http://aitherios-startae-bootstrap.herokuapp.com'
+    url = "http://#{ENV['APP_HOSTNAME']}"
     Net::HTTP.get_response(URI.parse(url))
   end
 

@@ -6,6 +6,6 @@ class ContactMailer < ActionMailer::Base
     @email = hash[:email]
     @message = hash[:message]
 
-    mail(from: @email, subject: "[aitherios-startae-bootstrap.herokuapp.com] #{@name}")
+    mail(from: @email, subject: "[#{ENV['APP_HOSTNAME']}] #{@name}")
   end
 end
