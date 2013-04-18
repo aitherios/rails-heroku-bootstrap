@@ -12,7 +12,7 @@ ActiveAdmin.register ContentBlock do
 
   form do |f|
     f.inputs do
-      f.input :name, input_html: { disabled: true } 
+      f.input :name, input_html: { disabled: true }
       f.input :body, input_html: { class: ( 'redactor' if f.object.body.match(/<\w/) ) }
     end
 

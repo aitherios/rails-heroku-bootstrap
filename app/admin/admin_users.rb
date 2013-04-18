@@ -1,10 +1,14 @@
 ActiveAdmin.register AdminUser do
   config.per_page = 10
+
   filter :email
 
   index do
     column :id
     column :email
+    column :current_sign_in_at        
+    column :last_sign_in_at           
+    column :sign_in_count             
     default_actions
   end
 
@@ -23,6 +27,9 @@ ActiveAdmin.register AdminUser do
       row :email
       row :created_at
       row :updated_at
+      row :current_sign_in_at        
+      row :last_sign_in_at           
+      row :sign_in_count             
     end
 
     active_admin_comments

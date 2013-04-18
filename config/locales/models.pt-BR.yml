@@ -29,6 +29,9 @@ pt-BR:
         password_confirmation: Confirmação da Senha
         created_at: Criado em
         updated_at: Atualizado em
+        current_sign_in_at: Loggado em
+        last_sign_in_at: Login anterior em
+        sign_in_count: Número de logins
       user:
         name: Nome
         email: Email

@@ -6,6 +6,7 @@ ActiveAdmin.register Page do
   
   index do
     column :id
+    column :slug
     column :title
     default_actions
   end

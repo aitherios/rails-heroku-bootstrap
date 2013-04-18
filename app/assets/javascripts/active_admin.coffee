@@ -1,8 +1,7 @@
 #= require active_admin/base
-#= require redactor
+#= require redactor-rails
 
 $ ->
-  $('.redactor').redactor({lang: 'pt_br', path: location.origin + '/assets'})
   $.datepicker.regional['pt'] =
     closeText: 'Fechar'
     prevText: '<Anterior'

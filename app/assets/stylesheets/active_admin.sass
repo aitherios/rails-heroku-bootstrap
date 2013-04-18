@@ -1,20 +1,7 @@
 @import "active_admin/mixins"
 @import "active_admin/base"
-@import "css/redactor"
+@import "redactor-rails"
 
-.redactor_box_fullscreen
-  z-index: 120001 !important
-  
-.redactor_box 
-  width: 76%
+.redactor_box
+  width: 77.5%
   margin-left: 20% !important
-
-  li
-    margin-bottom: 0 !important
-    
-.admin_paginas
-  .action_items, a[data-method="delete"]
-    display: none
-    
-  .index_as_table .zebra-striped td:last-child
-    width: 105px
