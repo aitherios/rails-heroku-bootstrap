@@ -1,6 +1,7 @@
 javascript:
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', "#{ENV['GOOGLE_ANALYTICS_ID']}"]);
+  _gaq.push(['_setDomainName', "#{ENV['APP_HOSTNAME']}"]);
   _gaq.push(['_trackPageview']);
 
   (function() {
