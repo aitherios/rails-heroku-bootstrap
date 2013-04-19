@@ -15,13 +15,16 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'fb-channel-file'
 gem 'friendly_id'
-gem 'newrelic_rpm'
 gem 'rdiscount'
 gem 'draper'
 gem 'rufus-scheduler'
 gem 'resque'
 gem 'redis'
 gem 'redactor-rails'
+
+# external services
+gem 'newrelic_rpm'
+gem 'sentry-raven'
 
 group :assets do
   gem 'compass'
