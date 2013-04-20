@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails',                  '~> 3.2.13'
 gem 'jquery-rails'
+gem 'jquery-migrate-rails'
 gem 'rails-boilerplate'
 gem 'pg'
 gem 'slim'
@@ -21,6 +22,7 @@ gem 'rufus-scheduler'
 gem 'resque'
 gem 'redis'
 gem 'redactor-rails'
+gem 'mercury-rails'
 
 # external services
 gem 'newrelic_rpm'
@@ -30,7 +32,6 @@ group :assets do
   gem 'compass'
   gem 'oily_png'
   gem 'compass-rails'
-  gem 'sass'
   gem 'sass-rails'
   gem 'susy'
   gem 'coffee-rails'

@@ -1,0 +1,36 @@
+a.admin-button-wrapper
+  z-index: 999
+  &:hover
+    text-decoration: none
+
+  #admin-pannel-button
+    position: absolute
+    right: 4em
+    bottom: 10em
+    margin-bottom: 90px
+
+  #mercury-edit-button
+    position: absolute
+    bottom: 4em
+    right: 4em
+    margin-bottom: 90px
+
+  .admin-button
+    padding: 0.3em 1em
+    width: 10em
+    text-align: center
+    background-color: #e74c3c
+    +transition(0.25s)
+    cursor: pointer
+    z-index: 999
+
+    &:hover
+      background-color: #ec7063
+
+    span
+      color: #ffffff
+      font-family: $sans-family
+      font-size: 2em
+      line-height: 2em
+      vertical-align: middle
+

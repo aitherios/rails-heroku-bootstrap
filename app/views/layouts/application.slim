@@ -20,6 +20,7 @@ html.no-js lang="#{I18n.locale}"
 
   body class="#{yield :body_class}"
     == render 'layouts/browser_warning'
+    == render 'layouts/mercury_edit_button' if current_admin_user.present?
 
     section.page
       == render 'layouts/header'

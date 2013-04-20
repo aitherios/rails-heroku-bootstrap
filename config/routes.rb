@@ -1,6 +1,7 @@
 require 'resque/server'
 
 AitheriosStartaeBootstrap::Application.routes.draw do
+  mount Mercury::Engine => '/'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
@@ -21,9 +22,11 @@ AitheriosStartaeBootstrap::Application.routes.draw do
   root  to:                     'home#index'
   get   'contato'           => 'contacts#index', as: :contacts
   match 'contato/enviar'    => 'contacts#new',   as: :new_contact
+
   match 'frontend/:template' => 'frontend#show'
   match 'frontend'           => 'frontend#index'
+  put   'content_blocks'     => 'content_blocks#update'
 
   ActiveAdmin.routes(self)
-  match ':slug'              => 'pages#show',     as: :page
+  get ':slug'                => 'pages#show',     as: :page
 end

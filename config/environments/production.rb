@@ -48,15 +48,17 @@ AitheriosStartaeBootstrap::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += %w( 
+  config.assets.precompile += %w(
+     mercury.js
+     mercury.css
      modernizr.js
+     selectivizr.js 
      nwmatcher-1.2.5.js
      html5shiv-printshiv.js
+     close_for_facebook_login.js 
+     active_admin.js 
      active_admin.css
      active_admin/print.css
-     active_admin.js 
-     close_for_facebook_login.js 
-     selectivizr.js 
      langs/pt_br.js 
      toolbars/default.js 
      toolbars/mini.js 

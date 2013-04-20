@@ -1,5 +1,7 @@
 en:
   app:
+    mercury:
+      edit_button: Editor
     contacts:
       leave_a_message: Leave us a message
       email: Email
