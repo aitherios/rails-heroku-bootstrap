@@ -74,6 +74,10 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.2.4)
     dotenv (0.7.0)
+    draper (1.2.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
     email_spec (1.4.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -215,6 +219,7 @@ GEM
     redis (3.0.3)
     redis-namespace (1.2.1)
       redis (~> 3.0.0)
+    request_store (1.0.5)
     responders (0.9.3)
       railties (~> 3.1)
     resque (1.24.1)
@@ -300,6 +305,7 @@ DEPENDENCIES
   compass
   compass-rails
   devise
+  draper
   email_spec
   factory_girl_rails
   fb-channel-file
