@@ -32,7 +32,7 @@ $hg-total-columns: $total-columns
 $hg-column-width: $column-width
 $hg-gutter-width: $gutter-width
 $hg-grid-padding: $grid-padding
-$hg-grid: ($hg-total-columns * $hg-column-width) + ($hg-total-columns * $hg-gutter-width)
+$hg-grid: $hg-grid-padding * 2 + ($hg-total-columns * $hg-column-width) + (($hg-total-columns - 1) * $hg-gutter-width)
 $hg-leading: $base-line-height
 $hg-horiz-grid-color: rgba(red,.1)
 $hg-vert-grid-color: rgba(#00b0b2,.3)
