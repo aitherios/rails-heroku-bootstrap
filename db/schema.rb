@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421014832) do
+ActiveRecord::Schema.define(:version => 20130421112155) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -57,8 +57,9 @@ ActiveRecord::Schema.define(:version => 20130421014832) do
   create_table "content_blocks", :force => true do |t|
     t.string   "name"
     t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.text     "original_body"
   end
 
   add_index "content_blocks", ["name"], :name => "index_content_blocks_on_name", :unique => true
