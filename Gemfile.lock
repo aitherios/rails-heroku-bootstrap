@@ -74,10 +74,6 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.2.4)
     dotenv (0.7.0)
-    draper (1.2.0)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      request_store (~> 1.0.3)
     email_spec (1.4.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -210,7 +206,6 @@ GEM
       thor (>= 0.14.6, < 2.0)
     raindrops (0.11.0)
     rake (10.0.4)
-    rdiscount (2.0.7.2)
     rdoc (3.12.2)
       json (~> 1.4)
     redactor-rails (0.3.3)
@@ -220,7 +215,6 @@ GEM
     redis (3.0.3)
     redis-namespace (1.2.1)
       redis (~> 3.0.0)
-    request_store (1.0.5)
     responders (0.9.3)
       railties (~> 3.1)
     resque (1.24.1)
@@ -306,7 +300,6 @@ DEPENDENCIES
   compass
   compass-rails
   devise
-  draper
   email_spec
   factory_girl_rails
   fb-channel-file
@@ -318,7 +311,6 @@ DEPENDENCIES
   jquery-rails
   magic_encoding
   mercury-rails
-  meta_search (>= 1.1.0.pre)
   mini_magick
   newrelic_rpm
   oily_png
@@ -326,7 +318,6 @@ DEPENDENCIES
   pg
   rails (~> 3.2.13)
   rails-boilerplate
-  rdiscount
   redactor-rails
   redis
   resque
