@@ -44,6 +44,7 @@ Else (Ctrl-C stops the webserver):
 * Add schemas to search providers (http://schema.org/)
 * Create final hostname email account and update app/mailers/contact_mailer.rb
 * Update public/humans.txt
+* Update project license on LICENSE and README.rdoc
 
 == Tecnologies used
 
