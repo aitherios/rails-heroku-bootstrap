@@ -32,6 +32,19 @@ If you are running for the first time:
 Else (Ctrl-C stops the webserver):
   foreman start
 
+== Checklist for production
+
+* Update favicons and apple-touch-icons located at public/
+* Update Amazon S3 variables
+* Create Facebook app and update system variables
+* Update APP_HOSTNAME with final hostname, not the something.herokuapp.com
+* Update GOOGLE_ANALYTICS_ID
+* Add project to Google Webmasters
+* Add a project sitemap (http://sitemaps.org)
+* Add schemas to search providers (http://schema.org/)
+* Create final hostname email account and update app/mailers/contact_mailer.rb
+* Update public/humans.txt
+
 == Tecnologies used
 
 * Sass: http://sass-lang.com/
