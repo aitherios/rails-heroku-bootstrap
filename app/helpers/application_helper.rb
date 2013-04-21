@@ -31,9 +31,9 @@ module ApplicationHelper
     end
 
     if current_admin_user.present? and options[:editable] != false
-      content = content_tag :div, content.html_safe, id: "content-block-#{cb.id}",
-                                                     class: 'mercury-region',
-                                                     data: { mercury: 'full' }
+      content = content_tag :span, content.html_safe, id: "content-block-#{cb.id}",
+                                                      class: 'mercury-region',
+                                                      data: { mercury: 'full' }
     end
       
     content.html_safe
