@@ -326,7 +326,7 @@ DEPENDENCIES
   rails (~> 3.2.13)
   rails-boilerplate
   rdiscount
-  redactor-rails (= 0.3.2)
+  redactor-rails
   redis
   resque
   rspec-rails

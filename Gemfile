@@ -22,7 +22,7 @@ gem 'draper'
 gem 'rufus-scheduler'
 gem 'resque'
 gem 'redis'
-gem 'redactor-rails',         '= 0.3.2'
+gem 'redactor-rails'
 gem 'mercury-rails'
 
 # external services
