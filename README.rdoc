@@ -21,6 +21,9 @@ Push the code to heroku:
 Run the migrations:
   heroku run rake db:migrate
 
+Restart the server:
+  heroku ps:restart
+
 == Running the project for development
 
 If you are running for the first time:
