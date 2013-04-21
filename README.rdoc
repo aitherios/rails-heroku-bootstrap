@@ -199,6 +199,9 @@ vendor
 
 The variables used by are present in your /.env
 
+Those are your local variables, to update them on heroku just:
+  heroku config:set WEB_CONCURRENCY=4 APP_HOSTNAME=myproject.com
+
 WEB_CONCURRENCY=3
   Number of extra processes unicorn will spawn.
 RACK_ENV=none
