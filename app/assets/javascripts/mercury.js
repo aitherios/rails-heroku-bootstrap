@@ -454,3 +454,11 @@ window.Mercury = {
 $(window).bind('mercury:saved', function() {
   window.location = window.location.href.replace(/\/editor\//i, '/');
 });
+
+$(window).bind('mercury:ready', function(){
+  var iframeRef = document.getElementById('mercury_iframe');
+  var innerDocument = iframeRef.contentWindow ? iframeRef.contentWindow.document : iframeRef.contentDocument;
+  $('a', innerDocument).click(function(event){
+    event.preventDefault();
+  });
+});
