@@ -28,12 +28,12 @@ module ApplicationHelper
       end
       
       content = cb.body
-    end
 
-    if current_admin_user.present? and options[:editable] != false
-      content = content_tag :span, content.html_safe, id: "content-block-#{cb.id}",
-                                                      class: 'mercury-region',
-                                                      data: { mercury: 'full' }
+      if current_admin_user.present? and options[:editable] != false
+        content = content_tag :span, content.html_safe, id: "content-block-#{cb.id}",
+                                                        class: 'mercury-region',
+                                                        data: { mercury: 'full' }
+      end
     end
       
     content.html_safe
