@@ -1,6 +1,7 @@
 require 'resque/server'
 
 AitheriosStartaeBootstrap::Application.routes.draw do
+  mount RedactorRails::Engine => '/redactor_rails'
   mount Mercury::Engine => '/'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

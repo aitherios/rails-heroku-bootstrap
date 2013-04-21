@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418124434) do
+ActiveRecord::Schema.define(:version => 20130421014832) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -85,7 +85,6 @@ ActiveRecord::Schema.define(:version => 20130418124434) do
   add_index "pages", ["slug"], :name => "index_paginas_on_slug"
 
   create_table "redactor_assets", :force => true do |t|
-    t.integer  "user_id"
     t.string   "data_file_name",                  :null => false
     t.string   "data_content_type"
     t.integer  "data_file_size"
