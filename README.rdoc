@@ -1,197 +1,121 @@
-== Welcome to Rails
+== How to bootstrap a project in Heroku
 
-Rails is a web-application framework that includes everything needed to create
-database-backed web applications according to the Model-View-Control pattern.
+Clone this repository:
+  git clone git@github.com:aitherios/startae-bootstrap.git my_new_project
+  cd my_new_project
 
-This pattern splits the view (also called the presentation) into "dumb"
-templates that are primarily responsible for inserting pre-built data in between
-HTML tags. The model contains the "smart" domain objects (such as Account,
-Product, Person, Post) that holds all the business logic and knows how to
-persist themselves to a database. The controller handles the incoming requests
-(such as Save New Account, Update Product, Show Post) by manipulating the model
-and directing data to the view.
+Rename the project to a name of your choosing and commit:
+  rake rename[MyNewProject]
+  git add .
+  git commit -am 'Renaming my project'
 
-In Rails, the model is handled by what's called an object-relational mapping
-layer entitled Active Record. This layer allows you to present the data from
-database rows as objects and embellish these data objects with business logic
-methods. You can read more about Active Record in
-link:files/vendor/rails/activerecord/README.html.
+Create a heroku app:
+  heroku create my_new_project
 
-The controller and view are handled by the Action Pack, which handles both
-layers by its two parts: Action View and Action Controller. These two layers
-are bundled in a single package due to their heavy interdependence. This is
-unlike the relationship between the Active Record and Action Pack that is much
-more separate. Each of these packages can be used independently outside of
-Rails. You can read more about Action Pack in
-link:files/vendor/rails/actionpack/README.html.
+Bootstrap heroku addons:
+  ./bootstrap_heroku.sh
 
+Push the code to heroku:
+  git push heroku master
 
-== Getting Started
+Run the migrations:
+  heroku run rake db:migrate
 
-1. At the command prompt, create a new Rails application:
-       <tt>rails new myapp</tt> (where <tt>myapp</tt> is the application name)
+== Running the project for development
 
-2. Change directory to <tt>myapp</tt> and start the web server:
-       <tt>cd myapp; rails server</tt> (run with --help for options)
+If you are running for the first time:
+  bundle install
+  rake db:create
+  rake db:migrate
+  foreman start
 
-3. Go to http://localhost:3000/ and you'll see:
-       "Welcome aboard: You're riding Ruby on Rails!"
+Else (Ctrl-C stops the webserver):
+  foreman start
 
-4. Follow the guidelines to start developing your application. You can find
-the following resources handy:
+== Tecnologies used
 
-* The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
-* Ruby on Rails Tutorial Book: http://www.railstutorial.org/
+* Sass: http://sass-lang.com/
+* Compass: http://compass-style.org/
+* Susy: http://susy.oddbird.net/
+* Slim: http://slim-lang.com/
+* Coffeescript: http://coffeescript.org/
+* ActiveAdmin: http://activeadmin.info/
+* Mercury Editor: http://jejacks0n.github.io/mercury/
+* Redactor: https://github.com/SammyLin/redactor-rails/
+* jQuery: http://jquery.com/
+* Draper: https://github.com/drapergem/draper/
+* Factory Girl: https://github.com/thoughtbot/factory_girl
+* Rspec: http://rspec.info/
+* Cucumber: http://cukes.info/
 
-
-== Debugging Rails
-
-Sometimes your application goes wrong. Fortunately there are a lot of tools that
-will help you debug it and get it back on the rails.
-
-First area to check is the application log files. Have "tail -f" commands
-running on the server.log and development.log. Rails will automatically display
-debugging and runtime information to these files. Debugging info will also be
-shown in the browser on requests from 127.0.0.1.
-
-You can also log your own messages directly into the log file from your code
-using the Ruby logger class from inside your controllers. Example:
-
-  class WeblogController < ActionController::Base
-    def destroy
-      @weblog = Weblog.find(params[:id])
-      @weblog.destroy
-      logger.info("#{Time.now} Destroyed Weblog ID ##{@weblog.id}!")
-    end
-  end
-
-The result will be a message in your log file along the lines of:
-
-  Mon Oct 08 14:22:29 +1000 2007 Destroyed Weblog ID #1!
-
-More information on how to use the logger is at http://www.ruby-doc.org/core/
-
-Also, Ruby documentation can be found at http://www.ruby-lang.org/. There are
-several books available online as well:
-
-* Programming Ruby: http://www.ruby-doc.org/docs/ProgrammingRuby/ (Pickaxe)
-* Learn to Program: http://pine.fm/LearnToProgram/ (a beginners guide)
-
-These two books will bring you up to speed on the Ruby language and also on
-programming in general.
-
-
-== Debugger
-
-Debugger support is available through the debugger command when you start your
-Mongrel or WEBrick server with --debugger. This means that you can break out of
-execution at any point in the code, investigate and change the model, and then,
-resume execution! You need to install ruby-debug to run the server in debugging
-mode. With gems, use <tt>sudo gem install ruby-debug</tt>. Example:
-
-  class WeblogController < ActionController::Base
-    def index
-      @posts = Post.all
-      debugger
-    end
-  end
-
-So the controller will accept the action, run the first line, then present you
-with a IRB prompt in the server window. Here you can do things like:
-
-  >> @posts.inspect
-  => "[#<Post:0x14a6be8
-          @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>,
-       #<Post:0x14a6620
-          @attributes={"title"=>"Rails", "body"=>"Only ten..", "id"=>"2"}>]"
-  >> @posts.first.title = "hello from a debugger"
-  => "hello from a debugger"
-
-...and even better, you can examine how your runtime objects actually work:
-
-  >> f = @posts.first
-  => #<Post:0x13630c4 @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>
-  >> f.
-  Display all 152 possibilities? (y or n)
-
-Finally, when you're ready to resume execution, you can enter "cont".
-
-
-== Console
-
-The console is a Ruby shell, which allows you to interact with your
-application's domain model. Here you'll have all parts of the application
-configured, just like it is when the application is running. You can inspect
-domain models, change values, and save to the database. Starting the script
-without arguments will launch it in the development environment.
-
-To start the console, run <tt>rails console</tt> from the application
-directory.
-
-Options:
-
-* Passing the <tt>-s, --sandbox</tt> argument will rollback any modifications
-  made to the database.
-* Passing an environment name as an argument will load the corresponding
-  environment. Example: <tt>rails console production</tt>.
-
-To reload your controllers and models after launching the console run
-<tt>reload!</tt>
-
-More information about irb can be found at:
-link:http://www.rubycentral.org/pickaxe/irb.html
-
-
-== dbconsole
-
-You can go to the command line of your database directly through <tt>rails
-dbconsole</tt>. You would be connected to the database with the credentials
-defined in database.yml. Starting the script without arguments will connect you
-to the development database. Passing an argument will connect you to a different
-database, like <tt>rails dbconsole production</tt>. Currently works for MySQL,
-PostgreSQL and SQLite 3.
-
-== Description of Contents
+== Project structure revisited
 
 The default directory structure of a generated Ruby on Rails application:
 
-  |-- app
-  |   |-- assets
-  |       |-- images
-  |       |-- javascripts
-  |       `-- stylesheets
-  |   |-- controllers
-  |   |-- helpers
-  |   |-- mailers
-  |   |-- models
-  |   `-- views
-  |       `-- layouts
-  |-- config
-  |   |-- environments
-  |   |-- initializers
-  |   `-- locales
-  |-- db
-  |-- doc
-  |-- lib
-  |   `-- tasks
-  |-- log
-  |-- public
-  |-- script
-  |-- test
-  |   |-- fixtures
-  |   |-- functional
-  |   |-- integration
-  |   |-- performance
-  |   `-- unit
-  |-- tmp
-  |   |-- cache
-  |   |-- pids
-  |   |-- sessions
-  |   `-- sockets
-  `-- vendor
-      |-- assets
-          `-- stylesheets
-      `-- plugins
+  ├── app
+  │   ├── admin
+  │   ├── assets
+  │   │   ├── fonts
+  │   │   ├── images
+  │   │   ├── javascripts
+  │   │   └── stylesheets
+  │   │       ├── components
+  │   │       ├── contacts
+  │   │       ├── debugging
+  │   │       ├── globals
+  │   │       ├── home
+  │   │       ├── layouts
+  │   │       ├── shared
+  │   │       └── webfonts
+  │   ├── controllers
+  │   ├── decorators
+  │   ├── helpers
+  │   ├── mailers
+  │   ├── models
+  │   │   └── redactor_rails
+  │   ├── views
+  │   │   ├── admin
+  │   │   ├── contact_mailer
+  │   │   ├── contacts
+  │   │   ├── devise
+  │   │   ├── frontend
+  │   │   ├── home
+  │   │   ├── layouts
+  │   │   └── pages
+  │   └── workers
+  ├── config
+  │   ├── environments
+  │   ├── initializers
+  │   └── locales
+  ├── db
+  ├── doc
+  ├── lib
+  │   └── tasks
+  ├── log
+  ├── public
+  ├── script
+  ├── spec
+  │   ├── controllers
+  │   ├── decorators
+  │   ├── factories
+  │   ├── helpers
+  │   ├── lib
+  │   ├── mailers
+  │   ├── models
+  │   ├── routing
+  │   ├── support
+  │   └── views
+  ├── tmp
+  │   ├── cache
+  │   ├── pids
+  │   ├── sessions
+  │   └── sockets
+  └── vendor
+      ├── assets
+      │   ├── images
+      │   ├── javascripts
+      │   └── stylesheets
+      └── plugins
 
 app
   Holds all the code that's specific to this particular application.
@@ -250,12 +174,37 @@ public
 script
   Helper scripts for automation and generation.
 
-test
-  Unit and functional tests along with fixtures. When using the rails generate
-  command, template test files will be generated for you and placed in this
-  directory.
+spec
+  Rspec test folder.
 
 vendor
   External libraries that the application depends on. Also includes the plugins
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
+
+== System variables used
+
+The variables used by are present in your /.env
+
+WEB_CONCURRENCY=3
+  Number of extra processes unicorn will spawn.
+RACK_ENV=none
+  For unicorn
+RAILS_ENV=development
+  Devolpment env by default
+APP_HOSTNAME=localhost
+  The hostname of your app, bootstrap_heroku.sh changes this to your heroku app host.
+GOOGLE_ANALYTICS_ID=UA-00000000-0
+  Google analytics id
+FACEBOOK_APP_ID=237947652982771
+  Facebook app id
+FACEBOOK_SECRET=9d86008f6d8be5d68c8501662b707008
+  Facebook secret
+S3_KEY=0000
+  Amazon S3 key
+S3_SECRET=000
+  Amazon S3 secret
+S3_REGION=000
+  Amazon S3 region
+S3_BUCKET=000
+  Amazon S3 bucket
