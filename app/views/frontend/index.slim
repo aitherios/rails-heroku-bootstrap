@@ -1,8 +1,96 @@
 section#main role="main"
-  p Main
+  h1 = '<h1>Header 1</h1>'
+  h2 = '<h2>Header 2</h2>'
+  h3 = '<h3>Header 3</h3>'
+  h4 = '<h4>Header 4</h4>'
+  h5 = '<h5>Header 5</h5>'
+  h6 = '<h6>Header 6</h6>'
 
-aside#secondary role="complementary"
-  p Sidebar
-  
-  .arrow-box
-    p hunf!
+  p
+    ' &lt;p&gt;Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. 
+    strong = '<strong>Paisis, filhis, espiritis santis.</strong>'
+    '  Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. 
+    em = '<em>Manduma pindureta quium dia nois paga.</em>'
+    ' Sapien in monti palavris qui num significa nadis i pareci latim.
+      Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.&lt;/p&gt;
+
+  p  
+    ' &lt;p&gt;Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
+    b = '<b>Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui.</b>'
+    ' Nullam leo erat, aliquet quis tempus a, posuere ut mi. 
+      Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. 
+      Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. 
+      Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. 
+    i = '<i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i>'
+    ' Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.&lt;/p&gt;
+
+  a href="/" title="root" = '<a href="/" title="root">Link</a>'
+
+  br
+ 
+  button type="button" = '<button type="button">Button</button>'
+
+  form
+    fieldset
+      legend Customer
+      p
+        label for="name" Username:
+        input type="text" name="name" id="name" placeholder="Username" required=true
+      p
+        label for="mail" Email:
+        input type="email" name="mail" id="mail" placeholder="Email" required=true
+      p
+        label for="phone" Telephone:
+        input type="tel" name="phone" id="phone" placeholder="Phone" required=true
+      p
+        label for="address" Address:
+        input type="text" name="address" id="address" size="40" placeholder="Address" required=true
+      p
+        label for="curriculum" Curriculum Vitae:
+        textarea id="curriculum" name="curriculum" placeholder="Curriculum Vitae" required=true
+    fieldset
+      legend Pizza Size
+      p
+        label for="small-size" Small
+        input type="radio" name="size" id="small-size"
+      p
+        label for="medium-size" Medium
+        input type="radio" name="size" id="medium-size"
+      p
+        label for="large-size" Large
+        input type="radio" name="size" id="large-size"
+
+    fieldset
+      legend Pizza Toppings
+      p
+        label for="bacon" Bacon
+        input type="checkbox" name="bacon" id="bacon"
+      p
+        label for="cheese" Cheese
+        input type="checkbox" name="cheese" id="cheese"
+      p
+        label for="onion" Onion
+        input type="checkbox" name="onion" id="onion"
+
+    fieldset
+      legend Extra
+      p
+        label for="search" Search
+        input type="search" name="search" id="search"
+      p
+        label for="color" Color
+        input type="color" name="color" id="color"
+      p
+        label for="date" Date
+        input type="date" name="date" id="date"
+      p
+        label for="time" Date
+        input type="time" name="time" id="time"
+      p
+        label for="range" Range
+        input type="range" min="0" max="10" step="2" value="6" id="range"
+      p
+        label for="number" Number
+        input type="number" min="0" max="10" step="2" value="6" id="number"
+
+    input type="submit" value="Save"
