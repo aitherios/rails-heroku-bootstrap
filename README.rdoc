@@ -46,6 +46,7 @@ Else (Ctrl-C stops the webserver):
 * Add a project sitemap (http://sitemaps.org)
 * Add schemas to search providers (http://schema.org/)
 * Create final hostname email account and update app/mailers/contact_mailer.rb
+* Error pages (e.g. 404, 500)
 * Update project title in layouts and admin config/initializers/active_admin.rb
 * Update public/humans.txt
 * Update project license on LICENSE and README.rdoc
