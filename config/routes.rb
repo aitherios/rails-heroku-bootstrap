@@ -3,7 +3,7 @@ require 'resque/server'
 AitheriosStartaeBootstrap::Application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
   mount Mercury::Engine => '/'
-  mount Kss::Engine => '/frontend/doc' if Rails.env.development?
+  mount Kss::Engine => '/kss' if Rails.env.development?
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
