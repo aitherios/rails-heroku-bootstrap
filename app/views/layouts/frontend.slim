@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Frontend
+    == render 'layouts/favicons'
+
+    == stylesheet_link_tag 'application', media: 'all'
+    == javascript_include_tag 'top_javascripts'
+    /[if lt IE 9]
+      == javascript_include_tag 'html5shiv-printshiv'
+  
+  body
+    == yield  
+
+    == javascript_include_tag 'application'
+    /[if (gte IE 6)&(lte IE 8)]
+      == javascript_include_tag 'nwmatcher-1.2.5'
+      == javascript_include_tag 'selectivizr'
+    == render 'layouts/development' if Rails.env.development?

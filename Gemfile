@@ -4,6 +4,7 @@ ruby '1.9.3'
 gem 'rails',                  '~> 3.2.13'
 gem 'pg'
 gem 'slim'
+gem 'slim-rails'
 gem 'unicorn'
 gem 'mini_magick'
 gem 'carrierwave'
@@ -23,6 +24,7 @@ gem 'rails-boilerplate'
 gem 'redactor-rails'
 gem 'mercury-rails'
 gem 'font-awesome-rails'
+gem 'kss-rails'
 
 # external services
 gem 'newrelic_rpm'
@@ -54,4 +56,5 @@ group :development do
   gem 'foreman'
   gem 'thin'
   gem 'magic_encoding'
+  gem 'html2slim'
 end

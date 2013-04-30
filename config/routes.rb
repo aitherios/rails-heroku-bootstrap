@@ -3,11 +3,12 @@ require 'resque/server'
 AitheriosStartaeBootstrap::Application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
   mount Mercury::Engine => '/'
+  mount Kss::Engine => '/frontend/doc' if Rails.env.development?
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   authenticate :admin_user do
-    mount Resque::Server, :at => "/workers"
+    mount Resque::Server, :at => '/workers'
   end
 
   devise_for :users, sign_out_via: :get, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -21,8 +22,8 @@ AitheriosStartaeBootstrap::Application.routes.draw do
   put '/usuarios' => 'settings#update', as: :update_user
   
   root  to:                     'home#index'
-  get   'contato'           => 'contacts#index', as: :contacts
-  match 'contato/enviar'    => 'contacts#new',   as: :new_contact
+  get   'contato'            => 'contacts#index', as: :contacts
+  match 'contato/enviar'     => 'contacts#new',   as: :new_contact
 
   match 'frontend/:template' => 'frontend#show'
   match 'frontend'           => 'frontend#index'

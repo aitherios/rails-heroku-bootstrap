@@ -51,11 +51,10 @@ AitheriosStartaeBootstrap::Application.configure do
   config.assets.precompile += %w(
      mercury.js
      mercury.css
-     modernizr.js
+     top_javascripts.js
      selectivizr.js 
      nwmatcher-1.2.5.js
      html5shiv-printshiv.js
-     close_for_facebook_login.js 
      active_admin.js 
      active_admin.css
      active_admin/print.css
