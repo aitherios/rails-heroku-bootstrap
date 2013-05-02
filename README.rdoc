@@ -37,18 +37,25 @@ Else (Ctrl-C stops the webserver):
 
 == Checklist for production
 
-* Update favicons and apple-touch-icons located at public/
-* Update Amazon S3 variables
-* Create Facebook app and update system variables
-* Update APP_HOSTNAME with final hostname, not the something.herokuapp.com
-* Update GOOGLE_ANALYTICS_ID
+=== Production services
+
+* Amazon S3 (sys variables)
+* Facebook app (sys variables)
+* Final Aplication Hostname, not the something.herokuapp.com (sys variable)
+* Google Analytics (sys variable)
 * Add project to Google Webmasters
+* Create final hostname email account and update app/mailers/contact_mailer.rb
+
+=== Finishing touch
+
+* Error pages (e.g. 404, 500)
+* Favicons and apple-touch-icons located at public/
+* Facebook thumbnails (_metatags.slim and facebook app registry)
 * Add a project sitemap (http://sitemaps.org)
 * Add schemas to search providers (http://schema.org/)
-* Create final hostname email account and update app/mailers/contact_mailer.rb
-* Error pages (e.g. 404, 500)
 * Update project title in layouts and admin config/initializers/active_admin.rb
 * Update public/humans.txt
+* Update public/robots.txt
 * Update project license on LICENSE and README.rdoc
 
 == Tecnologies used
