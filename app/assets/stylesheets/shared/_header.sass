@@ -46,9 +46,6 @@
       &:hover
         color: $link-color
 
-      &:active
-        +effect-click-down
-
     ul
       +inline-list
       +adjust-leading-to(2)
@@ -191,9 +188,6 @@
               // +small-elements-sprite(icon-alert)
               +opacity(.3)
 
-            &:active
-              +effect-click-down
-
             &.active
               background-color: $link-color
               color: $white            
@@ -217,8 +211,6 @@
             +padding-leader(.2)
             +padding-trailer(.2)
             text-decoration: none
-            &:active
-              +effect-click-down
             &:hover
               background-color: $link-color
               color: #333

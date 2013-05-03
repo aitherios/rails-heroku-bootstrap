@@ -11,16 +11,12 @@
     background-image: image-url($image2x)
     background-size: image-width($image) image-height($image)
 
-
-
 //  Nicer text rendering in webkit and gecko
 //  @see http://www.aestheticallyloyal.com/public/optimize-legibility/
 //  @see http://files.christophzillgens.com/webkit-font-smoothing.html
 =improve-text-rendering
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
-
-
 
 // These provide basic font stacks with fallbacks. You can add your own fonts to the stack
 =sans-serif($prepend:false)
@@ -44,28 +40,15 @@
   @else
     font-family: $list
 
+// CSS Effects
+=fade-on-hover
+  +transition(0.25s)
+  &:hover
+    +opacity(0.8)
 
-
-// =!effects (CSS Effects)
-=effect-click-down
-  position: relative
-  bottom: -1px
-
-
-
-// =!classes (Generic Classes)
 // Front-end debugging
 =debug
   background-color: rgba(red,0.6)
-
-.debug
-  +debug
-
-
-// Visibility & Display
-.hide 
-  display: none !important
-
 
 // Invisible Content Just for Screen Reader Users
 =hidden
@@ -76,106 +59,3 @@
   height: 1px
   overflow: hidden
 
-.hidden
-  +hidden
-  
-.display-inline
-  display: inline
-
-.display-block 
-  display: block
-
-.float-left 
-  float: left !important
-
-.float-left-text 
-  float: left !important
-  margin: 0 7px 4px 0 !important
-
-.float-right
-  float: right !important
-
-.float-right-text 
-  float: right !important
-  margin: 0 0 7px 4px !important
-
-.clear-both
-  clear: both
-  overflow: hidden
-  height: 1px
-  font-size: 1px
-
-.clear-left
-  clear: left !important
-
-.clear-right
-  clear: right !important
-
-.clear-none
-  clear: none !important
-
-
-/* Text */
-.align-left
-  text-align: left !important
-
-.align-right
-  text-align: right !important
-
-.align-center
-  text-align: center !important
-
-.uppercase
-  text-transform: uppercase !important
-
-.lowercase
-  text-transform: lowercase !important
-
-.dropcap:first-letter, .dropcaps p:first-letter
-  float: left
-  font-size: 2.25em
-  font-weight: bold
-  line-height: 1
-  padding-right: .1em
-
-.smallcaps
-  font-variant: small-caps
-  letter-spacing: .05em
-
-.highlight
-  background-color: #ffc
-
-.bold
-  font-weight: bold !important
-
-
-/* Remove Style */
-.no-background
-  background: none !important
-
-.no-border
-  border: none !important
-
-.no-border-top
-  border-top: none !important
-
-.no-border-bottom
-  border-bottom: none !important
-
-.no-border-right
-  border-right: none !important
-
-.no-border-left
-  border-right: none !important
-
-.no-margin
-  margin: 0 !important
-
-.no-padding
-  padding: 0 !important
-
-.no-bold
-  font-weight: normal !important
-
-.no-shadow
-  text-shadow: none !important
