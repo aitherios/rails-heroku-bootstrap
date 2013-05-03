@@ -26,6 +26,11 @@ Restart the server:
 
 == Running the project for development
 
+First configure your database access in:
+  config/database.yml
+Confer http://guides.rubyonrails.org/getting_started.html#configuring-a-database if
+you are having any problem.
+
 If you are running for the first time:
   bundle install
   rake db:create
