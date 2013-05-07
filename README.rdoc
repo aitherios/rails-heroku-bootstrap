@@ -24,6 +24,12 @@ Run the migrations:
 Restart the server:
   heroku ps:restart
 
+=== Managing multiple environments in Heroku
+
+If you are managing multiples environments don't forget to set the default environment:
+  git config heroku.remote production
+  git config heroku.remote heroku
+
 == Running the project for development
 
 First configure your database access in:
