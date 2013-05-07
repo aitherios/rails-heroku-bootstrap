@@ -30,6 +30,12 @@ If you are managing multiples environments don't forget to set the default envir
   git config heroku.remote production
   git config heroku.remote heroku
 
+You can create a new heroku environment with:
+  heroku create my_new_project --remote production
+
+And push with:
+  git push production master
+
 == Running the project for development
 
 First configure your database access in:
