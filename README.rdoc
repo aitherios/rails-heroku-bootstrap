@@ -68,6 +68,7 @@ Else (Ctrl-C stops the webserver):
 * Error pages (e.g. 404, 500)
 * Favicons and apple-touch-icons located at public/
 * Facebook thumbnails (_metatags.slim and facebook app registry)
+* Check https://developers.facebook.com/tools/debug
 * Add a project sitemap (http://sitemaps.org)
 * Add schemas to search providers (http://schema.org/)
 * Update project title in layouts and admin config/initializers/active_admin.rb
