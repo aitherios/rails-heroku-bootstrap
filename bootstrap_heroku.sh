@@ -8,6 +8,7 @@ heroku addons:add sendgrid:starter
 heroku addons:add sentry:developer
 heroku addons:add zerigo_dns:basic
 heroku addons:add logentries:tryit
-heroku addons:add scheduler
+heroku addons:add scheduler:standard
+heroku addons:add deployhooks:email
 
 heroku config:add APP_HOSTNAME=`heroku domains |grep 'herokuapp.com'`
