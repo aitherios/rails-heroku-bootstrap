@@ -7,7 +7,7 @@ heroku addons:add redistogo:nano
 heroku addons:add sendgrid:starter
 heroku addons:add sentry:developer
 heroku addons:add zerigo_dns:basic
-heroku addons:add logentries:tryit
+heroku addons:add papertrail:choklad
 heroku addons:add scheduler:standard
 heroku addons:add deployhooks:email
 
