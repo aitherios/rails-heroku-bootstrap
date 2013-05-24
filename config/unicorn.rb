@@ -9,8 +9,7 @@ before_fork do |server, worker|
     Process.kill 'QUIT', Process.pid
   end
 
-  defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.connection.disconnect!
+  ActiveRecord::Base.connection.disconnect! if defined?(ActiveRecord::Base)
 
   if defined?(Resque) and Rails.env.production?
     Resque.redis.quit
@@ -23,9 +22,8 @@ after_fork do |server, worker|
   Signal.trap 'TERM' do
     puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
   end
-
-  defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.establish_connection
+  
+  ActiveRecord::Base.establish_connection if defined?(ActiveRecord::Base)
 
   if defined?(Resque) and Rails.env.production?
     Resque.redis = ENV['REDIS_URI']
