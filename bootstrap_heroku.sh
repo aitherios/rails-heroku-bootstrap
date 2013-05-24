@@ -11,4 +11,7 @@ heroku addons:add papertrail:choklad
 heroku addons:add scheduler:standard
 heroku addons:add deployhooks:email
 
+heroku labs:enable log-runtime-metrics                  
+
 heroku config:add APP_HOSTNAME=`heroku domains |grep 'herokuapp.com'`
+heroku config:add WEB_CONCURRENCY=3
