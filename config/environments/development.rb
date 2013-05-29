@@ -1,6 +1,3 @@
-# thin
-$stdout.sync = true
-
 RailsHerokuBootstrap::Application.configure do
   config.cache_classes = false
   config.whiny_nils = true
@@ -21,4 +18,13 @@ RailsHerokuBootstrap::Application.configure do
   
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.console = true
+    Bullet.rails_logger = true
+    # Bullet.add_whitelist :type => :n_plus_one_query, :class_name => "Post", :association => :comments
+  end
+
 end
