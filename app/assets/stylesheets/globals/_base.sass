@@ -5,8 +5,8 @@
 
 // COMPASS MODULES
 // --------------------------------------------------
-@import "compass/reset"
-@import "compass/typography"
+//@import "compass/reset"
+//@import "compass/typography"
 @import "compass/utilities"
 @import "compass/utilities/sprites"
 @import "compass/css3"
@@ -22,12 +22,9 @@
 // OTHER GLOBAL FILES
 // --------------------------------------------------
 @import "variables"
-@import "functions"
 @import "mixins"
-@import "sprites"
 @import "media-queries"
 @import "print"
-@import "ie"
 
 
 
@@ -44,40 +41,3 @@ html
 // --------------------------------------------------
 +establish-baseline
 
-
-
-// FONT-FACES
-// --------------------------------------------------
-// Add a custom font-face with Compass
-// +font-face("Example-Font", font-files("webfonts/ss-standard.woff", woff, "webfonts/ss-standard.ttf", truetype, "webfonts/ss-standard.svg", svg), "webfonts/ss-standard.eot")
-
-
-
-// BOX-SIZING BORDER-BOX DEFAULT 
-// http://paulirish.com/2012/box-sizing-border-box-ftw/
-// --------------------------------------------------
-
-//Using box sizing border box with susy grid: https://github.com/ericam/susy/issues/29#issuecomment-6911654
-// Susy box sizing correction
-+border-box-sizing
-
-
-
-// FORMS
-// --------------------------------------------------
-input, textarea, select, button
-  outline: none
-  
-// Remove the webkit glow 
-*:focus
-  outline: none
-
-
-  
-b
-  font-weight: bold
-  
-// CLASSES
-// --------------------------------------------------
-.text-strike
-  text-decoration: line-through

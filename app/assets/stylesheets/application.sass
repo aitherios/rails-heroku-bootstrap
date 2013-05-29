@@ -2,71 +2,30 @@
 // ---------------------------------------------------------------------------------/
 //  IMPORTS
 // ---------------------------------------------------------------------------------/
+
+@import "bootstrap"
+
 @import "globals/base"
-
-
-// PLUGINS
-// ----------------------------------------/
-// @import "fancybox"
-// @import "responsiveslides"
-// @import "tipsy"
 
 // SHARED
 // ----------------------------------------/
 @import "shared/header"
 @import "shared/footer"
-@import "shared/forms"
-@import "shared/commom_elements"
 @import "shared/mercury_editor_button"
 
 
 // COMPONENTS
 // ----------------------------------------/
-@import "webfonts/symbolset/symbolset"
 @import "font-awesome"
-@import "components/feedback-bar"
-@import "components/loading"
-@import "components/messages"
-@import "components/buttons"
-@import "components/forms"
-@import "components/arrow-box"
+
 
 // SECTIONS
 // ----------------------------------------/
 @import "contacts/index"
 
 
-body
-  +sans-serif
-  color: $text-color
-  background-color: $white
-
-
-// LINKS
-// -----
-
-a
-  color: $link-color
-  text-decoration: none
-
-  &:visited
-    color: $link-color-visited
-
-  &:focus
-    color: $link-color-hover
-    text-decoration: underline
-
-  &:hover
-    color: $link-color-hover
-    text-decoration: underline
-
-  &:active
-    color: $link-color-active
-
-
-
 // SUSY GRID
 // -----
-#header-page-inner, #content, #footer-page-inner
-  +container
-  +box-sizing(content-box)
+//#header-page-inner, #content, #footer-page-inner
+//  +container
+//  +box-sizing(content-box)
