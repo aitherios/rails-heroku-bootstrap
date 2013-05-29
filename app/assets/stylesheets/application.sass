@@ -1,32 +1,28 @@
 @charset "utf-8"
-// ---------------------------------------------------------------------------------/
-//  IMPORTS
-// ---------------------------------------------------------------------------------/
 
-
+// FRAMEWORKS AND PLUGINS
+// ----------------------------------------/
 @import "bootstrap"
-
-@import "globals/base"
-
-// SHARED
-// ----------------------------------------/
-@import "shared/header"
-@import "shared/footer"
-@import "shared/mercury_editor_button"
-
-
-// COMPONENTS
-// ----------------------------------------/
 @import "font-awesome"
 
 
-// SECTIONS
+// BASE
 // ----------------------------------------/
-@import "contacts/index"
+@import "base/base"
 
 
-// SUSY GRID
-// -----
-//#header-page-inner, #content, #footer-page-inner
-//  +container
-//  +box-sizing(content-box)
+// LAYOUTS
+// ----------------------------------------/
+@import "layouts/header"
+@import "layouts/footer"
+@import "layouts/mercury_editor_button"
+
+
+// MODULES
+// ----------------------------------------/
+@import "modules/contact_form"
+
+
+// PAGES
+// ----------------------------------------/
+@import "pages/home"
