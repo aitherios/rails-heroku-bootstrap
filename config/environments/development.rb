@@ -18,4 +18,7 @@ RailsHerokuBootstrap::Application.configure do
   Slim::Engine.set_default_options pretty: true
   Slim::Engine.set_default_options format: :html5
   config.action_mailer.default_url_options = { host: 'localhost:5000' }
+  
+  # Automatically inject JavaScript needed for LiveReload
+  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 end

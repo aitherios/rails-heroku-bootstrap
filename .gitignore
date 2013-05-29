@@ -5,3 +5,5 @@ tmp
 .DS_Store
 public/uploads
 worklog
+.sublime-project
+.sublime-workspace
