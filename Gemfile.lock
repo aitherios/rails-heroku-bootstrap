@@ -206,6 +206,8 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-mini-profiler (0.1.26)
+      rack (>= 1.1.3)
     rack-protection (1.5.0)
       rack
     rack-ssl (1.3.3)
@@ -350,6 +352,7 @@ DEPENDENCIES
   oily_png
   omniauth-facebook
   pg
+  rack-mini-profiler
   rails (~> 3.2.13)
   rails-boilerplate
   redactor-rails
