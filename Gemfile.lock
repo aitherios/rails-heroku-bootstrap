@@ -54,6 +54,8 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    bullet (4.6.0)
+      uniform_notifier
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -307,6 +309,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uniform_notifier (1.2.0)
     uuidtools (2.1.4)
     vegas (0.1.11)
       rack (>= 1.0.0)
@@ -320,6 +323,7 @@ DEPENDENCIES
   activeadmin
   better_errors
   binding_of_caller
+  bullet
   carrierwave
   coffee-rails
   compass

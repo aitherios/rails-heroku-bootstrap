@@ -1,6 +1,3 @@
-# thin
-$stdout.sync = true
-
 RailsHerokuBootstrap::Application.configure do
   config.cache_classes = false
   config.whiny_nils = true
@@ -18,4 +15,12 @@ RailsHerokuBootstrap::Application.configure do
   Slim::Engine.set_default_options pretty: true
   Slim::Engine.set_default_options format: :html5
   config.action_mailer.default_url_options = { host: 'localhost:5000' }
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.console = true
+    Bullet.rails_logger = true
+    # Bullet.add_whitelist :type => :n_plus_one_query, :class_name => "Post", :association => :comments
+  end
 end

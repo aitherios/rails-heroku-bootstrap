@@ -59,4 +59,5 @@ group :development do
   gem 'html2slim'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'bullet'
 end
