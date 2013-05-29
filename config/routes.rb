@@ -1,6 +1,6 @@
 require 'resque/server'
 
-AitheriosStartaeBootstrap::Application.routes.draw do
+RailsHerokuBootstrap::Application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
   mount Mercury::Engine => '/'
   mount Kss::Engine => '/kss' if Rails.env.development?

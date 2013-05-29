@@ -1,7 +1,7 @@
 == How to bootstrap a project in Heroku
 
 Clone this repository:
-  git clone git@github.com:aitherios/startae-bootstrap.git my_new_project
+  git clone git@github.com:61bits/rails-heroku-bootstrap.git my_new_project
   cd my_new_project
 
 Rename the project to a name of your choosing and commit:

@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: aitherios_startae_bootstrap_development
+  database: rails_heroku_bootstrap_development
   host: localhost
   user: postgres
   password:
@@ -10,7 +10,7 @@ development:
 
 test: &test
   adapter: postgresql
-  database: aitherios_startae_bootstrap_test
+  database: rails_heroku_bootstrap_test
   host: localhost
   user: postgres
   password:
@@ -20,7 +20,7 @@ test: &test
 
 production:
   adapter: postgresql
-  database: aitherios_startae_bootstrap_production
+  database: rails_heroku_bootstrap_production
   host: localhost
   user: postgres
   password:

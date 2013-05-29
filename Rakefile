@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-AitheriosStartaeBootstrap::Application.load_tasks
+RailsHerokuBootstrap::Application.load_tasks
