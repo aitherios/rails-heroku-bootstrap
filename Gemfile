@@ -57,4 +57,6 @@ group :development do
   gem 'thin'
   gem 'magic_encoding'
   gem 'html2slim'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
