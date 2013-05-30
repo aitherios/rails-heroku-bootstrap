@@ -2,8 +2,8 @@
 db/*.sqlite3
 log/*.log
 tmp
-.DS_Store
 public/uploads
+**/.DS_Store
 worklog
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
