@@ -25,9 +25,9 @@ RailsHerokuBootstrap::Application.routes.draw do
   get   'contato'            => 'contacts#index', as: :contacts
   match 'contato/enviar'     => 'contacts#new',   as: :new_contact
 
-  match 'frontend/:template' => 'frontend#show'
-  match 'frontend'           => 'frontend#index'
-  put   'content_blocks'     => 'content_blocks#update'
+  put   'mercury_content'    => 'mercury_contents#update'
+  get   'frontend/:template' => 'frontend#show'
+  get   'frontend'           => 'frontend#index'
 
   ActiveAdmin.routes(self)
   get ':slug'                => 'pages#show',     as: :page

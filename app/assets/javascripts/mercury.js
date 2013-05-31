@@ -94,6 +94,7 @@ window.Mercury = {
     // `Mercury.Toolbar.Button.contexts` and `Mercury.Toolbar.ButtonGroup.contexts`
     toolbars: {
       primary: {
+        exit:                  ['Sair', 'Sair do Editor'],
         save:                  ['Save', 'Save this page'],
         preview:               ['Preview', 'Preview this page', { toggle: true, mode: true }],
         sep1:                  ' ',
@@ -314,8 +315,13 @@ window.Mercury = {
     // callback functions are executed within the scope of the given region, so you have access to all it's methods.
     behaviors: {
       //foreColor: function(selection, options) { selection.wrap('<span style="color:' + options.value.toHex() + '">', true) },
-      htmlEditor: function() { Mercury.modal('/mercury/modals/htmleditor.html', { title: 'HTML Editor', fullHeight: true, handler: 'htmlEditor' }); }
+      htmlEditor: function() { 
+        Mercury.modal('/mercury/modals/htmleditor.html', { title: 'HTML Editor', fullHeight: true, handler: 'htmlEditor' });
       },
+      exit: function() {
+        window.location.href = window.mercuryInstance.iframeSrc();
+      }
+    },
 
 
     // ## Global Behaviors

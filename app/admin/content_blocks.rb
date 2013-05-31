@@ -31,6 +31,7 @@ ActiveAdmin.register ContentBlock do
       row :body do
         content_block.body.html_safe
       end
+      row :href
     end
 
     active_admin_comments

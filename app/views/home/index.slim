@@ -1,6 +1,9 @@
-== content_block :home_text do
-  h1 Home  
+.edit_me
+  = edit_me :home_text do
+    h1 Home  
 
-== content_block :home_other_text, 'Another text, just bellow it.'
+.edit_me
+  = edit_me :home_other_text, 'Another text, just bellow it.'
 
-== code_content_block :editor_hidden_text, 'editor hidden text'
+.edit_me
+  = edit_me Page.first, :title
