@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
 ActiveAdmin.register Contact do
+  menu parent: I18n.t('app.active_admin.reports'), priority: 1
   actions :all, except: [:destroy, :edit, :new]
+
   config.per_page = 10
 
   filter :name

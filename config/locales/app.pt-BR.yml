@@ -1,5 +1,13 @@
 pt-BR:
   app:
+    active_admin:
+      administration: 'Administração'
+      content: 'Conteúdo'
+      reports: 'Relatórios'
+      welcome: 'Bem Vindo(a) ao Painel Administrativo!'
+      call_to_action: |
+        Para editar ou visualizar elementos desta aplicação
+        utilize a barra de navegação acima.
     mercury:
       edit_button: Editor
     contacts:

@@ -1,4 +1,7 @@
+# -*- coding: utf-8 -*-
 ActiveAdmin.register AdminUser do
+  menu parent: I18n.t('app.active_admin.administration'), priority: 1
+
   config.per_page = 10
 
   filter :email

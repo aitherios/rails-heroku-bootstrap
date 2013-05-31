@@ -1,5 +1,13 @@
 en:
   app:
+    active_admin:
+      administration: 'Administration'
+      content: 'Content'
+      reports: 'Reports'
+      welcome: 'Welcome to the Administration Panel!'
+      call_to_action: |
+        To edit or view elements of this application
+        please use the top navbar.
     mercury:
       edit_button: Editor
     contacts:
