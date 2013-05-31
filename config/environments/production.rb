@@ -54,6 +54,7 @@ RailsHerokuBootstrap::Application.configure do
      top_javascripts.js
      nwmatcher-1.2.5.js
      html5shiv-printshiv.js
+     selectivizr.js
      active_admin.js 
      active_admin.css
      active_admin/print.css
