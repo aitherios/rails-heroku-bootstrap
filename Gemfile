@@ -41,6 +41,7 @@ group :assets do
   gem 'uglifier'
   gem 'font_assets'
   gem 'modernizr-rails'
+  gem 'selectivizr-rails'
 end
 
 group :test, :development do

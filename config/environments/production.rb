@@ -52,7 +52,6 @@ RailsHerokuBootstrap::Application.configure do
      mercury.js
      mercury.css
      top_javascripts.js
-     selectivizr.js 
      nwmatcher-1.2.5.js
      html5shiv-printshiv.js
      active_admin.js 
