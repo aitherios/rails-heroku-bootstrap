@@ -1,97 +1,432 @@
 section.page
   #content
-    h1 = '<h1>Header 1</h1>'
-    h2 = '<h2>Header 2</h2>'
-    h3 = '<h3>Header 3</h3>'
-    h4 = '<h4>Header 4</h4>'
-    h5 = '<h5>Header 5</h5>'
-    h6 = '<h6>Header 6</h6>'
-
+    h1 Heading 1
+    h2 Heading 2
+    h3 Heading 3
+    h4 Heading 4
+    h5 Heading 5
+    h6 Heading 6
+    section
+      h1 Heading 1 (in section)
+      h2 Heading 2 (in section)
+      h3 Heading 3 (in section)
+      h4 Heading 4 (in section)
+      h5 Heading 5 (in section)
+      h6 Heading 6 (in section)
+    article
+      h1 Heading 1 (in article)
+      h2 Heading 2 (in article)
+      h3 Heading 3 (in article)
+      h4 Heading 4 (in article)
+      h5 Heading 5 (in article)
+      h6 Heading 6 (in article)
+    header
+      hgroup
+        h1 Heading 1 (in hgroup)
+        h2 Heading 2 (in hgroup)
+      nav
+        ul
+          li
+            a href="#" navigation item #1
+          li
+            a href="#" navigation item #2
+          li
+            a href="#" navigation item #3
+    h1 Text-level semantics
+    p hidden=true This should be hidden in all browsers, apart from IE6
     p
-      ' &lt;p&gt;Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. 
-      strong = '<strong>Paisis, filhis, espiritis santis.</strong>'
-      '  Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. 
-      em = '<em>Manduma pindureta quium dia nois paga.</em>'
-      ' Sapien in monti palavris qui num significa nadis i pareci latim.
-        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.&lt;/p&gt;
-
-    p  
-      ' &lt;p&gt;Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-      b = '<b>Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui.</b>'
-      ' Nullam leo erat, aliquet quis tempus a, posuere ut mi. 
-        Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. 
-        Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. 
-        Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. 
-      i = '<i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i>'
-      ' Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.&lt;/p&gt;
-
-    a href="/" title="root" = '<a href="/" title="root">Link</a>'
-
-    br
-   
-    button type="button" = '<button type="button">Button</button>'
-
+      ' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m. 
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m. 
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m.
+    p
+      ' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m. 
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m. 
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m.
+    address Address somewhere, world
+    hr
+    hr style="height:4px; border:solid #000; border-width:1px 0;"
+    p
+      |  The 
+      a href="#"
+        | a element
+      |  example
+      br
+      |  The 
+      abbr
+        | abbr element
+      |  and 
+      abbr title="Title text"
+        | abbr element with title
+      |  examples
+      br
+      |  The 
+      b
+        | b element
+      |  example
+      br
+      |  The 
+      cite
+        | cite element
+      |  example
+      br
+      |  The 
+      code
+        | code element
+      |  example
+      br
+      |  The 
+      del
+        | del element
+      |  example
+      br
+      |  The 
+      dfn
+        | dfn element
+      |  and 
+      dfn title="Title text"
+        | dfn element with title
+      |  examples
+      br
+      |  The 
+      em
+        | em element
+      |  example
+      br
+      |  The 
+      i
+        | i element
+      |  example
+      br
+      |  The img element 
+      img src="http://lorempixel.com/16/16" alt=""
+      |  example
+      br
+      |  The 
+      ins
+        | ins element
+      |  example
+      br
+      |  The 
+      kbd
+        | kbd element
+      |  example
+      br
+      |  The 
+      mark
+        | mark element
+      |  example
+      br
+      |  The 
+      q
+        | q element 
+        q
+          | inside
+        |  a q element
+      |  example
+      br
+      |  The 
+      s
+        | s element
+      |  example
+      br
+      |  The 
+      samp
+        | samp element
+      |  example
+      br
+      |  The 
+      small
+        | small element
+      |  example
+      br
+      |  The 
+      span
+        | span element
+      |  example
+      br
+      |  The 
+      strong
+        | strong element
+      |  example
+      br
+      |  The 
+      sub
+        | sub element
+      |  example
+      br
+      |  The 
+      sup
+        | sup element
+      |  example
+      br
+      |  The 
+      u
+        | u element
+      |  example
+      br
+      |  The 
+      var
+        | var element
+      |  example 
+    h1 Embedded content
+    h3 audio
+    audio controls=true
+    audio
+    h3 img
+    img src="http://lorempixel.com/100/100" alt=""
+    a href="#"
+      img src="http://lorempixel.com/100/100" alt=""
+    h3 svg
+    svg width="100px" height="100px"
+      circle cx="100" cy="100" r="100" fill="#ff0000"
+    h3 video
+    video controls=true
+    video
+    h1 Interactive content
+    h3 details / summary
+    details
+      summary More info
+      p Additional information
+      ul
+        li Point 1
+        li Point 2
+    h1 Grouping content
+    p 
+      ' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m. 
+    h3 pre
+    pre
+      ' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et m. 
+    pre
+      code = '<html> <head> </head> <body> <div class="main"> <div> </body> </html>'
+    h3 blockquote
+    blockquote
+      p = 'Some sort of famous witty quote marked up with a <blockquote> and a child <p> element.'
+    blockquote =  'Even better philosophical quote marked up with just a <blockquote> element.'
+    h3 ordered list
+    ol
+      li list item 1
+      li
+        | list item 1 
+        ol
+          li list item 2
+          li
+            | list item 2 
+            ol
+              li list item 3
+              li list item 3
+          li list item 2
+          li list item 2
+      li list item 1
+      li list item 1
+    h3 unordered list
+    ul
+      li list item 1
+      li 
+        | list item 1 
+        ul
+          li list item 2
+          li 
+            | list item 2 
+            ul
+              li list item 3
+              li list item 3
+          li list item 2
+          li list item 2
+      li list item 1
+      li list item 1
+    h3 description list
+    dl
+      dt Description name
+      dd Description value
+      dt Description name
+      dd Description value
+      dd Description value
+      dt Description name
+      dt Description name
+      dd Description value
+    h3 figure
+    figure
+      img src="http://lorempixel.com/400/200" alt=""
+      figcaption Figcaption content
+    h1 Tabular data
+    table
+      caption Jimi Hendrix - albums
+      thead
+        tr
+          th Album
+          th Year
+          th Price
+      tfoot
+        tr
+          th Album
+          th Year
+          th Price
+      tbody
+        tr
+          td Are You Experienced
+          td 1967
+          td $10.00
+        tr
+          td Axis Bold as Love
+          td 1967
+          td $12.00
+        tr
+          td Electric Ladyland
+          td 1968
+          td $10.00
+        tr
+          td Band of Gypsys
+          td 1970
+          td $12.00
+    h1 Forms
     form
       fieldset
-        legend Customer
+        legend Inputs as descendents of labels (form legend). This doubles up as a long legend that can test word wrapping.
         p
-          label for="name" Username:
-          input type="text" name="name" id="name" placeholder="Username" required=true
+          label
+            | Text input 
+            input type="text" value="default value that goes on and on without stopping or punctuation"
         p
-          label for="mail" Email:
-          input type="email" name="mail" id="mail" placeholder="Email" required=true
+          label
+            | Email input 
+            input type="email"
         p
-          label for="phone" Telephone:
-          input type="tel" name="phone" id="phone" placeholder="Phone" required=true
+          label
+            | Search input 
+            input type="search"
         p
-          label for="address" Address:
-          input type="text" name="address" id="address" size="40" placeholder="Address" required=true
+          label
+            | Tel input 
+            input type="tel"
         p
-          label for="curriculum" Curriculum Vitae:
-          textarea id="curriculum" name="curriculum" placeholder="Curriculum Vitae" required=true
+          label
+            | URL input 
+            input type="url" placeholder="http://"
+        p
+          label
+            | Password input 
+            input type="password" value="password"
+        p
+          label
+            | File input 
+            input type="file"
+        p
+          label
+            | Radio input 
+            input type="radio" name="rad"
+        p
+          label
+            | Checkbox input 
+            input type="checkbox"
+        p
+          label
+            input type="radio" name="rad"
+            |  Radio input
+        p
+          label
+            input type="checkbox"
+            |  Checkbox input
+        p
+          label
+            | Select field 
+            select
+              option Option 01
+              option Option 02
+        p
+          label
+            | Textarea 
+            textarea cols="30" rows="5" Textarea text
       fieldset
-        legend Pizza Size
+        legend Inputs as siblings of labels
         p
-          label for="small-size" Small
-          input type="radio" name="size" id="small-size"
+          label for="ic" Color input
+          input#ic type="color" value="#000000"
         p
-          label for="medium-size" Medium
-          input type="radio" name="size" id="medium-size"
+          label for="in" Number input
+          input#in type="number" min="0" max="10" value="5"
         p
-          label for="large-size" Large
-          input type="radio" name="size" id="large-size"
-
+          label for="ir" Range input
+          input#ir type="range" value="10"
+        p
+          label for="idd" Date input
+          input#idd type="date" value="1970-01-01"
+        p
+          label for="idm" Month input
+          input#idm type="month" value="1970-01"
+        p
+          label for="idw" Week input
+          input#idw type="week" value="1970-W01"
+        p
+          label for="idt" Datetime input
+          input#idt type="datetime" value="1970-01-01T00:00:00Z"
+        p
+          label for="idtl" Datetime-local input
+          input#idtl type="datetime-local" value="1970-01-01T00:00"
+        p
+          label for="irb" Radio input
+          input#irb type="radio" name="rad"
+        p
+          label for="icb" Checkbox input
+          input#icb type="checkbox"
+        p
+          input#irb2 type="radio" name="rad"
+          label for="irb2" Radio input
+        p
+          input#icb2 type="checkbox"
+          label for="icb2" Checkbox input
+        p
+          label for="s" Select field
+          select#s
+            option Option 01
+            option Option 02
+        p
+          label for="t" Textarea
+          textarea#t cols="30" rows="5" Textarea text
       fieldset
-        legend Pizza Toppings
-        p
-          label for="bacon" Bacon
-          input type="checkbox" name="bacon" id="bacon"
-        p
-          label for="cheese" Cheese
-          input type="checkbox" name="cheese" id="cheese"
-        p
-          label for="onion" Onion
-          input type="checkbox" name="onion" id="onion"
-
-      fieldset
-        legend Extra
-        p
-          label for="search" Search
-          input type="search" name="search" id="search"
-        p
-          label for="color" Color
-          input type="color" name="color" id="color"
-        p
-          label for="date" Date
-          input type="date" name="date" id="date"
-        p
-          label for="time" Date
-          input type="time" name="time" id="time"
-        p
-          label for="range" Range
-          input type="range" min="0" max="10" step="2" value="6" id="range"
-        p
-          label for="number" Number
-          input type="number" min="0" max="10" step="2" value="6" id="number"
-
-      input type="submit" value="Save"
+        legend Clickable inputs and buttons
+        p: input type="image" src="http://lorempixel.com/90/24" alt="Image (input)"
+        p: input type="reset" value="Reset (input)"
+        p: input type="button" value="Button (input)"
+        p: input type="submit" value="Submit (input)"
+        p: input type="submit" value="Disabled (input)" disabled=true
+        p: button type="reset" Reset (button)
+        p: button type="button" Button (button)
+        p: button type="submit" Submit (button)
+        p: button type="submit" disabled=true Disabled (button)
+      fieldset#boxsize
+        legend box-sizing tests
+        div: input type="text" value="text"
+        div: input type="email" value="email"
+        div: input type="search" value="search"
+        div: input type="url" value="http://example.com"
+        div: input type="password" value="password"
+        div: input type="color" value="#000000"
+        div: input type="number" value="5"
+        div: input type="range" value="10"
+        div: input type="date" value="1970-01-01"
+        div: input type="month" value="1970-01"
+        div: input type="week" value="1970-W01"
+        div: input type="datetime" value="1970-01-01T00:00:00Z"
+        div: input type="datetime-local" value="1970-01-01T00:00"
+        div: input type="radio"
+        div: input type="checkbox"
+        div
+          select
+            option Option 01
+            option Option 02
+        div: textarea cols="30" rows="5" Textarea text
+        div: input type="image" src="http://lorempixel.com/90/24" alt="Image (input)"
+        div: input type="reset" value="Reset (input)"
+        div: input type="button" value="Button (input)"
+        div: input type="submit" value="Submit (input)"
+        div: button type="reset" Reset (button)
+        div: button type="button" Button (button)
+        div: button type="submit"

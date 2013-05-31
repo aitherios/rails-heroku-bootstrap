@@ -32,6 +32,7 @@ gem 'sentry-raven'
 
 group :assets do
   gem 'compass'
+  gem 'compass-normalize'
   gem 'oily_png'
   gem 'compass-rails'
   gem 'sass-rails'

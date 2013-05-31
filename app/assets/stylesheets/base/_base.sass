@@ -11,9 +11,10 @@
 
 // COMPASS PLUGINS
 // --------------------------------------------------
+@import "normalize"
 @import "susy"
 
-// OTHER GLOBAL FILES
+// BASE PARTIALS
 // --------------------------------------------------
 @import "variables"
 @import "mixins"
@@ -25,6 +26,9 @@
 // ---------------------------------------------------------------------------------
 html
   overflow-y: scroll
+
+*
+  +box-sizing(border-box)
 
 // ACTIVATE THE VERTICAL RHYTHM
 // --------------------------------------------------
