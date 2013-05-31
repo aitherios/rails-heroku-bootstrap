@@ -4,6 +4,7 @@ log/*.log
 tmp
 public/uploads
 **/.DS_Store
+.DS_Store
 worklog
 *.sublime-project
 *.sublime-workspace

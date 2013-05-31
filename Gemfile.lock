@@ -197,6 +197,7 @@ GEM
     mime-types (1.23)
     mini_magick (3.6.0)
       subexec (~> 0.2.1)
+    modernizr-rails (2.6.2.1)
     mono_logger (1.1.0)
     multi_json (1.7.4)
     multipart-post (1.2.0)
@@ -385,6 +386,7 @@ DEPENDENCIES
   magic_encoding
   mercury-rails
   mini_magick
+  modernizr-rails
   newrelic_rpm
   oily_png
   omniauth-facebook

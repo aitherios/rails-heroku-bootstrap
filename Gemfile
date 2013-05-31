@@ -40,6 +40,7 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
   gem 'font_assets'
+  gem 'modernizr-rails'
 end
 
 group :test, :development do
