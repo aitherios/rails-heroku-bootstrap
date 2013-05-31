@@ -25,6 +25,7 @@ gem 'rails-boilerplate'
 gem 'mercury-rails'
 gem 'font-awesome-rails'
 gem 'kss-rails'
+gem 'chosen-rails'
 
 # external services
 gem 'newrelic_rpm'

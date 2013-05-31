@@ -2,8 +2,8 @@
 #= require jquery_ujs
 #= require jquery.ui.all
 #= require active_admin/application
-# require ckeditor/init
-# require redactor-rails
+#= require chosen-jquery
+#= require ckeditor/init
 
 $ ->
   $.datepicker.regional['pt'] =
@@ -25,3 +25,6 @@ $ ->
 
   $.datepicker.setDefaults($.datepicker.regional['pt'])
   $('.datepicker').datepicker($.datepicker.regional['pt'])
+
+  $('select').chosen
+    no_results_text: 'Nenhum resultado para'
