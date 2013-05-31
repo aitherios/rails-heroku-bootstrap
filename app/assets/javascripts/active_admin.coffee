@@ -2,7 +2,8 @@
 #= require jquery_ujs
 #= require jquery.ui.all
 #= require active_admin/application
-#= require redactor-rails
+# require ckeditor/init
+# require redactor-rails
 
 $ ->
   $.datepicker.regional['pt'] =

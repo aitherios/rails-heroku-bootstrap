@@ -1,6 +1,7 @@
 require 'resque/server'
 
 RailsHerokuBootstrap::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   mount RedactorRails::Engine => '/redactor_rails'
   mount Mercury::Engine => '/'
   mount Kss::Engine => '/kss' if Rails.env.development?

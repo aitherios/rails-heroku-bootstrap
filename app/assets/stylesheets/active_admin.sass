@@ -1,7 +1,11 @@
 @import "active_admin/mixins"
 @import "active_admin/base"
-@import "redactor-rails"
+@import "ckeditor/editor"
+@import "ckeditor/dialog"
 
-.redactor_box
-  width: 77.5%
-  margin-left: 20% !important
+
+body.active_admin
+
+  .cke_chrome 
+    width: 76% !important
+    overflow: hidden
