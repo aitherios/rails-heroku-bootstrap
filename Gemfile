@@ -37,12 +37,13 @@ group :assets do
   gem 'oily_png'
   gem 'compass-rails'
   gem 'sass-rails'
+  gem 'breakpoint'
   gem 'susy'
   gem 'coffee-rails'
   gem 'uglifier'
   gem 'font_assets'
   gem 'modernizr-rails'
-  gem 'selectivizr-rails'
+  gem 'selectivizr-rails'  
 end
 
 group :test, :development do
