@@ -24,7 +24,6 @@ gem 'jquery-migrate-rails'
 gem 'rails-boilerplate'
 gem 'mercury-rails'
 gem 'font-awesome-rails'
-gem 'kss-rails'
 gem 'chosen-rails'
 
 # external services
@@ -69,4 +68,5 @@ group :development do
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'rack-mini-profiler'
+  gem 'kss-rails'
 end
