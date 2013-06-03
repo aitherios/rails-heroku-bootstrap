@@ -65,7 +65,7 @@ Else (Ctrl-C stops the webserver):
 
 === Finishing touch
 
-* Error pages (e.g. 404, 500)
+* Error pages (e.g. 404, 503)
 * Favicons and apple-touch-icons located at public/
 * Facebook thumbnails (_metatags.slim and facebook app registry)
 * Check https://developers.facebook.com/tools/debug
@@ -103,20 +103,17 @@ The default directory structure of a generated Ruby on Rails application:
   │   │   ├── images
   │   │   ├── javascripts
   │   │   └── stylesheets
-  │   │       ├── components
-  │   │       ├── contacts
-  │   │       ├── debugging
-  │   │       ├── globals
-  │   │       ├── home
+  │   │       ├── base
   │   │       ├── layouts
-  │   │       ├── shared
-  │   │       └── webfonts
+  │   │       ├── modules
+  │   │       ├── states
+  │   │       └── themes
   │   ├── controllers
   │   ├── decorators
   │   ├── helpers
   │   ├── mailers
   │   ├── models
-  │   │   └── redactor_rails
+  │   │   └── ckeditor
   │   ├── views
   │   │   ├── admin
   │   │   ├── contact_mailer
@@ -124,6 +121,7 @@ The default directory structure of a generated Ruby on Rails application:
   │   │   ├── devise
   │   │   ├── frontend
   │   │   ├── home
+  │   │   ├── kss
   │   │   ├── layouts
   │   │   └── pages
   │   └── workers
@@ -150,10 +148,6 @@ The default directory structure of a generated Ruby on Rails application:
   │   ├── support
   │   └── views
   ├── tmp
-  │   ├── cache
-  │   ├── pids
-  │   ├── sessions
-  │   └── sockets
   └── vendor
       ├── assets
       │   ├── images
