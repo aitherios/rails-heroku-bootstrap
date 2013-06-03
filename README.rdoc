@@ -70,7 +70,7 @@ Else (Ctrl-C stops the webserver):
 * Facebook thumbnails (_metatags.slim and facebook app registry)
 * Check https://developers.facebook.com/tools/debug
 * Add a project sitemap (http://sitemaps.org)
-* Add schemas to search providers (http://schema.org/)
+* Add schemas to search providers (http://schema.org)
 * Update project title in layouts and admin config/initializers/active_admin.rb
 * Update public/humans.txt
 * Update public/robots.txt
