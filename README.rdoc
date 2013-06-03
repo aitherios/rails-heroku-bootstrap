@@ -85,7 +85,7 @@ Else (Ctrl-C stops the webserver):
 * Coffeescript: http://coffeescript.org/
 * ActiveAdmin: http://activeadmin.info/
 * Mercury Editor: http://jejacks0n.github.io/mercury/
-* Redactor: https://github.com/SammyLin/redactor-rails/
+* CKEditor: http://ckeditor.com/
 * jQuery: http://jquery.com/
 * Draper: https://github.com/drapergem/draper/
 * Factory Girl: https://github.com/thoughtbot/factory_girl
