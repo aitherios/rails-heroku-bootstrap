@@ -32,16 +32,17 @@ gem 'sentry-raven'
 
 group :assets do
   gem 'sass-rails'
-  gem 'oily_png'
-  gem 'compass-rails'
-  gem 'compass-normalize'
-  gem 'breakpoint'
-  gem 'susy'
   gem 'coffee-rails'
   gem 'uglifier'
   gem 'font_assets'
   gem 'modernizr-rails'
-  gem 'selectivizr-rails'  
+  gem 'selectivizr-rails'
+  # compass and plugins
+  gem 'compass-rails'
+  gem 'compass-normalize'
+  gem 'breakpoint'
+  gem 'susy'
+  gem 'oily_png'
 end
 
 group :test, :development do
