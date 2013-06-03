@@ -3,3 +3,4 @@ project_type = :rails
 require "susy"
 require "breakpoint"
 require "compass-normalize"
+require "sassy-buttons"

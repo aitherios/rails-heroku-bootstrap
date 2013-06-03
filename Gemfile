@@ -43,6 +43,7 @@ group :assets do
   gem 'breakpoint'
   gem 'susy'
   gem 'oily_png'
+  gem 'sassy-buttons'
 end
 
 group :test, :development do
