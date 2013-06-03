@@ -78,19 +78,19 @@ Else (Ctrl-C stops the webserver):
 
 == Tecnologies used
 
-* Sass: http://sass-lang.com/
-* Compass: http://compass-style.org/
-* Susy: http://susy.oddbird.net/
-* Slim: http://slim-lang.com/
-* Coffeescript: http://coffeescript.org/
-* ActiveAdmin: http://activeadmin.info/
-* Mercury Editor: http://jejacks0n.github.io/mercury/
-* CKEditor: http://ckeditor.com/
-* jQuery: http://jquery.com/
-* Draper: https://github.com/drapergem/draper/
+* Sass: http://sass-lang.com
+* Compass: http://compass-style.org
+* Susy: http://susy.oddbird.net
+* Slim: http://slim-lang.com
+* Coffeescript: http://coffeescript.org
+* ActiveAdmin: http://activeadmin.info
+* Mercury Editor: http://jejacks0n.github.io/mercury
+* CKEditor: http://ckeditor.com
+* jQuery: http://jquery.com
+* Draper: https://github.com/drapergem/draper
 * Factory Girl: https://github.com/thoughtbot/factory_girl
-* Rspec: http://rspec.info/
-* Cucumber: http://cukes.info/
+* Rspec: http://rspec.info
+* Cucumber: http://cukes.info
 
 == Project structure revisited
 
