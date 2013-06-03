@@ -374,7 +374,6 @@ DEPENDENCIES
   chosen-rails
   ckeditor
   coffee-rails
-  compass
   compass-normalize
   compass-rails
   devise

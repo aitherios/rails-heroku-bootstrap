@@ -31,11 +31,10 @@ gem 'newrelic_rpm'
 gem 'sentry-raven'
 
 group :assets do
-  gem 'compass'
-  gem 'compass-normalize'
+  gem 'sass-rails'
   gem 'oily_png'
   gem 'compass-rails'
-  gem 'sass-rails'
+  gem 'compass-normalize'
   gem 'breakpoint'
   gem 'susy'
   gem 'coffee-rails'
