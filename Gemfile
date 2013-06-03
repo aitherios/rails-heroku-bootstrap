@@ -44,6 +44,8 @@ group :assets do
   gem 'susy'
   gem 'oily_png'
   gem 'sassy-buttons'
+  gem 'color-schemer'
+  gem 'toolkit'
 end
 
 group :test, :development do
