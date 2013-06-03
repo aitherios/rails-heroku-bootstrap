@@ -94,7 +94,7 @@ Else (Ctrl-C stops the webserver):
 
 == Project structure revisited
 
-The default directory structure of a generated Ruby on Rails application:
+The directory structure of the application:
 
   ├── app
   │   ├── admin
