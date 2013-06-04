@@ -9,8 +9,9 @@
 //
 // COMPASS
 // --------------------------------------------------
-// tollkit includes: compass, color-schemer, breakpoint and singularitygs
+// tollkit includes: compass, color-schemer and breakpoint
 @import "toolkit" 
+@import "singularitygs"
 @import "singularity-extras"
 @import "sassy-buttons"
 @import "normalize"
@@ -31,3 +32,19 @@ html
 // ACTIVATE THE VERTICAL RHYTHM
 // --------------------------------------------------
 +establish-baseline
+
+// RESPONSIVE GRIDS
+// --------------------------------------------------
+
+$grids: 4   //min defaut grid system
+$grids: add-grid(4 at $phones)  //480px to 768px
+$grids: add-grid(6 at $tablets) //769px to 980px
+$grids: add-grid(9 at $default) //981px to 1200px
+$grids: add-grid(16 at $large-display) //1200px to max
+
+// Fixed grid lenght
+//$grids: 12
+//$gutters: .2
+
+body  
+  +background-grid
