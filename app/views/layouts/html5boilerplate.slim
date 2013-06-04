@@ -1,0 +1,45 @@
+doctype html
+
+/[if lt IE 7]
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="#{I18n.locale}">
+/[if IE 7]
+  <html class="no-js lt-ie9 lt-ie8" lang="#{I18n.locale}">
+/[if IE 8]
+  <html class="no-js lt-ie9" lang="#{I18n.locale}">
+
+/![if gt IE 8]><!
+html.no-js lang="#{I18n.locale}"
+  /! <![endif]
+
+  head
+    title #{(content_for?(:title) ? "#{yield :title} — " : "") + 'RailsHerokuBootstrap' }
+    == render 'layouts/metatags'
+    == render 'layouts/favicons'
+
+    == csrf_meta_tags
+    == stylesheet_link_tag 'application', media: 'all'
+    == javascript_include_tag 'top_javascripts'
+    /[if lt IE 9]
+      == javascript_include_tag 'html5shiv-printshiv'
+
+  body class="#{yield :body_class}"
+    == render 'layouts/browser_warning'
+    == render 'layouts/mercury_edit_button' if current_admin_user.present?
+    == render 'layouts/header'
+
+    section.page
+      - if notice.present?
+        .notice == notice
+      - if alert.present?
+        .alert == alert
+
+      == yield
+
+    == render 'layouts/footer'
+
+    == javascript_include_tag 'application'
+    /[if (gte IE 6)&(lte IE 8)]
+      == javascript_include_tag 'nwmatcher-1.2.5'
+      == javascript_include_tag 'selectivizr'
+    == render 'layouts/development' if Rails.env.development?
+    == render 'layouts/google_analytics' if Rails.env.production?
