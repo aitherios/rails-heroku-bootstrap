@@ -17,11 +17,12 @@ gem 'rufus-scheduler'
 gem 'draper'
 gem 'resque'
 gem 'redis'
+
+# frontend gems
 gem 'ckeditor'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-migrate-rails'
-gem 'rails-boilerplate'
 gem 'mercury-rails'
 gem 'font-awesome-rails'
 gem 'chosen-rails'
@@ -40,8 +41,9 @@ group :assets do
   # compass and plugins
   gem 'compass-rails'
   gem 'compass-normalize'
+  gem 'singularitygs'
+  gem 'singularity-extras'
   gem 'breakpoint'
-  gem 'susy'
   gem 'oily_png'
   gem 'sassy-buttons'
   gem 'color-schemer'
@@ -62,6 +64,7 @@ end
 group :development do
   gem 'foreman'
   gem 'thin'
+  gem 'rails-boilerplate'
   gem 'magic_encoding'
   gem 'html2slim'
   gem 'guard-livereload', require: false

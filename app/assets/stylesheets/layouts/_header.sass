@@ -16,7 +16,6 @@
   font-weight: normal
   
 #header-page-inner
-  +container
 
   .logo-page
     width: 160px
@@ -35,10 +34,6 @@
 
 
   nav.nav-page
-    +span-columns(4 ,12)
-    +push(2)
-    +padding-leader(1.5)
-    +padding-trailer(.5)
     padding-left: 20px
 
     a
@@ -66,9 +61,6 @@
 
 
   nav.nav-user
-    +padding-leader(1.5)
-    +padding-trailer(.5)
-    +span-columns(6 omega,12)
     
     .info
       color: $gray-light
@@ -209,8 +201,6 @@
             padding-left: 1em
             padding-right: 1em
             font-weight: bold
-            +padding-leader(.2)
-            +padding-trailer(.2)
             text-decoration: none
             &:hover
               background-color: $link-color
