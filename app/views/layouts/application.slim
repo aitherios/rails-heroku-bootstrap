@@ -21,10 +21,9 @@ html.no-js lang="#{I18n.locale}"
   body class="#{yield :body_class}"
     == render 'layouts/browser_warning'
     == render 'layouts/mercury_edit_button' if current_admin_user.present?
-
     == render 'layouts/header'
 
-    #content
+    section.page
       - if notice.present?
         .notice == notice
       - if alert.present?

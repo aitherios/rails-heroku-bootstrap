@@ -1,5 +1,9 @@
 pt-BR:
   app:
+    lt_ie_9_warning:
+      Você está usando um navegador <strong>desatualizado</strong>. 
+      Por favor <a href="http://browsehappy.com/">atualize o seu navegador</a> ou 
+      <a href="http://www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar a sua experiência.
     active_admin:
       administration: 'Administração'
       content: 'Conteúdo'
