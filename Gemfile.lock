@@ -160,10 +160,8 @@ GEM
       multi_json (~> 1.7)
     has_scope (0.5.1)
     hashie (2.0.5)
-    heroku_rails_deflate (1.0.0)
-      actionpack (~> 3.2.13)
-      activesupport (~> 3.2.13)
-      rack (~> 1.4.5)
+    heroku-deflater (0.5.1)
+      rack (>= 1.4.5)
     hike (1.2.2)
     hpricot (0.8.6)
     html2slim (0.0.2)
@@ -417,7 +415,7 @@ DEPENDENCIES
   foreman
   friendly_id
   guard-livereload
-  heroku_rails_deflate
+  heroku-deflater
   html2slim
   jquery-migrate-rails
   jquery-rails
