@@ -76,3 +76,7 @@ group :development do
   gem 'rack-mini-profiler'
   gem 'kss-rails'
 end
+
+group :production do
+  gem 'heroku_rails_deflate'
+end
