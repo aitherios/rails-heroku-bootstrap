@@ -40,3 +40,5 @@ pt-BR:
         remember_me: Lembrar-me
         created_at: Criado em
         updated_at: Atualizado em
+        current_sign_in_at: Último login em
+        sign_in_count: No. de logins
