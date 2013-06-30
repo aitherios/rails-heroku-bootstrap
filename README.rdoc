@@ -80,7 +80,7 @@ Else (Ctrl-C stops the webserver):
 
 * Sass: http://sass-lang.com
 * Compass: http://compass-style.org
-* Susy: http://susy.oddbird.net
+* SingularityGS: http://singularity.gs/
 * Slim: http://slim-lang.com
 * Coffeescript: http://coffeescript.org
 * ActiveAdmin: http://activeadmin.info
