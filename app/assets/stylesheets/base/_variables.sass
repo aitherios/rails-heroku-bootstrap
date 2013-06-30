@@ -1,59 +1,65 @@
 // ---------------------------------------------------------------------------------
 // VARIABLES
-// Variables to customize the look and feel of Bootstrap
 // ---------------------------------------------------------------------------------
 
 
-// CONFIG: Susy Grid
+// SINGULARITYGS
 // --------------------------------------------------
-$total-columns: 12
-$column-width: 60px
-$gutter-width: 20px
-$grid-padding: 10px
+$grids: 4   //min defaut grid system
+$grids: add-grid(4 at $phones)  //480px to 768px
+$grids: add-grid(6 at $tablets) //769px to 980px
+$grids: add-grid(9 at $default) //981px to 1200px
+$grids: add-grid(16 at $large-display) //1200px to max
+// Fixed grid lenght
+//$grids: 12
+//$gutters: .2
 
+// BREAKPOIT
+// --------------------------------------------------
+$breakpoint-no-query-fallbacks: true
+$breakpoint-to-ems: true
+$breakpoints: 'large display' 1200px min-width, 'default' 980px 1199px, 'portrait tablets' 768px 979px, 'phones to tablets' 767px max-width, 'phones' 480px max-width
 
-// CONFIG: Vertical Rhythm
+// RESPONSIVE LENGHT VARIABLES 
+// --------------------------------------------------
+$phones: 480px
+$tablets: 768px
+$default: 980px
+$large-display: 1200px
+
+// COMPASS VERTICAL RHYTHM
 // --------------------------------------------------
 $base-font-size: 14px
 $base-line-height: 20px
 $round-to-nearest-half-line: false
 $font-unit: 14px
 
-
-// CONFIG: HASH GRID - FOR DEBUGGING
-// Getting values from the variables from Susy Grid and Vertical Rhythm
-// --------------------------------------------------
-$hg-total-columns: $total-columns
-$hg-column-width: $column-width
-$hg-gutter-width: $gutter-width
-$hg-grid-padding: $grid-padding
-$hg-grid: $hg-grid-padding * 2 + ($hg-total-columns * $hg-column-width) + (($hg-total-columns - 1) * $hg-gutter-width)
-$hg-leading: $base-line-height
-$hg-horiz-grid-color: rgba(red,.1)
-$hg-vert-grid-color: rgba(#00b0b2,.3)
-
-
-// CONFIG: Compass Cross-Browser Support Configuration
+// COMPASS CROSS-BROWSER SUPPORT
 // --------------------------------------------------
 $legacy-support-for-ie6: false
 $legacy-support-for-ie7: false
+$legacy-support-for-ie8: false
 
-
-// CONFIG: Compass Defaults
+// COMPASS DEFAULTS
 // --------------------------------------------------
 $default-text-shadow-blur: 0
 
+// TYPOGRAPHY
+// --------------------------------------------------
+$sans-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+$serif-family: "Georgia", "Times New Roman", Times, Cambria, Georgia, serif
+$monospace-family: "Monaco", "Courier New", monospace, sans-serif
+$lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+$text-color: $gray-dark !default
 
 // GLOBAL VALUES
 // --------------------------------------------------
-
 
 // Links
 $link-color: #0088cc !default
 $link-color-hover: darken($link-color, 15) !default
 $link-color-visited: lighten($link-color, 30) !default
 $link-color-active: rgba($link-color, .5)
-
 
 // Grays
 $black: black !default
@@ -63,7 +69,6 @@ $gray: #555555 !default
 $gray-light: #999999 !default
 $gray-lighter: #eeeeee !default
 $white: white !default
-
 
 // Accent colors
 $blue: #049cdb !default
@@ -75,31 +80,6 @@ $orange: #f89406 !default
 $pink: #c3325f !default
 $purple: #7a43b6 !default
 
-
 // Text Selection
 $text-selection-color: $gray-dark
 $text-selection-background: lighten($yellow, 40)
-
-// TYPOGRAPHY
-// --------------------------------------------------
-$sans-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-$serif-family: "Georgia", "Times New Roman", Times, Cambria, Georgia, serif
-$monospace-family: "Monaco", "Courier New", monospace, sans-serif
-$lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif
-$text-color: $gray-dark !default
-
-
-// BREAKPOITS VARIABLES
-// --------------------------------------------------
-$breakpoint-no-query-fallbacks: true
-$breakpoint-to-ems: true
-$breakpoints: 'large display' 1200px min-width, 'default' 980px 1199px, 'portrait tablets' 768px 979px, 'phones to tablets' 767px max-width, 'phones' 480px max-width
-
-
-//RESPONSIVE LENGHT VARIABLES 
-// --------------------------------------------------
-$phones: 480px
-$tablets: 768px
-$default: 980px
-$large-display: 1200px
-
