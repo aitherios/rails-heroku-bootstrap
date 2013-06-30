@@ -61,13 +61,6 @@ RailsHerokuBootstrap::Application.configure do
      active_admin.js 
      active_admin.css
      active_admin/print.css
-     langs/pt_br.js 
-     toolbars/default.js 
-     toolbars/mini.js 
-     css/docstyle.css
-     css/style.css
-     css/wym.css
-     css/redactor.css
    )
 
   # Disable delivery errors, bad email addresses will be ignored
