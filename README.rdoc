@@ -237,9 +237,9 @@ APP_HOSTNAME=localhost
   The hostname of your app, bootstrap_heroku.sh changes this to your heroku app host.
 GOOGLE_ANALYTICS_ID=UA-00000000-0
   Google analytics id
-FACEBOOK_APP_ID=237947652982771
+FACEBOOK_APP_ID=129857033875302
   Facebook app id
-FACEBOOK_SECRET=9d86008f6d8be5d68c8501662b707008
+FACEBOOK_SECRET=b7ca37a8abcd5a0e8ffa40ed01f81e66
   Facebook secret
 S3_KEY=0000
   Amazon S3 key
