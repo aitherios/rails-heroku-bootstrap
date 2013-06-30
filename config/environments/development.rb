@@ -11,10 +11,12 @@ RailsHerokuBootstrap::Application.configure do
   config.active_record.mass_assignment_sanitizer = :strict
   config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.assets.compress = false
-  config.assets.debug = true
+  # config.assets.debug = true
+  config.assets.debug = false
   Slim::Engine.set_default_options pretty: true
   Slim::Engine.set_default_options format: :html5
   config.action_mailer.default_url_options = { host: 'localhost:5000' }
+
   
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
