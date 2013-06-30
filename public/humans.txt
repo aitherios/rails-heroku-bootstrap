@@ -26,26 +26,26 @@ TECHNOLOGY
 Ruby on Rails
 http://rubyonrails.org
 
-SLIM
-http://slim-lang.com
-
-SASS
-http://sass-lang.com
-
-COMPASS
-http://compass-style.org
-
 HTML5 Boilerplate
 http://html5boilerplate.com
 
-SUSY
-http://susy.oddbird.net
+Slim
+http://slim-lang.com
 
-Modernizr
-http://modernizr.com
+Sass
+http://sass-lang.com
+
+Compass
+http://compass-style.org
+
+SingularityGS
+http://singularity.gs/
 
 jQuery
 http://jquery.com
+
+Modernizr
+http://modernizr.com
 
 CoffeeScript
 http://coffeescript.org
