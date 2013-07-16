@@ -45,7 +45,6 @@ group :assets do
   gem 'singularity-extras'
   gem 'breakpoint'
   gem 'oily_png'
-  gem 'sassy-buttons'
   gem 'color-schemer'
   gem 'toolkit'
 end
