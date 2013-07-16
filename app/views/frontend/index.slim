@@ -1,3 +1,11 @@
+- if @entries.present?
+  h1 Frontend Files:
+  ul
+    - @entries.each do |entry|
+      li = link_to entry, frontend_path(entry.gsub(/(.html)?\.\w+$/, ''))
+    
+h1 Comparison Sheet:
+
 section.page
   #content
     h1 Heading 1
