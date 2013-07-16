@@ -20,6 +20,20 @@ Twitter:   @61bits
 Location:  Brasília, DF, Brasil
 Email:     contato@61bits.com.br
 
+Flávio Fonseca Alves
+Backend / Frontend Developer
+
+  github.com/flavioalves
+  twitter.com/flavioalves
+  fb.me/flavio.alves
+
+Renan Mendes Carvalho
+Backend / Frontend Developer
+
+  github.com/aitherios
+  twitter.com/aitherios
+  fb.me/rmcarvalho
+
 _______________________________________________________________________________
 TECHNOLOGY
 
