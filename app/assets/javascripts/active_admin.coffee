@@ -28,3 +28,4 @@ $ ->
 
   $('select').chosen
     no_results_text: 'Nenhum resultado para'
+    allow_single_deselect: true
